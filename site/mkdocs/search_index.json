@@ -57,12 +57,12 @@
         },
         {
             "location": "/hello_world_again/",
-            "text": "Hello again!!!\n\n\n*Reborn on Mar 13 2016\n\n\n\n\nIt's upset for me to stop keeping my blog for several days.\n\n\nBut now, am back with my friend \"Github\" LOL\n\n\nReally fabulous to see u again!",
+            "text": "Hello again!!!\n\n\nReborn on Mar 13 2016\n\n\n\n\nIt's upset for me to stop keeping my blog for several days.\n\n\nBut now, am back with my friend \"Github\" LOL\n\n\nReally fabulous to see u again!",
             "title": "Helloworld again!"
         },
         {
             "location": "/hello_world_again/#hello-again",
-            "text": "*Reborn on Mar 13 2016   It's upset for me to stop keeping my blog for several days.  But now, am back with my friend \"Github\" LOL  Really fabulous to see u again!",
+            "text": "Reborn on Mar 13 2016   It's upset for me to stop keeping my blog for several days.  But now, am back with my friend \"Github\" LOL  Really fabulous to see u again!",
             "title": "Hello again!!!"
         },
         {
@@ -76,14 +76,24 @@
             "title": "Handbook for Linux Instructions"
         },
         {
-            "location": "/summeries/port_management/",
-            "text": "Port Management On the Lab Serveri7\n\n\n\n\n\n\nport 6666 -\n 192.168.0.155:3389\n\n\n\n\nused for Microsoft Remote Contrl\n\n\n\n\nport 8888 -\n 192.169.0.160:88\n\n\n\n\nused for accessing my blog on the ubuntu server\n\n\n\n\nport 22 -\n 192.168.0.160:22\n\n\n\n\nused for ssh accessing to the ubuntu on server\n\n\n\n\nport 1000 -\n 192.168.0.160:1000\n\n\n\n\nused for the http server for sharing folders.\n\n\n\n\nport 54321 -\n 192.168.0.161:54321\n\n\n\n\nused for the romote desktop for my own os Win7 on serveri7",
-            "title": "Port Management"
+            "location": "/at_company/debug_instructions/",
+            "text": "The debug flow\n\n\nmodified on Mar 13 2016 12:49AM\n\n\n\n\nHow to run the dev server:\n\n\n\n\n\n\nUsing ssh to connect to the server  \nssh sp\n\n\nenter the circle-server-dev folder \ncsd\n\n\nrun Runimg.sh \ncd docker/app\n + \n./runimage.sh --dev -d\n\n\ncheck the logs \ndocker logs --follow circle-server\n\n\n\n\n\n\nHow to check the logs of time server:\n\n\n\n\n\n\nusing \npm2 l\n to see all the running exs\n\n\nusing \npm2 logs 2\n to check the logs of the time server",
+            "title": "How to start the debug server"
         },
         {
-            "location": "/summeries/port_management/#port-management-on-the-lab-serveri7",
-            "text": "port 6666 -  192.168.0.155:3389   used for Microsoft Remote Contrl   port 8888 -  192.169.0.160:88   used for accessing my blog on the ubuntu server   port 22 -  192.168.0.160:22   used for ssh accessing to the ubuntu on server   port 1000 -  192.168.0.160:1000   used for the http server for sharing folders.   port 54321 -  192.168.0.161:54321   used for the romote desktop for my own os Win7 on serveri7",
-            "title": "Port Management On the Lab Serveri7"
+            "location": "/at_company/debug_instructions/#the-debug-flow",
+            "text": "modified on Mar 13 2016 12:49AM",
+            "title": "The debug flow"
+        },
+        {
+            "location": "/at_company/debug_instructions/#how-to-run-the-dev-server",
+            "text": "Using ssh to connect to the server   ssh sp  enter the circle-server-dev folder  csd  run Runimg.sh  cd docker/app  +  ./runimage.sh --dev -d  check the logs  docker logs --follow circle-server",
+            "title": "How to run the dev server:"
+        },
+        {
+            "location": "/at_company/debug_instructions/#how-to-check-the-logs-of-time-server",
+            "text": "using  pm2 l  to see all the running exs  using  pm2 logs 2  to check the logs of the time server",
+            "title": "How to check the logs of time server:"
         },
         {
             "location": "/readme/",

@@ -7,6 +7,7 @@ pages:
         - Helloworld again!: hello_world_again.md
     - Technical Summeries:
         - Instrutions Summeries In Linux: summeries/instructions_in_linux.md
-    - Port Management: summeries/port_management.md
+    - At Company:
+        - How to start the debug server: at_company/debug_instructions.md
     - README: readme.md
-theme: readthedocs
+theme: slate
