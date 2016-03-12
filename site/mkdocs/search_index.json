@@ -13,7 +13,7 @@
         {
             "location": "/helloworld/",
             "text": "Hello My Blog\n\n\nModified On 2016.1.1\n\n\n\n\nMy Blog has already been set up on the server by using \"mkdocs\" in my lab.\n\n\nHere are the features of the server:\n\n\n\n\n\n\nif you are interested in how to build your own Blog, CLICK HERE",
-            "title": "Appearance"
+            "title": "Hello World!"
         },
         {
             "location": "/helloworld/#hello-my-blog",
@@ -54,6 +54,16 @@
             "location": "/set_steps/#just-enjoy-it",
             "text": "",
             "title": "Just Enjoy it!!!"
+        },
+        {
+            "location": "/hello_world_again/",
+            "text": "Hello again!!!\n\n\n*Reborn on Mar 13 2016\n\n\n\n\nIt's upset for me to stop keeping my blog for several days.\n\n\nBut now, am back with my friend \"Github\" LOL\n\n\nReally fabulous to see u again!",
+            "title": "helloworld again!"
+        },
+        {
+            "location": "/hello_world_again/#hello-again",
+            "text": "*Reborn on Mar 13 2016   It's upset for me to stop keeping my blog for several days.  But now, am back with my friend \"Github\" LOL  Really fabulous to see u again!",
+            "title": "Hello again!!!"
         },
         {
             "location": "/summeries/instructions_in_linux/",

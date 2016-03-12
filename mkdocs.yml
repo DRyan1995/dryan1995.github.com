@@ -2,8 +2,9 @@ site_name: "Ryan's Blog"
 pages:
     - Index: index.md
     - Hello My Blog:
-        - Appearance : helloworld.md
+        - Hello World! : helloworld.md
         - Setting Up My First Blog: set_steps.md
+        - helloworld again!: hello_world_again.md
     - Technical Summeries:
         - Instrutions Summeries In Linux: summeries/instructions_in_linux.md
     - Port Management: summeries/port_management.md
