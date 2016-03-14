@@ -1,5 +1,3 @@
-> This is useless
-
 #My First Flask project
 
 使用FLASK和HTML完成了TODOLIST网站

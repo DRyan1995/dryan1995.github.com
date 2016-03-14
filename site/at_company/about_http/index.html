@@ -186,9 +186,6 @@
 </div></div>
             <div class="col-md-9" role="main">
 
-<blockquote>
-<p>This is useless</p>
-</blockquote>
 <h1 id="http">HTTP</h1>
 <h2 id="1-definition">1. Definition</h2>
 <blockquote>
@@ -196,6 +193,20 @@
 </blockquote>
 <h2 id="2-components-request-methods">2. Components &amp;&amp; Request Methods</h2>
 <blockquote>
+<p>1、请求格式：
++ 一个起始行--------内容包括：请求方式，URI,HTTP协议的版本
++ 一个或者多个头域
++ 一个指示头域结束的空行
++ 和可选的消息体组成。
++ 四部分当中头域是最重要的</p>
+<p>2、响应格式：
++ HTTP协议的版本、状态代码、描述
++ 响应头
++响应正文</p>
+<p><code>HTTP/1.1 200 OK
+Server:nio/1.1
+Content-type:text/html;charset=GBK
+Content-length:102</code></p>
 <p><em>发出的请求信息包括以下几个:</em></p>
 <ul>
 <li>请求行

@@ -1,5 +1,3 @@
-> This is useless
-
 #HTTP
 
 ##1. Definition
@@ -7,6 +5,25 @@
 > HTTP是一个客户端终端（用户）和服务器端（网站）请求和应答的标准（TCP）。通过使用Web浏览器、网络爬虫或者其它的工具，客户端发起一个HTTP请求到服务器上指定端口（默认端口为80）。我们称这个客户端为用户代理程序（user agent）。应答的服务器上存储着一些资源，比如HTML文件和图像。我们称这个应答服务器为源服务器（origin server）。
 
 ##2. Components && Request Methods
+
+> 1、请求格式：
+> + 一个起始行--------内容包括：请求方式，URI,HTTP协议的版本
+> + 一个或者多个头域
+> + 一个指示头域结束的空行
+> + 和可选的消息体组成。
+> + 四部分当中头域是最重要的
+
+> 2、响应格式：
+> + HTTP协议的版本、状态代码、描述
+> + 响应头
+> +响应正文
+
+> `HTTP/1.1 200 OK
+Server:nio/1.1
+Content-type:text/html;charset=GBK
+Content-length:102
+`
+
 > *发出的请求信息包括以下几个:*
 
 > + 请求行
