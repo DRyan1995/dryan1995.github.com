@@ -5,21 +5,21 @@ pages:
         - Hello World! : helloworld.md
         - Setting Up My First Blog: set_steps.md
         - Helloworld again!: hello_world_again.md
-    # - Notes On Jan 2016:
-    #     - To my 2016: 2016_1/to_my_2016.md
-    #     - 2016.1.1: 2016_1/1.md
-    #     - 2016.1.2: 2016_1/2.md
-    #     - 2016.1.3: 2016_1/3.md
-    #     - 2016.1.4: 2016_1/4.md
-    #     - 2016.1.5: 2016_1/5.md
-    #     - 2016.1.6: 2016_1/6.md
-    #     - 2016.1.7: 2016_1/7.md
-    #     - 2016.1.8: 2016_1/8.md
-    #     - 2016.1.9: 2016_1/9.md
-    #     - 2016.1.10: 2016_1/10.md
-    #     - 2016.1.13: 2016_1/13.md
-    # - Diaries On Mar 2016:
-    #     - 2016.3.13: 2016_3/13.md
+    - Notes On Jan 2016:
+        - To my 2016: 2016_1/to_my_2016.md
+        - 2016.1.1: 2016_1/1.md
+        - 2016.1.2: 2016_1/2.md
+        - 2016.1.3: 2016_1/3.md
+        - 2016.1.4: 2016_1/4.md
+        - 2016.1.5: 2016_1/5.md
+        - 2016.1.6: 2016_1/6.md
+        - 2016.1.7: 2016_1/7.md
+        - 2016.1.8: 2016_1/8.md
+        - 2016.1.9: 2016_1/9.md
+        - 2016.1.10: 2016_1/10.md
+        - 2016.1.13: 2016_1/13.md
+    - Diaries On Mar 2016:
+        - 2016.3.13: 2016_3/13.md
     - Technical Summeries:
         - Instrutions Summeries In Linux: summeries/instructions_in_linux.md
     - At Company:
