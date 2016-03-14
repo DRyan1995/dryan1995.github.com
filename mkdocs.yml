@@ -26,5 +26,6 @@ pages:
         - How to start the debug server: at_company/debug_instructions.md
         - Git instructions: at_company/git_instructions.md
         - HTTP Protocol: at_company/about_http.md
+        - My First Flask Program: at_company/flask_demo.md
     - README: readme.md
 theme: amelia

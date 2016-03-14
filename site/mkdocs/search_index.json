@@ -161,6 +161,26 @@
             "title": "7. Cookies"
         },
         {
+            "location": "/at_company/flask_demo/",
+            "text": "This is useless\n\n\n\n\nMy First Flask project\n\n\n\u4f7f\u7528FLASK\u548cHTML\u5b8c\u6210\u4e86TODOLIST\u7f51\u7ad9\n\n\nAbout Flask\n\n\n\n\n\n\n\n\nUse \nrequest.get[\"key\"]\n to get data when using GET Method\n\n\n\n\n\n\nUse \nrequest.form[\"key\"]\n or \nrequest.form.get(key)\n to get data when using POST Method\n\n\n\n\n\n\n\n\nAbout Jinja2",
+            "title": "My First Flask Program"
+        },
+        {
+            "location": "/at_company/flask_demo/#my-first-flask-project",
+            "text": "\u4f7f\u7528FLASK\u548cHTML\u5b8c\u6210\u4e86TODOLIST\u7f51\u7ad9",
+            "title": "My First Flask project"
+        },
+        {
+            "location": "/at_company/flask_demo/#about-flask",
+            "text": "Use  request.get[\"key\"]  to get data when using GET Method    Use  request.form[\"key\"]  or  request.form.get(key)  to get data when using POST Method",
+            "title": "About Flask"
+        },
+        {
+            "location": "/at_company/flask_demo/#about-jinja2",
+            "text": "",
+            "title": "About Jinja2"
+        },
+        {
             "location": "/readme/",
             "text": "CONTACT ME\n\n\n\n\nIf you have any advice or ideas about my Blog, you can discuss with me.\n\n\n\n\n\n\n\n\nE-Mail : ryan951125@icloud.com\n\n\n\n\nBack To Home",
             "title": "README"
