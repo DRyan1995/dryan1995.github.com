@@ -171,6 +171,8 @@
         
             <li><a href="#about-jinja2">About Jinja2</a></li>
         
+            <li><a href="#how-to-run-the-web-server">How To RUN the web server?</a></li>
+        
     
     </ul>
 </div></div>
@@ -190,7 +192,18 @@
 </ul>
 </blockquote>
 <h2 id="about-jinja2">About Jinja2</h2>
-<p><img alt="MyJinja2" src="../../image/Jinja2.png" /></p></div>
+<p><img alt="MyJinja2" src="../../image/Jinja2.png" /></p>
+<h2 id="how-to-run-the-web-server">How To RUN the web server?</h2>
+<blockquote>
+<p><em>1#</em></p>
+<p>add <code>if __name__=='main'</code></p>
+<p><code>app.debug = TRUE</code></p>
+<p><code>app.run()</code></p>
+<p><code>python3 run mainplatform.py</code></p>
+<p><em>2#</em></p>
+<p>use <em>gunicorn</em></p>
+<p><code>gunicorn my_project:app</code></p>
+</blockquote></div>
         </div>
 
         <footer class="col-md-12">

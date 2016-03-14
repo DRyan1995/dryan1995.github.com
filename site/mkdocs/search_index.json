@@ -162,7 +162,7 @@
         },
         {
             "location": "/at_company/flask_demo/",
-            "text": "My First Flask project\n\n\n\u4f7f\u7528FLASK\u548cHTML\u5b8c\u6210\u4e86TODOLIST\u7f51\u7ad9\n\n\nAbout Flask\n\n\n\n\n\n\n\n\nUse \nrequest.get[\"key\"]\n to get data when using GET Method\n\n\n\n\n\n\nUse \nrequest.form[\"key\"]\n or \nrequest.form.get(key)\n to get data when using POST Method\n\n\n\n\n\n\n\n\nAbout Jinja2",
+            "text": "My First Flask project\n\n\n\u4f7f\u7528FLASK\u548cHTML\u5b8c\u6210\u4e86TODOLIST\u7f51\u7ad9\n\n\nAbout Flask\n\n\n\n\n\n\n\n\nUse \nrequest.get[\"key\"]\n to get data when using GET Method\n\n\n\n\n\n\nUse \nrequest.form[\"key\"]\n or \nrequest.form.get(key)\n to get data when using POST Method\n\n\n\n\n\n\n\n\nAbout Jinja2\n\n\n\n\nHow To RUN the web server?\n\n\n\n\n1#\n\n\nadd \nif __name__=='main'\n\n\napp.debug = TRUE\n\n\napp.run()\n\n\npython3 run mainplatform.py\n\n\n2#\n\n\nuse \ngunicorn\n\n\ngunicorn my_project:app",
             "title": "My First Flask Program"
         },
         {
@@ -179,6 +179,11 @@
             "location": "/at_company/flask_demo/#about-jinja2",
             "text": "",
             "title": "About Jinja2"
+        },
+        {
+            "location": "/at_company/flask_demo/#how-to-run-the-web-server",
+            "text": "1#  add  if __name__=='main'  app.debug = TRUE  app.run()  python3 run mainplatform.py  2#  use  gunicorn  gunicorn my_project:app",
+            "title": "How To RUN the web server?"
         },
         {
             "location": "/readme/",
