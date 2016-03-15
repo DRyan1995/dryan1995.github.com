@@ -186,6 +186,21 @@
             "title": "How To RUN the web server?"
         },
         {
+            "location": "/at_company/about_db/",
+            "text": "Database\n\n\nHow to connect to Panpan's Database \n Some simple usage:\n\n\n\n\n\n\n\n\nPanpan's Database \nmysql -uroot -h 10.0.0.15\n\n\n\n\n\n\nMy local Database \nmysql -uroot -proot\n\n\n\n\n\n\nSHOW Databases;\n\n\n\n\n\n\nUSE Database_name\n\n\n\n\n\n\nShow Tables;\n\n\n\n\n\n\ndesc table_name\n\n\n\n\n\n\nHow to add a column in a table:\n\n\n\n\nALTER Table_name ADD Field_name data_type AFTER Field_name2\n\n\n\n\nHow to select data in a table\n\n\n\n\nSELECT * FROM table_name WHERE Field_name = value",
+            "title": "Database"
+        },
+        {
+            "location": "/at_company/about_db/#database",
+            "text": "",
+            "title": "Database"
+        },
+        {
+            "location": "/at_company/about_db/#how-to-connect-to-panpans-database-some-simple-usage",
+            "text": "Panpan's Database  mysql -uroot -h 10.0.0.15    My local Database  mysql -uroot -proot    SHOW Databases;    USE Database_name    Show Tables;    desc table_name    How to add a column in a table:   ALTER Table_name ADD Field_name data_type AFTER Field_name2   How to select data in a table   SELECT * FROM table_name WHERE Field_name = value",
+            "title": "How to connect to Panpan's Database &amp;&amp; Some simple usage:"
+        },
+        {
             "location": "/readme/",
             "text": "CONTACT ME\n\n\n\n\nIf you have any advice or ideas about my Blog, you can discuss with me.\n\n\n\n\n\n\n\n\nE-Mail : ryan951125@icloud.com\n\n\n\n\nBack To Home",
             "title": "README"

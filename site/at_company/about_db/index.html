@@ -7,14 +7,14 @@
         
         
         
-        <link rel="shortcut icon" href="../img/favicon.ico">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>README - Ryan's Blog</title>
+	<title>Database - Ryan's Blog</title>
 
-        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/highlight.css">
-        <link href="../css/base.css" rel="stylesheet">
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -41,7 +41,7 @@
             </button>
 
             <!-- Main title -->
-            <a class="navbar-brand" href="..">Ryan's Blog</a>
+            <a class="navbar-brand" href="../..">Ryan's Blog</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -51,7 +51,7 @@
             
             
                 <li >
-                    <a href="..">Index</a>
+                    <a href="../..">Index</a>
                 </li>
             
             
@@ -62,19 +62,19 @@
                     
                         
 <li >
-    <a href="../helloworld/">Hello World!</a>
+    <a href="../../helloworld/">Hello World!</a>
 </li>
 
                     
                         
 <li >
-    <a href="../set_steps/">Setting Up My First Blog</a>
+    <a href="../../set_steps/">Setting Up My First Blog</a>
 </li>
 
                     
                         
 <li >
-    <a href="../hello_world_again/">Helloworld again!</a>
+    <a href="../../hello_world_again/">Helloworld again!</a>
 </li>
 
                     
@@ -89,7 +89,7 @@
                     
                         
 <li >
-    <a href="../summeries/instructions_in_linux/">Instrutions Summeries In Linux</a>
+    <a href="../../summeries/instructions_in_linux/">Instrutions Summeries In Linux</a>
 </li>
 
                     
@@ -98,37 +98,37 @@
             
             
             
-                <li class="dropdown">
+                <li class="dropdown active">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">At Company <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         
 <li >
-    <a href="../at_company/debug_instructions/">How to start the debug server</a>
+    <a href="../debug_instructions/">How to start the debug server</a>
 </li>
 
                     
                         
 <li >
-    <a href="../at_company/git_instructions/">Git instructions</a>
+    <a href="../git_instructions/">Git instructions</a>
 </li>
 
                     
                         
 <li >
-    <a href="../at_company/about_http/">HTTP Protocol</a>
+    <a href="../about_http/">HTTP Protocol</a>
 </li>
 
                     
                         
 <li >
-    <a href="../at_company/flask_demo/">My First Flask Program</a>
+    <a href="../flask_demo/">My First Flask Program</a>
 </li>
 
                     
                         
-<li >
-    <a href="../at_company/about_db/">Database</a>
+<li class="active">
+    <a href="./">Database</a>
 </li>
 
                     
@@ -137,8 +137,8 @@
             
             
             
-                <li class="active">
-                    <a href="./">README</a>
+                <li >
+                    <a href="../../readme/">README</a>
                 </li>
             
             
@@ -152,12 +152,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../at_company/about_db/">
+                    <a rel="next" href="../flask_demo/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
-                <li class="disabled">
-                    <a rel="prev" >
+                <li >
+                    <a rel="prev" href="../../readme/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -171,22 +171,47 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#contact-me">CONTACT ME</a></li>
+        <li class="main active"><a href="#database">Database</a></li>
+        
+            <li><a href="#how-to-connect-to-panpans-database-some-simple-usage">How to connect to Panpan's Database &amp;&amp; Some simple usage:</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="contact-me">CONTACT ME</h1>
+<h1 id="database">Database</h1>
+<h2 id="how-to-connect-to-panpans-database-some-simple-usage">How to connect to Panpan's Database &amp;&amp; Some simple usage:</h2>
 <blockquote>
-<p>If you have any advice or ideas about my Blog, you can discuss with me.</p>
-</blockquote>
-<hr />
 <ul>
-<li>E-Mail : ryan951125@icloud.com</li>
+<li>
+<p>Panpan's Database <code>mysql -uroot -h 10.0.0.15</code></p>
+</li>
+<li>
+<p>My local Database <code>mysql -uroot -proot</code></p>
+</li>
+<li>
+<p><code>SHOW Databases;</code></p>
+</li>
+<li>
+<p><code>USE Database_name</code></p>
+</li>
+<li>
+<p><code>Show Tables;</code></p>
+</li>
+<li>
+<p><code>desc table_name</code></p>
+</li>
 </ul>
-<p><a href="../../index.html">Back To Home</a></p></div>
+<p>How to add a column in a table:</p>
+<ul>
+<li><code>ALTER Table_name ADD Field_name data_type AFTER Field_name2</code></li>
+</ul>
+<p>How to select data in a table</p>
+<ul>
+<li><code>SELECT * FROM table_name WHERE Field_name = value</code></li>
+</ul>
+</blockquote></div>
         </div>
 
         <footer class="col-md-12">
@@ -195,12 +220,12 @@
             <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
         </footer>
 
-        <script src="../js/jquery-1.10.2.min.js"></script>
-        <script src="../js/bootstrap-3.0.3.min.js"></script>
-        <script src="../js/highlight.pack.js"></script>
-        <script>var base_url = '..';</script>
-        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
-        <script src="../js/base.js"></script>
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
             <div class="modal-dialog">
