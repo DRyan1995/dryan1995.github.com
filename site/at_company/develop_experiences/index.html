@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Git instructions - Ryan's Blog</title>
+	<title>Experiences while develpping - Ryan's Blog</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -109,8 +109,8 @@
 
                     
                         
-<li class="active">
-    <a href="./">Git instructions</a>
+<li >
+    <a href="../git_instructions/">Git instructions</a>
 </li>
 
                     
@@ -133,8 +133,8 @@
 
                     
                         
-<li >
-    <a href="../develop_experiences/">Experiences while develpping</a>
+<li class="active">
+    <a href="./">Experiences while develpping</a>
 </li>
 
                     
@@ -158,12 +158,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../debug_instructions/">
+                    <a rel="next" href="../about_db/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../about_http/">
+                    <a rel="prev" href="../../readme/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -177,37 +177,27 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#the-git-instructions">The Git Instructions</a></li>
-        
-            <li><a href="#about-the-branch-operations">About the branch operations:</a></li>
-        
-            <li><a href="#about-the-basic-operations">About the basic operations:</a></li>
+        <li class="main active"><a href="#develop-experiences">Develop Experiences</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="the-git-instructions">The Git Instructions</h1>
-<p><em>modified on Mar 13 2016 1:17AM</em></p>
-<hr />
-<h2 id="about-the-branch-operations">About the branch operations:</h2>
+<h1 id="develop-experiences">Develop Experiences</h1>
+<p><em>Typing down what I've met and learnt in the web project</em></p>
 <blockquote>
+<p>How to get data from a POST request</p>
 <ul>
-<li>using <code>git branch</code> to check all the branches and your current branch</li>
-<li>using <code>git branch -d</code> to delete the branch that are not needed</li>
-<li>using <code>git checkout -b</code> to create or switch to another branch</li>
-<li>using <code>git branch --set-upstream-to=origin/dev dev</code> to set the relation table beween your local branch and your remote branch</li>
+<li><code>data = args_helper.check_post_data(["?reject_reason:str"])</code></li>
 </ul>
-</blockquote>
-<h2 id="about-the-basic-operations">About the basic operations:</h2>
-<blockquote>
+<p>DO NOT FORGET to check if the dict has the key!!!!</p>
 <ul>
-<li>using <code>git pull</code></li>
-<li>using <code>git push</code></li>
-<li>using <code>git init</code></li>
-<li>using <code>remote add</code></li>
-<li>ETC.....</li>
+<li><code>if "key" in data</code> and so as to use <code>data[key]</code></li>
+</ul>
+<p>How to loop n times in Python3</p>
+<ul>
+<li><code>for i in range(0,count)</code></li>
 </ul>
 </blockquote></div>
         </div>

@@ -201,6 +201,16 @@
             "title": "How to connect to Panpan's Database &amp;&amp; Some simple usage:"
         },
         {
+            "location": "/at_company/develop_experiences/",
+            "text": "Develop Experiences\n\n\nTyping down what I've met and learnt in the web project\n\n\n\n\nHow to get data from a POST request\n\n\n\n\ndata = args_helper.check_post_data([\"?reject_reason:str\"])\n\n\n\n\nDO NOT FORGET to check if the dict has the key!!!!\n\n\n\n\nif \"key\" in data\n and so as to use \ndata[key]\n\n\n\n\nHow to loop n times in Python3\n\n\n\n\nfor i in range(0,count)",
+            "title": "Experiences while develpping"
+        },
+        {
+            "location": "/at_company/develop_experiences/#develop-experiences",
+            "text": "Typing down what I've met and learnt in the web project   How to get data from a POST request   data = args_helper.check_post_data([\"?reject_reason:str\"])   DO NOT FORGET to check if the dict has the key!!!!   if \"key\" in data  and so as to use  data[key]   How to loop n times in Python3   for i in range(0,count)",
+            "title": "Develop Experiences"
+        },
+        {
             "location": "/readme/",
             "text": "CONTACT ME\n\n\n\n\nIf you have any advice or ideas about my Blog, you can discuss with me.\n\n\n\n\n\n\n\n\nE-Mail : ryan951125@icloud.com\n\n\n\n\nBack To Home",
             "title": "README"

@@ -28,5 +28,6 @@ pages:
         - HTTP Protocol: at_company/about_http.md
         - My First Flask Program: at_company/flask_demo.md
         - Database: at_company/about_db.md
+        - Experiences while develpping: at_company/develop_experiences.md
     - README: readme.md
 theme: amelia
