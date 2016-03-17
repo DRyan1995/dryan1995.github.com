@@ -97,7 +97,7 @@
         },
         {
             "location": "/at_company/git_instructions/",
-            "text": "The Git Instructions\n\n\nmodified on Mar 13 2016 1:17AM\n\n\n\n\nAbout the branch operations:\n\n\n\n\n\n\nusing \ngit branch\n to check all the branches and your current branch\n\n\nusing \ngit branch -d\n to delete the branch that are not needed\n\n\nusing \ngit checkout -b\n to create or switch to another branch\n\n\nusing \ngit branch --set-upstream-to=origin/dev dev\n to set the relation table beween your local branch and your remote branch\n\n\n\n\n\n\nAbout the basic operations:\n\n\n\n\n\n\nusing \ngit pull\n\n\nusing \ngit push\n\n\nusing \ngit init\n\n\nusing \nremote add\n\n\nETC.....",
+            "text": "The Git Instructions\n\n\nmodified on Mar 13 2016 1:17AM\n\n\n\n\nAbout the branch operations:\n\n\n\n\n\n\nusing \ngit branch\n to check all the branches and your current branch\n\n\nusing \ngit branch -d\n to delete the branch that are not needed\n\n\nusing \ngit checkout -b\n to create or switch to another branch\n\n\nusing \ngit branch --set-upstream-to=origin/dev dev\n to set the relation table beween your local branch and your remote branch\n\n\n\n\n\n\nAbout the basic operations:\n\n\n\n\n\n\nusing \ngit pull\n\n\nusing \ngit push\n\n\nusing \ngit init\n\n\nusing \nremote add\n\n\nETC.....\n\n\n\n\n\n\nHow to rollback:",
             "title": "Git instructions"
         },
         {
@@ -114,6 +114,11 @@
             "location": "/at_company/git_instructions/#about-the-basic-operations",
             "text": "using  git pull  using  git push  using  git init  using  remote add  ETC.....",
             "title": "About the basic operations:"
+        },
+        {
+            "location": "/at_company/git_instructions/#how-to-rollback",
+            "text": "",
+            "title": "How to rollback:"
         },
         {
             "location": "/at_company/about_http/",
@@ -202,7 +207,7 @@
         },
         {
             "location": "/at_company/develop_experiences/",
-            "text": "Develop Experiences\n\n\nTyping down what I've met and learnt in the web project\n\n\nAbout web server developing\n\n\n\n\nHow to get data from a POST request\n\n\n\n\ndata = args_helper.check_post_data([\"?reject_reason:str\"])\n\n\n\n\nDO NOT FORGET to check if the dict has the key!!!!\n\n\n\n\nif \"key\" in data\n and so as to use \ndata[key]\n\n\n\n\nHow to loop n times in Python3\n\n\n\n\nfor i in range(0,count)\n\n\n\n\n\n\nSOME TIPS\n\n\n\n\n\n\n\n\nPay Special Attention to the FORMAT \n NAME of coding\n\n\n\n\n\n\nDONOT FORGET CHECK GRAMMAR ONCE YOU MODIFY THE PROGRAM",
+            "text": "Develop Experiences\n\n\nTyping down what I've met and learnt in the web project\n\n\nAbout web server developing\n\n\n\n\nHow to get data from a POST request\n\n\n\n\ndata = args_helper.check_post_data([\"?reject_reason:str\"])\n\n\n\n\nDO NOT FORGET to check if the dict has the key!!!!\n\n\n\n\nif \"key\" in data\n and so as to use \ndata[key]\n\n\n\n\nHow to loop n times in Python3\n\n\n\n\nfor i in range(0,count)\n\n\n\n\n\n\nSOME TIPS\n\n\n\n\n\n\n\n\nPay Special Attention to the FORMAT \n NAME of coding\n\n\n\n\n\n\nDONOT FORGET CHECK GRAMMAR ONCE YOU MODIFY THE PROGRAM\n\n\n\n\n\n\nDONOT FORGET \nutils.gen_hash_id()\n when creating a \nHashIdModel\n\n\n\n\n\n\n\n\nGREATE EXAMPLES\n\n\nExample 1\n\n\n\n\nExample 2\n\n\n\n\nExample 3",
             "title": "Experiences while develpping"
         },
         {
@@ -217,8 +222,28 @@
         },
         {
             "location": "/at_company/develop_experiences/#some-tips",
-            "text": "Pay Special Attention to the FORMAT   NAME of coding    DONOT FORGET CHECK GRAMMAR ONCE YOU MODIFY THE PROGRAM",
+            "text": "Pay Special Attention to the FORMAT   NAME of coding    DONOT FORGET CHECK GRAMMAR ONCE YOU MODIFY THE PROGRAM    DONOT FORGET  utils.gen_hash_id()  when creating a  HashIdModel",
             "title": "SOME TIPS"
+        },
+        {
+            "location": "/at_company/develop_experiences/#greate-examples",
+            "text": "",
+            "title": "GREATE EXAMPLES"
+        },
+        {
+            "location": "/at_company/develop_experiences/#example-1",
+            "text": "",
+            "title": "Example 1"
+        },
+        {
+            "location": "/at_company/develop_experiences/#example-2",
+            "text": "",
+            "title": "Example 2"
+        },
+        {
+            "location": "/at_company/develop_experiences/#example-3",
+            "text": "",
+            "title": "Example 3"
         },
         {
             "location": "/readme/",

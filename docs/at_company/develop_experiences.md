@@ -24,8 +24,6 @@
 
 > + DONOT FORGET `utils.gen_hash_id()` when creating a `HashIdModel`
 
-> + ATTENTION
-
 ##GREATE EXAMPLES
 
 ### Example 1
@@ -35,3 +33,7 @@
 ### Example 2
 
 ![example2](/image/example_2.png)
+
+### Example 3
+
+![example3](/image/example_3.png)

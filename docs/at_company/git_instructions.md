@@ -18,3 +18,7 @@
 > - using `git init`
 > - using `remote add`
 > - ETC.....
+
+## How to rollback:
+
+![rollback_helper](/image/git_rollback.png)
