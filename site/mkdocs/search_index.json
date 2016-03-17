@@ -202,13 +202,23 @@
         },
         {
             "location": "/at_company/develop_experiences/",
-            "text": "Develop Experiences\n\n\nTyping down what I've met and learnt in the web project\n\n\n\n\nHow to get data from a POST request\n\n\n\n\ndata = args_helper.check_post_data([\"?reject_reason:str\"])\n\n\n\n\nDO NOT FORGET to check if the dict has the key!!!!\n\n\n\n\nif \"key\" in data\n and so as to use \ndata[key]\n\n\n\n\nHow to loop n times in Python3\n\n\n\n\nfor i in range(0,count)",
+            "text": "Develop Experiences\n\n\nTyping down what I've met and learnt in the web project\n\n\nAbout web server developing\n\n\n\n\nHow to get data from a POST request\n\n\n\n\ndata = args_helper.check_post_data([\"?reject_reason:str\"])\n\n\n\n\nDO NOT FORGET to check if the dict has the key!!!!\n\n\n\n\nif \"key\" in data\n and so as to use \ndata[key]\n\n\n\n\nHow to loop n times in Python3\n\n\n\n\nfor i in range(0,count)\n\n\n\n\n\n\nSOME TIPS\n\n\n\n\n\n\n\n\nPay Special Attention to the FORMAT \n NAME of coding\n\n\n\n\n\n\nDONOT FORGET CHECK GRAMMAR ONCE YOU MODIFY THE PROGRAM",
             "title": "Experiences while develpping"
         },
         {
             "location": "/at_company/develop_experiences/#develop-experiences",
-            "text": "Typing down what I've met and learnt in the web project   How to get data from a POST request   data = args_helper.check_post_data([\"?reject_reason:str\"])   DO NOT FORGET to check if the dict has the key!!!!   if \"key\" in data  and so as to use  data[key]   How to loop n times in Python3   for i in range(0,count)",
+            "text": "Typing down what I've met and learnt in the web project",
             "title": "Develop Experiences"
+        },
+        {
+            "location": "/at_company/develop_experiences/#about-web-server-developing",
+            "text": "How to get data from a POST request   data = args_helper.check_post_data([\"?reject_reason:str\"])   DO NOT FORGET to check if the dict has the key!!!!   if \"key\" in data  and so as to use  data[key]   How to loop n times in Python3   for i in range(0,count)",
+            "title": "About web server developing"
+        },
+        {
+            "location": "/at_company/develop_experiences/#some-tips",
+            "text": "Pay Special Attention to the FORMAT   NAME of coding    DONOT FORGET CHECK GRAMMAR ONCE YOU MODIFY THE PROGRAM",
+            "title": "SOME TIPS"
         },
         {
             "location": "/readme/",

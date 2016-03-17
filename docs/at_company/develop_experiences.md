@@ -2,6 +2,8 @@
 
 *Typing down what I've met and learnt in the web project*
 
+##About web server developing
+
 > How to get data from a POST request
 
 > + `data = args_helper.check_post_data(["?reject_reason:str"])`
@@ -13,3 +15,9 @@
 > How to loop n times in Python3
 
 > + `for i in range(0,count)`
+
+#SOME TIPS
+
+> + *Pay Special Attention to the FORMAT & NAME of coding*
+
+> + DONOT FORGET CHECK GRAMMAR ONCE YOU MODIFY THE PROGRAM
