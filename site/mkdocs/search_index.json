@@ -207,7 +207,7 @@
         },
         {
             "location": "/at_company/develop_experiences/",
-            "text": "Develop Experiences\n\n\nTyping down what I've met and learnt in the web project\n\n\nAbout web server developing\n\n\n\n\nHow to get data from a POST request\n\n\n\n\ndata = args_helper.check_post_data([\"?reject_reason:str\"])\n\n\n\n\nDO NOT FORGET to check if the dict has the key!!!!\n\n\n\n\nif \"key\" in data\n and so as to use \ndata[key]\n\n\n\n\nHow to loop n times in Python3\n\n\n\n\nfor i in range(0,count)\n\n\n\n\n\n\nSOME TIPS\n\n\n\n\n\n\n\n\nPay Special Attention to the FORMAT \n NAME of coding\n\n\n\n\n\n\nDONOT FORGET CHECK GRAMMAR ONCE YOU MODIFY THE PROGRAM\n\n\n\n\n\n\nDONOT FORGET \nutils.gen_hash_id()\n when creating a \nHashIdModel\n\n\n\n\n\n\n\n\nGREATE EXAMPLES\n\n\nExample 1\n\n\n\n\nExample 2\n\n\n\n\nExample 3",
+            "text": "Develop Experiences\n\n\nTyping down what I've met and learnt in the web project\n\n\nAbout web server developing\n\n\n\n\nHow to get data from a POST request\n\n\n\n\ndata = args_helper.check_post_data([\"?reject_reason:str\"])\n\n\n\n\nDO NOT FORGET to check if the dict has the key!!!!\n\n\n\n\nif \"key\" in data\n and so as to use \ndata[key]\n\n\n\n\nHow to loop n times in Python3\n\n\n\n\nfor i in range(0,n)\n\n\n\n\n\n\nSOME TIPS\n\n\n\n\n\n\n\n\nPay Special Attention to the FORMAT \n NAME of coding\n\n\n\n\n\n\nDONOT FORGET CHECK GRAMMAR ONCE YOU MODIFY THE PROGRAM\n\n\n\n\n\n\nDONOT FORGET \nutils.gen_hash_id()\n when creating a \nHashIdModel\n\n\n\n\n\n\n\n\nGREATE EXAMPLES\n\n\nExample 1\n\n\n\n\nExample 2\n\n\n\n\nExample 3",
             "title": "Experiences while develpping"
         },
         {
@@ -217,7 +217,7 @@
         },
         {
             "location": "/at_company/develop_experiences/#about-web-server-developing",
-            "text": "How to get data from a POST request   data = args_helper.check_post_data([\"?reject_reason:str\"])   DO NOT FORGET to check if the dict has the key!!!!   if \"key\" in data  and so as to use  data[key]   How to loop n times in Python3   for i in range(0,count)",
+            "text": "How to get data from a POST request   data = args_helper.check_post_data([\"?reject_reason:str\"])   DO NOT FORGET to check if the dict has the key!!!!   if \"key\" in data  and so as to use  data[key]   How to loop n times in Python3   for i in range(0,n)",
             "title": "About web server developing"
         },
         {
@@ -244,6 +244,21 @@
             "location": "/at_company/develop_experiences/#example-3",
             "text": "",
             "title": "Example 3"
+        },
+        {
+            "location": "/at_company/about_sqlalchemy/",
+            "text": "SQLAlchemy\n\n\nHOW TO CREATE TBALE:",
+            "title": "SQLAlchemy"
+        },
+        {
+            "location": "/at_company/about_sqlalchemy/#sqlalchemy",
+            "text": "",
+            "title": "SQLAlchemy"
+        },
+        {
+            "location": "/at_company/about_sqlalchemy/#how-to-create-tbale",
+            "text": "",
+            "title": "HOW TO CREATE TBALE:"
         },
         {
             "location": "/readme/",
