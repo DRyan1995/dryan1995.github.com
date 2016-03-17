@@ -16,8 +16,22 @@
 
 > + `for i in range(0,count)`
 
-#SOME TIPS
+##SOME TIPS
 
 > + *Pay Special Attention to the FORMAT & NAME of coding*
 
 > + DONOT FORGET CHECK GRAMMAR ONCE YOU MODIFY THE PROGRAM
+
+> + DONOT FORGET `utils.gen_hash_id()` when creating a `HashIdModel`
+
+> + ATTENTION
+
+##GREATE EXAMPLES
+
+### Example 1
+
+![example1](/image/example_1.png)
+
+### Example 2
+
+![example2](/image/example_2.png)
