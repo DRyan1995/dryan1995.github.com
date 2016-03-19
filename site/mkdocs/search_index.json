@@ -286,6 +286,16 @@
             "title": "Featuers:"
         },
         {
+            "location": "/at_company/about_hotkeys/",
+            "text": "Hotkeys Provided By Panpan\n\n\n\n\nM-x \u547d\u4ee4\u7a97\u53e3\n\n\nC-x C-f \u6253\u5f00\u6587\u4ef6\n\n\nC-J/K \u5207\u6362\u6807\u7b7e\n\n\nM-m/p \u5207\u6362\u7a97\u53e3\uff08\u5207\u5206\u540e\u7684\u7a97\u53e3\uff09 \u5df2\u4fee\u6539\n\n\nC-x 2 \u6c34\u5e73\u5207\u5206\n\n\nC-x 3 \u5782\u76f4\u5207\u5206\n\n\nC-x 0 \u5173\u95ed\u5207\u5206\u7a97\u53e3\n\n\nC-x k \u5173\u95ed\u6807\u7b7e\n\n\nC-t \u5728\u6253\u5f00\u7684tab\u4e2d\u5bfb\u627e\u4e00\u4e2atab\n\n\nC-M-j \u5728\u6587\u4ef6\u5185\u67e5\u627e\u5b9a\u4e49\uff08\u539f\u6765\u7684cmd-R\uff09\n\n\nC-s \u641c\u7d22\n\n\n\n\nC-M-f \u5168\u5c40\u641c\u7d22\n\n\n\n\n\n\nC-\n \u8df3\u5230\u822a\u9996\uff0c\u884c\u5c3e\n\n\n\n\n\n\nC-g \u9000\u51fa\uff08\u76f8\u5f53\u4e8eesc\uff09\n\n\n\n\nC-space \u5f00\u542f/\u5173\u95ed\u9009\u533a \uff08\u8fd9\u4e2a\u5feb\u6377\u952e\u5f88\u91cd\u8981\uff0c\u4f46\u662f\u548c\u8f93\u5165\u6cd5\u76f8\u51b2\uff0c\u4f60\u770b\u7740\u529e\uff09 \u5df2\u4fee\u6539\n\n\nC-x h \u5168\u9009\n\n\nC-w cut\n\n\n\n\nM-w copy\n\n\n\n\n\n\nC-y paste\n\n\n\n\n\n\nM-y paste-from-history\n\n\n\n\n\n\nC-/ undo \u5df2\u4fee\u6539\n\n\n\n\nC-? redo",
+            "title": "Hotkeys"
+        },
+        {
+            "location": "/at_company/about_hotkeys/#hotkeys-provided-by-panpan",
+            "text": "M-x \u547d\u4ee4\u7a97\u53e3  C-x C-f \u6253\u5f00\u6587\u4ef6  C-J/K \u5207\u6362\u6807\u7b7e  M-m/p \u5207\u6362\u7a97\u53e3\uff08\u5207\u5206\u540e\u7684\u7a97\u53e3\uff09 \u5df2\u4fee\u6539  C-x 2 \u6c34\u5e73\u5207\u5206  C-x 3 \u5782\u76f4\u5207\u5206  C-x 0 \u5173\u95ed\u5207\u5206\u7a97\u53e3  C-x k \u5173\u95ed\u6807\u7b7e  C-t \u5728\u6253\u5f00\u7684tab\u4e2d\u5bfb\u627e\u4e00\u4e2atab  C-M-j \u5728\u6587\u4ef6\u5185\u67e5\u627e\u5b9a\u4e49\uff08\u539f\u6765\u7684cmd-R\uff09  C-s \u641c\u7d22   C-M-f \u5168\u5c40\u641c\u7d22    C-  \u8df3\u5230\u822a\u9996\uff0c\u884c\u5c3e    C-g \u9000\u51fa\uff08\u76f8\u5f53\u4e8eesc\uff09   C-space \u5f00\u542f/\u5173\u95ed\u9009\u533a \uff08\u8fd9\u4e2a\u5feb\u6377\u952e\u5f88\u91cd\u8981\uff0c\u4f46\u662f\u548c\u8f93\u5165\u6cd5\u76f8\u51b2\uff0c\u4f60\u770b\u7740\u529e\uff09 \u5df2\u4fee\u6539  C-x h \u5168\u9009  C-w cut   M-w copy    C-y paste    M-y paste-from-history    C-/ undo \u5df2\u4fee\u6539   C-? redo",
+            "title": "Hotkeys Provided By Panpan"
+        },
+        {
             "location": "/readme/",
             "text": "CONTACT ME\n\n\n\n\nIf you have any advice or ideas about my Blog, you can discuss with me.\n\n\n\n\n\n\n\n\nE-Mail : ryan951125@icloud.com\n\n\n\n\nBack To Home",
             "title": "README"

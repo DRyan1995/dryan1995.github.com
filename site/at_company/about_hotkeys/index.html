@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Database - Ryan's Blog</title>
+	<title>Hotkeys - Ryan's Blog</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -127,8 +127,8 @@
 
                     
                         
-<li class="active">
-    <a href="./">Database</a>
+<li >
+    <a href="../about_db/">Database</a>
 </li>
 
                     
@@ -151,8 +151,8 @@
 
                     
                         
-<li >
-    <a href="../about_hotkeys/">Hotkeys</a>
+<li class="active">
+    <a href="./">Hotkeys</a>
 </li>
 
                     
@@ -176,12 +176,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../flask_demo/">
+                    <a rel="next" href="../docker/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../develop_experiences/">
+                    <a rel="prev" href="../../readme/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -195,59 +195,52 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#database">Database</a></li>
-        
-            <li><a href="#how-to-connect-to-panpans-database-some-simple-usage">How to connect to Panpan's Database &amp;&amp; Some simple usage:</a></li>
+        <li class="main active"><a href="#hotkeys-provided-by-panpan">Hotkeys Provided By Panpan</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="database">Database</h1>
-<h2 id="how-to-connect-to-panpans-database-some-simple-usage">How to connect to Panpan's Database &amp;&amp; Some simple usage:</h2>
-<blockquote>
+<h1 id="hotkeys-provided-by-panpan">Hotkeys Provided By Panpan</h1>
 <ul>
+<li>M-x 命令窗口</li>
+<li>C-x C-f 打开文件</li>
+<li>C-J/K 切换标签</li>
+<li>M-m/p 切换窗口（切分后的窗口） 已修改</li>
+<li>C-x 2 水平切分</li>
+<li>C-x 3 垂直切分</li>
+<li>C-x 0 关闭切分窗口</li>
+<li>C-x k 关闭标签</li>
+<li>C-t 在打开的tab中寻找一个tab</li>
+<li>C-M-j 在文件内查找定义（原来的cmd-R）</li>
+<li>C-s 搜索</li>
 <li>
-<p>Panpan's Database <code>mysql -uroot -h 10.0.0.15</code></p>
+<p>C-M-f 全局搜索</p>
 </li>
 <li>
-<p>My local Database <code>mysql -uroot -proot</code></p>
+<p>C-</> 跳到航首，行尾</p>
 </li>
 <li>
-<p><code>SHOW Databases;</code></p>
+<p>C-g 退出（相当于esc）</p>
+</li>
+<li>C-space 开启/关闭选区 （这个快捷键很重要，但是和输入法相冲，你看着办） 已修改</li>
+<li>C-x h 全选</li>
+<li>C-w cut</li>
+<li>
+<p>M-w copy</p>
 </li>
 <li>
-<p><code>USE Database_name</code></p>
+<p>C-y paste</p>
 </li>
 <li>
-<p><code>Show Tables;</code></p>
+<p>M-y paste-from-history</p>
 </li>
 <li>
-<p><code>desc table_name</code></p>
+<p>C-/ undo 已修改</p>
 </li>
-</ul>
-<p>How to add a column in a table:</p>
-<ul>
-<li><code>ALTER TABLE Table_name ADD Field_name data_type AFTER Field_name2</code></li>
-</ul>
-<p>How to select data in a table</p>
-<ul>
-<li><code>SELECT * FROM table_name WHERE Field_name = value</code></li>
-</ul>
-<p>How to update data in a table</p>
-<ul>
-<li><code>UPDATE table_name SET Field_name1 = value1 WHERE Field_name2 = value2</code></li>
-</ul>
-<p>How to modify a column name in a table</p>
-<ul>
-<li><code>ALTER TABLE table_name CHANGE Field_name1 Field_name2 Field_type</code></li>
-</ul>
-<p>How to delete a column in a table</p>
-<ul>
-<li><code>ALTER TABLE table_name DROP Field_name</code></li>
-</ul>
-</blockquote></div>
+<li>C-? redo</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">

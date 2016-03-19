@@ -31,5 +31,6 @@ pages:
         - Experiences while develpping: at_company/develop_experiences.md
         - SQLAlchemy: at_company/about_sqlalchemy.md
         - Docker: at_company/docker.md
+        - Hotkeys: at_company/about_hotkeys.md
     - README: readme.md
 theme: amelia
