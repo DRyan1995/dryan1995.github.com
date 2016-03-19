@@ -30,5 +30,6 @@ pages:
         - Database: at_company/about_db.md
         - Experiences while develpping: at_company/develop_experiences.md
         - SQLAlchemy: at_company/about_sqlalchemy.md
+        - Docker: at_company/docker.md
     - README: readme.md
 theme: amelia
