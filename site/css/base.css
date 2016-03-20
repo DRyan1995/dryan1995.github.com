@@ -62,9 +62,9 @@ div.col-md-9 img {
 
 code {
     padding: 1px 3px;
-    background: #0d747c;
-    border: solid 1px #0a565c;
-    color: #fff;
+    background: #f5f5f5;
+    border: solid 1px #ccc;
+    color: #333;
 }
 
 pre code {
@@ -73,11 +73,11 @@ pre code {
 }
 
 a > code {
-    color: #e8d069;
+    color: #eb6864;
 }
 
 a > code:hover, a > code:focus {
-    color: #debb27;
+    color: #e22620;
 }
 
 /*
