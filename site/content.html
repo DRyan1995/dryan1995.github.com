@@ -7,3 +7,17 @@
 {% endif %}
 
 {{ content }}
+
+
+
+<iframe id="myframe" src="http://localhost:5000" width="1000" name="123">
+</iframe>
+
+<script type="text/javascript">
+  var frame =  document.getElementById('myframe');
+  var pageid = document.title;
+  var url = "localhost:5000"
+  frame.src = url+'/'+pageid;
+  alert(frame.src);
+
+</script>
