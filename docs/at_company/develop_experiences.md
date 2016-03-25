@@ -24,6 +24,8 @@
 
 > + DONOT FORGET `utils.gen_hash_id()` when creating a `HashIdModel`
 
+> + Use `args_helper.check_post_data(["key1","key2:type'])` to get body json content
+
 ##GREATE EXAMPLES
 
 ### Example 1
