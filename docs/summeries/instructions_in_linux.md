@@ -12,14 +12,14 @@
 
 - `"rm -f"`
 > *remove -f +filenames*
-> *(deleting files by name)* 
+> *(deleting files by name)*
 
 - `"rm -rf"`
 > *Being used to delete folders*
 
 
 - `"df -h"`
-> *show the disk usage condition* 
+> *show the disk usage condition*
 
 - `"ssh root@192.168.0.120"`
 > *remotely connect the linux terminal by "usr@ipaddress"*
@@ -43,3 +43,6 @@
 
 - `"zip -r target_name.zip source_folder_name"`
 > *being used to zip folders*
+
+- `nohup command &`
+> *being used to run command backgroud when ssh*
