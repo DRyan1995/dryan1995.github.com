@@ -58,4 +58,8 @@ very convenient:
 
 1. `pip install shadowsocks`
 2. `ssserver -p 8000 -k password -m rc4-md5 -d start`
- 
+
+On MACOSX: Simply use ShadowsocksX
+On Ubuntu:
+1. `sudo apt-get install shadowsocks-qt5`
+2. <a href="http://blog.csdn.net/weiqiangsu/article/details/46956977">browse the website for a solution</a>
