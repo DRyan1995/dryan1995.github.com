@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Database - Ryan's Blog</title>
+	<title>Build VPN - Ryan's Blog</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -127,8 +127,8 @@
 
                     
                         
-<li class="active">
-    <a href="./">Database</a>
+<li >
+    <a href="../about_db/">Database</a>
 </li>
 
                     
@@ -157,8 +157,8 @@
 
                     
                         
-<li >
-    <a href="../steps_to_build_vpn/">Build VPN</a>
+<li class="active">
+    <a href="./">Build VPN</a>
 </li>
 
                     
@@ -182,12 +182,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../flask_demo/">
+                    <a rel="next" href="../about_hotkeys/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../develop_experiences/">
+                    <a rel="prev" href="../../readme/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -201,59 +201,89 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#database">Database</a></li>
+        <li class="main active"><a href="#how-to-build-your-own-vpn">How To Build Your Own VPN</a></li>
         
-            <li><a href="#how-to-connect-to-panpans-database-some-simple-usage">How to connect to Panpan's Database &amp;&amp; Some simple usage:</a></li>
+            <li><a href="#using-pptpweak-sercurity">Using PPTP(weak sercurity)</a></li>
+        
+            <li><a href="#using-shadowsocks">Using ShadowSocks</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="database">Database</h1>
-<h2 id="how-to-connect-to-panpans-database-some-simple-usage">How to connect to Panpan's Database &amp;&amp; Some simple usage:</h2>
-<blockquote>
-<ul>
+<h1 id="how-to-build-your-own-vpn">How To Build Your Own VPN</h1>
+<h2 id="using-pptpweak-sercurity">Using PPTP(weak sercurity)</h2>
+<ol>
 <li>
-<p>Panpan's Database <code>mysql -uroot -h 10.0.0.15</code></p>
+<p>安装pptpd，这是个VPN服务器端软件
+<code>sudo apt-get install pptpd</code></p>
 </li>
 <li>
-<p>My local Database <code>mysql -uroot -proot</code></p>
+<p>修改文件 /etc/pptpd.conf
+<code>sudo vi /etc/pptpd.conf</code>
+找到# TAG: localip一行，在后面添加以下2行：
+<code>localip 192.168.0.1</code>
+<code>remoteip 192.168.0.234-238,192.168.0.245</code></p>
 </li>
 <li>
-<p><code>SHOW Databases;</code></p>
+<p>修改文件 /etc/ppp/pptpd-options
+<code>sudo vi /etc/ppp/pptpd-options</code>
+找到 #ms-dns这行，去掉前面的#号，修改成google提供的DNS server或其他DNS：
+<code>ms-dns 8.8.8.8</code>
+<code>ms-dns 8.8.4.4</code></p>
 </li>
 <li>
-<p><code>USE Database_name</code></p>
+<p>修改文件 /etc/ppp/chap-secrets，按一行四列添加账号、服务器名、密码和IP限制。服务器名（默认 写pptpd 即可，务必与pptpd-options 文件的name一行一样）。如创建一个名为user，密码为userpasswd，不限制登录IP的VPN账号：
+<code>user pptpd userpasswd *</code></p>
 </li>
 <li>
-<p><code>Show Tables;</code></p>
+<p>修改文件 /etc/sysctl.conf，去掉这一行<code>#net.ipv4.ip_forward=1</code> 的#号，开启ipv4 forward，然后运行命令：
+<code>sudo sysctl –p</code>
+运行后会显示 net.ipv4.ip_forward = 1，就表示修改生效了。</p>
 </li>
 <li>
-<p><code>desc table_name</code></p>
+<p>使用iptables建立一个NAT
+<code>sudo apt-get install iptables</code>
+<code>iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o eth0 -j MASQUERADE</code>
+上面的24表示子网掩码，代表24个1.
+eth0是网卡名字，可以通过命令 ifconfig 查看 （插播悲剧：server的是eth1，我写的eth0，搞了很久client都不能通过VPN server连到外网，原因竟然是这个）
+为防止重启服务器后iptables丢失，先运行
+<code>iptables-save &gt; /etc/iptables-rules</code>
+然后修改文件 /etc/network/interfaces ，在eth0/eth1.. 下面加入
+<code>pre-up iptables-restore &lt; /etc/iptables-rules</code></p>
 </li>
-</ul>
-<p>How to add a column in a table:</p>
-<ul>
-<li><code>ALTER TABLE Table_name ADD Field_name data_type AFTER Field_name2</code></li>
-</ul>
-<p>How to select data in a table</p>
-<ul>
-<li><code>SELECT * FROM table_name WHERE Field_name = value</code></li>
-</ul>
-<p>How to update data in a table</p>
-<ul>
-<li><code>UPDATE table_name SET Field_name1 = value1 WHERE Field_name2 = value2</code></li>
-</ul>
-<p>How to modify a column name in a table</p>
-<ul>
-<li><code>ALTER TABLE table_name CHANGE Field_name1 Field_name2 Field_type</code></li>
-</ul>
-<p>How to delete a column in a table</p>
-<ul>
-<li><code>ALTER TABLE table_name DROP Field_name</code></li>
-</ul>
-</blockquote></div>
+<li>
+<p>现在应该就搞定了。
+不放心的话可以重启 server，或者重启 pptpd
+<code>sudo /etc/init.d/pptpd restart</code></p>
+</li>
+<li>
+<p>在client端设置连接VPN进行测试，client是Ubuntu的话请看这里</p>
+</li>
+<li>
+<p>测试是否可以连接到VPN server：
+<code>ping server_IP</code>
+不能的话，问题应该出在前4步。</p>
+</li>
+<li>
+<p>测试是否可以连接到外网：
+<code>ping 8.8.8.8</code>（任何其他外网IP都行）
+不能的话，问题应该出在第5-6步，看看是否正确设置了 ipv4 forward</p>
+</li>
+<li>
+<p>测试是否可以解析DNS：
+<code>nslookup google.com</code>
+不能的话，应该是服务器端的DNS设置有问题。</p>
+</li>
+</ol>
+<h2 id="using-shadowsocks">Using ShadowSocks</h2>
+<p><strong>coming soon</strong></p>
+<p>very convenient:</p>
+<ol>
+<li><code>pip install shadowsocks</code></li>
+<li><code>ssserver -p 8000 -k password -m rc4-md5 -d start</code></li>
+</ol></div>
         </div>
 
         <footer class="col-md-12">

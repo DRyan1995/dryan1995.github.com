@@ -54,4 +54,8 @@ eth0是网卡名字，可以通过命令 ifconfig 查看 （插播悲剧：serve
 ## Using ShadowSocks
 **coming soon**
 
-*I Will solve this when am free*
+very convenient:
+
+1. `pip install shadowsocks`
+2. `ssserver -p 8000 -k password -m rc4-md5 -d start`
+ 
