@@ -29,3 +29,5 @@
 > use *gunicorn*
 
 > `gunicorn my_project:app`
+
+<a href="http://xiaorui.cc/2014/11/22/%E7%94%A8gunicorn%E5%92%8Cgevent%E6%8F%90%E9%AB%98python-web%E6%A1%86%E6%9E%B6%E7%9A%84%E6%80%A7%E8%83%BD/">Details about gunicorn</a> 
