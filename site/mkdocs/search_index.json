@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/",
-            "text": "Welcome to Ryan's Blog\n\n\n\n\nSwiftly Recording Moments In  My  Life...  \n\n\n\n\n\nMy writing team",
+            "text": "Welcome to Ryan's Blog\n\n\n\n\nSwiftly Recording Moments In  My  Life...  \n\n\n\n\n\n\nMy team: \n\nMy Writing Team\n\n\n\nMy Github: \n My Github",
             "title": "Index"
         },
         {
             "location": "/#welcome-to-ryans-blog",
-            "text": "Swiftly Recording Moments In  My  Life...     \nMy writing team",
+            "text": "Swiftly Recording Moments In  My  Life...      My team:  \nMy Writing Team  My Github:   My Github",
             "title": "Welcome to Ryan's Blog"
         },
         {
