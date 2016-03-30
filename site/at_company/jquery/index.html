@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Docker - Ryan's Blog</title>
+	<title>JQUERY - Ryan's Blog</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -145,8 +145,8 @@
 
                     
                         
-<li class="active">
-    <a href="./">Docker</a>
+<li >
+    <a href="../docker/">Docker</a>
 </li>
 
                     
@@ -163,8 +163,8 @@
 
                     
                         
-<li >
-    <a href="../jquery/">JQUERY</a>
+<li class="active">
+    <a href="./">JQUERY</a>
 </li>
 
                     
@@ -188,12 +188,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../about_sqlalchemy/">
+                    <a rel="next" href="../steps_to_build_vpn/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../about_hotkeys/">
+                    <a rel="prev" href="../../readme/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -207,66 +207,56 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#about-docker">About Docker</a></li>
+        <li class="main active"><a href="#jquery">JQUERY</a></li>
         
-            <li><a href="#difference-from-common-vm">Difference From common VM</a></li>
-        
-            <li><a href="#arch-of-docker">Arch of Docker</a></li>
-        
-            <li><a href="#featuers">Featuers:</a></li>
+            <li><a href="#tips">Tips:</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="about-docker">About Docker</h1>
-<h2 id="difference-from-common-vm">Difference From common VM</h2>
-<p><img alt="difference" src="../../image/docker_comparison.png" /></p>
-<blockquote>
-<ul>
+<h1 id="jquery">JQUERY</h1>
+<h2 id="tips">Tips:</h2>
+<ol>
 <li>
-<p>VM是完整运行在宿主机上的完整操作系统，会消耗较多的CPU内存。</p>
+<p>USE trim to remove all the spaces when comparing strings</p>
+<pre><code>if(circlename_up.trim() != top_string.trim())
+{
+  $(this).parent().parent().prev().children().first().text(circlename_down);
+  $(this).parent().prev().text(circlename_up);
+}
+</code></pre>
 </li>
 <li>
-<p>Docker不同，只包含应用程序层以及依赖库，相对来说隔离效果不如VM以及log方面也不灵活</p>
-</li>
-</ul>
-</blockquote>
-<h2 id="arch-of-docker">Arch of Docker</h2>
-<ul>
-<li>
-<p>Obviously its a C/S mode</p>
-</li>
-<li>
-<p>To some extent it's like git</p>
-</li>
-</ul>
-<p><img alt="arch" src="../../image/docker_arch.png" /></p>
-<h2 id="featuers">Featuers:</h2>
-<ul>
-<li>
-<p>文件系统隔离：每个进程容器运行在完全独立的根文件系统里。</p>
-</li>
-<li>
-<p>资源隔离：可以使用cgroup为每个进程容器分配不同的系统资源，例如CPU和内存。</p>
-</li>
-<li>
-<p>网络隔离：每个进程容器运行在自己的网络命名空间里，拥有自己的虚拟接口和IP地址。</p>
+<p>DO NOT FORGET TO REDECLARE METHODS WHEN YOU CREATE IT USING DOM</p>
+<pre><code>function insert_circle_li(){
+    circle_info_li = circle_info_li1 + circle_name + circle_info_li2;
+    $("#circle_info_wrapper").append(circle_info_li);
+
+    $(".mybtn_del").click(function(){
+        $(this).parent().parent().hide();
+    });
+
+    $(".mybtn_up_c").click(function(){
+        var circlename_down = $(this).parent().prev().text();
+        var circlename_up = $(this).parent().parent().prev().children().first().text();
+        var top_string = "分类设置";
+        if(circlename_up.trim() != top_string.trim())
+        {
+          $(this).parent().parent().prev().children().first().text(circlename_down);
+          $(this).parent().prev().text(circlename_up);
+        }
+    });
+
+}
+</code></pre>
 </li>
 <li>
-<p>写时复制：采用写时复制方式创建根文件系统，这让部署变得极其快捷，并且节省内存和硬盘空间。</p>
+<p>A very USEFUL TOOL (CONVERT html to js):
+<a href="http://www.css88.com/tool/html2js/" target="_blank">Click Here!</a></p>
 </li>
-<li>
-<p>日志记录：Docker将会收集和记录每个进程容器的标准流（stdout/stderr/stdin），用于实时检索或批量检索。</p>
-</li>
-<li>
-<p>变更管理：容器文件系统的变更可以提交到新的映像中，并可重复使用以创建更多的容器。无需使用模板或手动配置。</p>
-</li>
-<li>
-<p>交互式Shell：Docker可以分配一个虚拟终端并关联到任何容器的标准输入上，例如运行一个一次性交互shell。</p>
-</li>
-</ul></div>
+</ol></div>
         </div>
 
         <footer class="col-md-12">
