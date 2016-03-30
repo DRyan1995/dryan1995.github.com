@@ -100,6 +100,15 @@
     <url>
      <loc>None/at_company/steps_to_build_vpn/</loc>
      <lastmod>2016-03-30</lastmod>
+<<<<<<< HEAD
+=======
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/at_company/jquery/</loc>
+     <lastmod>2016-03-30</lastmod>
+>>>>>>> 32a475755e74f75ea34f364beec968cea8f07d17
      <changefreq>daily</changefreq>
     </url>
         

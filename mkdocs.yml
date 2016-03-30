@@ -33,5 +33,6 @@ pages:
         - Docker: at_company/docker.md
         - Hotkeys: at_company/about_hotkeys.md
         - Build VPN: at_company/steps_to_build_vpn.md
+        - JQUERY: at_company/jquery.md
     - README: readme.md
 theme: journal
