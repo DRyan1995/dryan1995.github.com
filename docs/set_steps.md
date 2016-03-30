@@ -2,7 +2,7 @@
 
 *Modified on 2016.1.1*
 
-![My_Web](image/My_Blog.png)
+![My_Web](http://120.27.114.115:8088/myblog/My_Blog.png)
 
 ## Step 1:
 
@@ -21,5 +21,4 @@
 -  Start the Server by using "mkdocs serve -a 0.0.0.0:80"
 
 
-## Just Enjoy it!!! 
-
+## Just Enjoy it!!!

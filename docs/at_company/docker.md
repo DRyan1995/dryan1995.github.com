@@ -2,7 +2,7 @@
 
 ## Difference From common VM
 
-![difference](/image/docker_comparison.png)
+![difference](http://120.27.114.115:8088/myblog/docker_comparison.png)
 
 > + VM是完整运行在宿主机上的完整操作系统，会消耗较多的CPU内存。
 
@@ -14,7 +14,7 @@
 
 + To some extent it's like git
 
-![arch](/image/docker_arch.png)
+![arch](http://120.27.114.115:8088/myblog/docker_arch.png)
 
 ## Featuers:
 

@@ -9,7 +9,7 @@ Swiftly Recording Moments In  My  Life...
 
 
 
-![mylife](image/mylife.jpg)
+![mylife](http://120.27.114.115:8088/myblog/mylife.jpg)
 
 - My team: <a href="http://janetym.com:1125">
 My Writing Team

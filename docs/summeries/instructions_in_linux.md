@@ -32,7 +32,7 @@
 > *change the file permission so that it can be excuted*
 
 
-- ![sharefolder](/image/share_folder.png)
+- ![sharefolder](http://120.27.114.115:8088/myblog/share_folder.png)
 > *how to share folder with Windows*
 
 - `"g++ -g sourcename -o targetname"`

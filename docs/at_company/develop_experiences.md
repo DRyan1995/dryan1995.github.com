@@ -30,12 +30,12 @@
 
 ### Example 1
 
-![example1](/image/example_1.png)
+![example1](http://120.27.114.115:8088/myblog/example_1.png)
 
 ### Example 2
 
-![example2](/image/example_2.png)
+![example2](http://120.27.114.115:8088/myblog/example_2.png)
 
 ### Example 3
 
-![example3](/image/example_3.png)
+![example3](http://120.27.114.115:8088/myblog/example_3.png)

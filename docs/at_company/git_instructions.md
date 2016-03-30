@@ -21,4 +21,4 @@
 
 ## How to rollback:
 
-![rollback_helper](/image/git_rollback.png)
+![rollback_helper](http://120.27.114.115:8088/myblog/git_rollback.png)
