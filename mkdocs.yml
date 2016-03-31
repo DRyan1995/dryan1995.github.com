@@ -22,19 +22,20 @@ pages:
     #     - 2016.3.13: 2016_3/13.md
     - FPGA:
         - Smart Home: fpga_programmes/smarthome.md
-    - Linux:
-        - Instrutions Summeries: summeries/instructions_in_linux.md
+    - LINUX:
+        - INSTRUCTIONS: summeries/instructions_in_linux.md
     - WEB:
-        - How to start the debug server: at_company/debug_instructions.md
-        - Git instructions: at_company/git_instructions.md
+        - HOW TO RUN DEBUG SERVER: at_company/debug_instructions.md
+        - Git: at_company/git_instructions.md
         - HTTP Protocol: at_company/about_http.md
         - My First Flask Program: at_company/flask_demo.md
-        - Database: at_company/about_db.md
-        - Experiences while develpping: at_company/develop_experiences.md
+        - DATABASE: at_company/about_db.md
+        - EXPERIENCES: at_company/develop_experiences.md
         - SQLAlchemy: at_company/about_sqlalchemy.md
-        - Docker: at_company/docker.md
-        - Hotkeys: at_company/about_hotkeys.md
-        - Build VPN: at_company/steps_to_build_vpn.md
+        - DOCKER: at_company/docker.md
+        - HOTKEYS: at_company/about_hotkeys.md
+        - VPN: at_company/steps_to_build_vpn.md
         - JQUERY: at_company/jquery.md
+        - CSS: at_company/css.md
     - README: readme.md
 theme: journal

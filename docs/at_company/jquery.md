@@ -2,7 +2,7 @@
 
 ##Tips:
 
-1. USE trim to remove all the spaces when comparing strings
+### 1. USE trim to remove all the spaces when comparing strings
 
         if(circlename_up.trim() != top_string.trim())
         {
@@ -10,7 +10,7 @@
           $(this).parent().prev().text(circlename_up);
         }
 
-2. DO NOT FORGET TO REDECLARE METHODS WHEN YOU CREATE IT USING DOM
+### 2. DO NOT FORGET TO REDECLARE METHODS WHEN YOU CREATE IT USING DOM
 
         function insert_circle_li(){
             circle_info_li = circle_info_li1 + circle_name + circle_info_li2;
@@ -33,5 +33,12 @@
 
         }
 
-3. A very USEFUL TOOL (CONVERT html to js):
-<a href="http://www.css88.com/tool/html2js/" target="_blank">Click Here!</a>
+### 3. A USEFUL TOOL:
+
+*convert html to js var*
+
+[CLICK HERE](http://www.css88.com/tool/html2js/)
+
+### 4. HOW TO REDIRECT:
+
+    window.location.href = "http://ryan95.com:8080"
