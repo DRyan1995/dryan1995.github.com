@@ -46,3 +46,5 @@
 
 - `nohup command &`
 > *being used to run command backgroud when ssh*
+
+- USE PM2 INSTEAD
