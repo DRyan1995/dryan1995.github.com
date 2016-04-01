@@ -407,7 +407,7 @@
         },
         {
             "location": "/at_company/css/",
-            "text": "CSS\n\n\nMY FIRST CSS PROGRAM\n\n\nCLICKHERE (USE PHONE VIEW FOR BETTER DISPLAY)\n\n\nInteresting\n\n\n1. ROUND PIC\n\n\nHow To Turn a rectangle pic into a round one:\n\n\n    .circular--landscape{\n        display:inline-block;\n        position:relative;\n        width:200px;\n        height:200px;\n        overflow:hidden;\n        border-radius:50%;\n    }\n\n    .circular--landscape img{\n        width:auto;\n        height:100%;\n        margin-left:-50%;\n    }\n\n\n\n2. DISPLAY\n\n\nGet to know the difference between inline and block\n\n\nUSE BOTH WHEN MAKING A HTML WITH DIV\n\n\nAVOID FLEX WHEN DEVELOPPING\n\n\n3. AVOID EXTRA CONTENT\n\n\nusing overflow\n\n\noverflow:hidden\n\n\n4. PADDING AND MARGIN\n\n\nDistinguish them\n\n\n5. SELECTOR\n\n\nCSS SELECTOR REFERENCE",
+            "text": "CSS\n\n\nMY FIRST CSS PROGRAM\n\n\nCLICKHERE (USE PHONE VIEW FOR BETTER DISPLAY)\n\n\nInteresting\n\n\n1. ROUND PIC\n\n\nHow To Turn a rectangle pic into a round one:\n\n\n    .circular--landscape{\n        display:inline-block;\n        position:relative;\n        width:200px;\n        height:200px;\n        overflow:hidden;\n        border-radius:50%;\n    }\n\n    .circular--landscape img{\n        width:auto;\n        height:100%;\n        margin-left:-50%;\n    }\n\n\n\n2. DISPLAY\n\n\nGet to know the difference between inline and block\n\n\nUSE BOTH WHEN MAKING A HTML WITH DIV\n\n\nAVOID FLEX WHEN DEVELOPPING\n\n\n3. AVOID EXTRA CONTENT\n\n\nusing overflow\n\n\noverflow:hidden\n\n\n4. PADDING AND MARGIN\n\n\nDistinguish them\n\n\n5. SELECTOR\n\n\nCSS SELECTOR REFERENCE\n\n\n6. DEAL WITH OVERFLOW\n\n\nSET:\n\n\noverflow-y:auto",
             "title": "CSS"
         },
         {
@@ -444,6 +444,11 @@
             "location": "/at_company/css/#5-selector",
             "text": "CSS SELECTOR REFERENCE",
             "title": "5. SELECTOR"
+        },
+        {
+            "location": "/at_company/css/#6-deal-with-overflow",
+            "text": "SET:  overflow-y:auto",
+            "title": "6. DEAL WITH OVERFLOW"
         },
         {
             "location": "/at_company/node/",

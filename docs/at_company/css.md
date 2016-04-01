@@ -46,3 +46,9 @@
 ###5. SELECTOR
 
 [CSS SELECTOR REFERENCE](http://www.w3schools.com/cssref/css_selectors.asp)
+
+###6. DEAL WITH OVERFLOW
+
+SET:
+
+`overflow-y:auto`
