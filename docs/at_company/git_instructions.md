@@ -3,6 +3,9 @@
 *modified on Mar 13 2016 1:17AM*
 
 ---
+## About config the editor:
+
+`$ git config --global core.editor emacs`
 
 ## About the branch operations:
 

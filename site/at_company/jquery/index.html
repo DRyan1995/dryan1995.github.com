@@ -99,12 +99,12 @@
             
             
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">LINUX <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         
 <li >
-    <a href="../../summeries/instructions_in_linux/">Instrutions Summeries</a>
+    <a href="../../summeries/instructions_in_linux/">INSTRUCTIONS</a>
 </li>
 
                     
@@ -119,13 +119,13 @@
                     
                         
 <li >
-    <a href="../debug_instructions/">How to start the debug server</a>
+    <a href="../debug_instructions/">HOW TO RUN DEBUG SERVER</a>
 </li>
 
                     
                         
 <li >
-    <a href="../git_instructions/">Git instructions</a>
+    <a href="../git_instructions/">Git</a>
 </li>
 
                     
@@ -143,13 +143,13 @@
                     
                         
 <li >
-    <a href="../about_db/">Database</a>
+    <a href="../about_db/">DATABASE</a>
 </li>
 
                     
                         
 <li >
-    <a href="../develop_experiences/">Experiences while develpping</a>
+    <a href="../develop_experiences/">EXPERIENCES</a>
 </li>
 
                     
@@ -161,25 +161,43 @@
                     
                         
 <li >
-    <a href="../docker/">Docker</a>
+    <a href="../docker/">DOCKER</a>
 </li>
 
                     
                         
 <li >
-    <a href="../about_hotkeys/">Hotkeys</a>
+    <a href="../about_hotkeys/">HOTKEYS</a>
 </li>
 
                     
                         
 <li >
-    <a href="../steps_to_build_vpn/">Build VPN</a>
+    <a href="../steps_to_build_vpn/">VPN</a>
 </li>
 
                     
                         
 <li class="active">
     <a href="./">JQUERY</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../css/">CSS</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../node/">NODE</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../nginx/">Nginx</a>
 </li>
 
                     
@@ -208,7 +226,7 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../../readme/">
+                    <a rel="prev" href="../css/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -233,45 +251,41 @@
 
 <h1 id="jquery">JQUERY</h1>
 <h2 id="tips">Tips:</h2>
-<ol>
-<li>
-<p>USE trim to remove all the spaces when comparing strings</p>
-<pre><code>if(circlename_up.trim() != top_string.trim())
-{
-  $(this).parent().parent().prev().children().first().text(circlename_down);
-  $(this).parent().prev().text(circlename_up);
-}
+<h3 id="1-use-trim-to-remove-all-the-spaces-when-comparing-strings">1. USE trim to remove all the spaces when comparing strings</h3>
+<pre><code>    if(circlename_up.trim() != top_string.trim())
+    {
+      $(this).parent().parent().prev().children().first().text(circlename_down);
+      $(this).parent().prev().text(circlename_up);
+    }
 </code></pre>
-</li>
-<li>
-<p>DO NOT FORGET TO REDECLARE METHODS WHEN YOU CREATE IT USING DOM</p>
-<pre><code>function insert_circle_li(){
-    circle_info_li = circle_info_li1 + circle_name + circle_info_li2;
-    $("#circle_info_wrapper").append(circle_info_li);
+<h3 id="2-do-not-forget-to-redeclare-methods-when-you-create-it-using-dom">2. DO NOT FORGET TO REDECLARE METHODS WHEN YOU CREATE IT USING DOM</h3>
+<pre><code>    function insert_circle_li(){
+        circle_info_li = circle_info_li1 + circle_name + circle_info_li2;
+        $("#circle_info_wrapper").append(circle_info_li);
 
-    $(".mybtn_del").click(function(){
-        $(this).parent().parent().hide();
-    });
+        $(".mybtn_del").click(function(){
+            $(this).parent().parent().hide();
+        });
 
-    $(".mybtn_up_c").click(function(){
-        var circlename_down = $(this).parent().prev().text();
-        var circlename_up = $(this).parent().parent().prev().children().first().text();
-        var top_string = "分类设置";
-        if(circlename_up.trim() != top_string.trim())
-        {
-          $(this).parent().parent().prev().children().first().text(circlename_down);
-          $(this).parent().prev().text(circlename_up);
-        }
-    });
+        $(".mybtn_up_c").click(function(){
+            var circlename_down = $(this).parent().prev().text();
+            var circlename_up = $(this).parent().parent().prev().children().first().text();
+            var top_string = "分类设置";
+            if(circlename_up.trim() != top_string.trim())
+            {
+              $(this).parent().parent().prev().children().first().text(circlename_down);
+              $(this).parent().prev().text(circlename_up);
+            }
+        });
 
-}
+    }
 </code></pre>
-</li>
-<li>
-<p>A very USEFUL TOOL (CONVERT html to js):
-<a href="http://www.css88.com/tool/html2js/" target="_blank">Click Here!</a></p>
-</li>
-</ol></div>
+<h3 id="3-a-useful-tool">3. A USEFUL TOOL:</h3>
+<p><em>convert html to js var</em></p>
+<p><a href="http://www.css88.com/tool/html2js/">CLICK HERE</a></p>
+<h3 id="4-how-to-redirect">4. HOW TO REDIRECT:</h3>
+<pre><code>window.location.href = "http://ryan95.com:8080"
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">

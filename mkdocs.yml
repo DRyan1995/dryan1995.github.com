@@ -37,5 +37,7 @@ pages:
         - VPN: at_company/steps_to_build_vpn.md
         - JQUERY: at_company/jquery.md
         - CSS: at_company/css.md
+        - NODE: at_company/node.md
+        - Nginx: at_company/nginx.md
     - README: readme.md
 theme: journal
