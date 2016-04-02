@@ -2,7 +2,7 @@
 
 ## Pics & Video
 
-[Click HERE TO View Our Instrution Video](http://120.27.114.115:8088/smarthome/ourvideo.mp4)
+[CLICK HERE TO View Our Instrution Video （PLEASE DOWNLOAD IT FIRST）](http://120.27.114.115:8088/smarthome/ourvideo.mp4)
 
 ![boardpic](http://120.27.114.115:8088/smarthome/shboard.jpeg)
 
