@@ -21,7 +21,7 @@
 
 ### 1. HOW TO DIVIDE A HTML INTO 3 PIECES
 
-![layout](http://120.27.114.115:8088//proj/layout.png)
+![layout](http://120.27.114.115:8088/proj/layout.png)
 
 **DO NOT FORGET TO MAKE MIDDLE DIV THE LAST ONE!!**
 
