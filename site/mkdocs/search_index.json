@@ -117,12 +117,12 @@
         },
         {
             "location": "/summeries/instructions_in_linux/",
-            "text": "Handbook for Linux Instructions\n\n\nmodified on 2016.1.2\n\n\n\n\n\n\n\n\n\"cd\"\n\n\n\n\nchange dir\n\n\n\n\n\n\n\n\n\"ls\"\n\n\n\n\nList Files\n\n\n\n\n\n\n\n\n\"rm -f\"\n\n\n\n\nremove -f +filenames\n\n\n(deleting files by name)\n\n\n\n\n\n\n\n\n\"rm -rf\"\n\n\n\n\nBeing used to delete folders\n\n\n\n\n\n\n\n\n\"df -h\"\n\n\n\n\nshow the disk usage condition\n\n\n\n\n\n\n\n\n\"ssh root@192.168.0.120\"\n\n\n\n\nremotely connect the linux terminal by \"usr@ipaddress\"\n\n\n\n\n\n\n\n\n\"scp my_file_name root@192.168.1.120:/home/root\"\n\n\n\n\nremotely copy a file to the account on the ip\n\n\n\n\n\n\n\n\n\"chmod +x my_file_name\"\n\n\n\n\nchange the file permission so that it can be excuted\n\n\n\n\n\n\n\n\n\n\n\n\nhow to share folder with Windows\n\n\n\n\n\n\n\n\n\"g++ -g sourcename -o targetname\"\n\n\n\n\nbeing used to build cpp projects with gdb\n\n\n\n\n\n\n\n\n\"python3 -m http.server port\"\n\n\n\n\nbeing used to create a server to share files\n\n\n\n\n\n\n\n\n\"zip -r target_name.zip source_folder_name\"\n\n\n\n\nbeing used to zip folders\n\n\n\n\n\n\n\n\nnohup command \n\n\n\n\nbeing used to run command backgroud when ssh",
+            "text": "Handbook for Linux Instructions\n\n\nmodified on 2016.1.2\n\n\n\n\n\n\n\n\n\"cd\"\n\n\n\n\nchange dir\n\n\n\n\n\n\n\n\n\"ls\"\n\n\n\n\nList Files\n\n\n\n\n\n\n\n\n\"rm -f\"\n\n\n\n\nremove -f +filenames\n\n\n(deleting files by name)\n\n\n\n\n\n\n\n\n\"rm -rf\"\n\n\n\n\nBeing used to delete folders\n\n\n\n\n\n\n\n\n\"df -h\"\n\n\n\n\nshow the disk usage condition\n\n\n\n\n\n\n\n\n\"ssh root@192.168.0.120\"\n\n\n\n\nremotely connect the linux terminal by \"usr@ipaddress\"\n\n\n\n\n\n\n\n\n\"scp my_file_name root@192.168.1.120:/home/root\"\n\n\n\n\nremotely copy a file to the account on the ip\n\n\n\n\n\n\n\n\n\"chmod +x my_file_name\"\n\n\n\n\nchange the file permission so that it can be excuted\n\n\n\n\n\n\n\n\n\n\n\n\nhow to share folder with Windows\n\n\n\n\n\n\n\n\n\"g++ -g sourcename -o targetname\"\n\n\n\n\nbeing used to build cpp projects with gdb\n\n\n\n\n\n\n\n\n\"python3 -m http.server port\"\n\n\n\n\nbeing used to create a server to share files\n\n\n\n\n\n\n\n\n\"zip -r target_name.zip source_folder_name\"\n\n\n\n\nbeing used to zip folders\n\n\n\n\n\n\n\n\nnohup command \n\n\n\n\nbeing used to run command backgroud when ssh\n\n\n\n\n\n\n\n\nUSE PM2 INSTEAD",
             "title": "INSTRUCTIONS"
         },
         {
             "location": "/summeries/instructions_in_linux/#handbook-for-linux-instructions",
-            "text": "modified on 2016.1.2     \"cd\"   change dir     \"ls\"   List Files     \"rm -f\"   remove -f +filenames  (deleting files by name)     \"rm -rf\"   Being used to delete folders     \"df -h\"   show the disk usage condition     \"ssh root@192.168.0.120\"   remotely connect the linux terminal by \"usr@ipaddress\"     \"scp my_file_name root@192.168.1.120:/home/root\"   remotely copy a file to the account on the ip     \"chmod +x my_file_name\"   change the file permission so that it can be excuted       how to share folder with Windows     \"g++ -g sourcename -o targetname\"   being used to build cpp projects with gdb     \"python3 -m http.server port\"   being used to create a server to share files     \"zip -r target_name.zip source_folder_name\"   being used to zip folders     nohup command    being used to run command backgroud when ssh",
+            "text": "modified on 2016.1.2     \"cd\"   change dir     \"ls\"   List Files     \"rm -f\"   remove -f +filenames  (deleting files by name)     \"rm -rf\"   Being used to delete folders     \"df -h\"   show the disk usage condition     \"ssh root@192.168.0.120\"   remotely connect the linux terminal by \"usr@ipaddress\"     \"scp my_file_name root@192.168.1.120:/home/root\"   remotely copy a file to the account on the ip     \"chmod +x my_file_name\"   change the file permission so that it can be excuted       how to share folder with Windows     \"g++ -g sourcename -o targetname\"   being used to build cpp projects with gdb     \"python3 -m http.server port\"   being used to create a server to share files     \"zip -r target_name.zip source_folder_name\"   being used to zip folders     nohup command    being used to run command backgroud when ssh     USE PM2 INSTEAD",
             "title": "Handbook for Linux Instructions"
         },
         {
@@ -407,13 +407,18 @@
         },
         {
             "location": "/at_company/css/",
-            "text": "CSS\n\n\n1. ROUND PIC\n\n\nHow To Turn a rectangle pic into a round one:\n\n\n    .circular--landscape{\n        display:inline-block;\n        position:relative;\n        width:200px;\n        height:200px;\n        overflow:hidden;\n        border-radius:50%;\n    }\n\n    .circular--landscape img{\n        width:auto;\n        height:100%;\n        margin-left:-50%;\n    }\n\n\n\n2. DISPLAY\n\n\nGet to know the difference between inline and block\n\n\nUSE BOTH WHEN MAKING A HTML WITH DIV\n\n\nAVOID FLEX WHEN DEVELOPPING\n\n\n3. AVOID EXTRA CONTENT\n\n\nusing overflow\n\n\noverflow:hidden\n\n\n4. PADDING AND MARGIN\n\n\nDistinguish them\n\n\n5. SELECTOR\n\n\nCSS SELECTOR REFERENCE",
+            "text": "CSS\n\n\nMY FIRST CSS PROGRAM\n\n\nCLICKHERE (USE PHONE VIEW FOR BETTER DISPLAY)\n\n\nInteresting\n\n\n1. ROUND PIC\n\n\nHow To Turn a rectangle pic into a round one:\n\n\n    .circular--landscape{\n        display:inline-block;\n        position:relative;\n        width:200px;\n        height:200px;\n        overflow:hidden;\n        border-radius:50%;\n    }\n\n    .circular--landscape img{\n        width:auto;\n        height:100%;\n        margin-left:-50%;\n    }\n\n\n\n2. DISPLAY\n\n\nGet to know the difference between inline and block\n\n\nUSE BOTH WHEN MAKING A HTML WITH DIV\n\n\nAVOID FLEX WHEN DEVELOPPING\n\n\n3. AVOID EXTRA CONTENT\n\n\nusing overflow\n\n\noverflow:hidden\n\n\n4. PADDING AND MARGIN\n\n\nDistinguish them\n\n\n5. SELECTOR\n\n\nCSS SELECTOR REFERENCE\n\n\n6. DEAL WITH OVERFLOW\n\n\nSET:\n\n\noverflow-y:auto",
             "title": "CSS"
         },
         {
             "location": "/at_company/css/#css",
             "text": "",
             "title": "CSS"
+        },
+        {
+            "location": "/at_company/css/#my-first-css-program",
+            "text": "CLICKHERE (USE PHONE VIEW FOR BETTER DISPLAY)  Interesting",
+            "title": "MY FIRST CSS PROGRAM"
         },
         {
             "location": "/at_company/css/#1-round-pic",
@@ -439,6 +444,11 @@
             "location": "/at_company/css/#5-selector",
             "text": "CSS SELECTOR REFERENCE",
             "title": "5. SELECTOR"
+        },
+        {
+            "location": "/at_company/css/#6-deal-with-overflow",
+            "text": "SET:  overflow-y:auto",
+            "title": "6. DEAL WITH OVERFLOW"
         },
         {
             "location": "/at_company/node/",
