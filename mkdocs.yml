@@ -1,7 +1,7 @@
 site_name: "Ryan's Blog"
 pages:
     - Index: index.md
-    - Hello My Blog:
+    - Hello:
         - Hello World! : helloworld.md
         - Setting Up My First Blog: set_steps.md
         - Helloworld again!: hello_world_again.md
@@ -20,6 +20,9 @@ pages:
     #     - 2016.1.13: 2016_1/13.md
     # - Diaries On Mar 2016:
     #     - 2016.3.13: 2016_3/13.md
+    - PROJECTS:
+        - Smart Home: projects/smarthome.md
+        - Ryan's IM: projects/ryan-im.md
     - FPGA:
         - Smart Home: fpga_programmes/smarthome.md
     - LINUX:

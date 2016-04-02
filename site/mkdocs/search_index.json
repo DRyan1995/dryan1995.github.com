@@ -76,6 +76,86 @@
             "title": "Hello again!!!"
         },
         {
+            "location": "/projects/smarthome/",
+            "text": "SmartHome\n\n\nPics \n Video\n\n\nCLICK HERE TO View Our Instrution Video \uff08PLEASE DOWNLOAD IT FIRST\uff09\n\n\n\n\n\n\n\n\n\n\nBrief Introduction\n\n\n\u3010Abstract\u3011\n\n\nOur design is based  on the platform of Altera DE-2 development board based on WiFi communication of smart home model to simulate the home environment, controlling a number of peripheral modules, and complete the communication between board(server) and  mobile phones(client) . Through this course design, I have been familiar with the usage of HDL, qsys,  quartus 13 ,NIOS II Eclipse and a series of development environment.\n\n\nIn this design, we use Verilog HDL to prepare the DHT11 temperature and humidity sensor for reading temperature and humidity data , and control some surroundings such as breathing LEDs (PWM), a small fan; using Qsys to build a NIOS II core platform; NIOS II and WIFI module communication protocol written by C language, sending instructions to the client and decode the instructions sent by the client, after which parsing operation after a series of peripheral modules; using JAVA language and Android Studio platform to complete the building of the Android client; SOCKET communication based on TCP protocol to complete the two-way communication between the client and the server; finally using quartus13.0 to complete the final design.\n\n\n\n\n\u3010Key Words\u3011\n\n\nFPGA\uff0cNIOS ii\uff0cPWM\uff0cUART\uff0cTCP\uff0cSOCKET\uff0cANDROID\uff0cC/S\uff0cWIFI\uff0cSmart Home\n\n\n\n\n\u3010Report\u3011\n\n\nClick HERE TO Download Our Project Report\n\n\nClick HERE TO Download Our Project Report2\n\n\n\n\n\u3010Source Code\u3011\n\n\nClick HERE TO Download Android Platform Code\n\n\nClick HERE TO Download Altera Platform Code\n\n\nClick HERE TO Download Xilinx Platform Code",
+            "title": "Smart Home"
+        },
+        {
+            "location": "/projects/smarthome/#smarthome",
+            "text": "",
+            "title": "SmartHome"
+        },
+        {
+            "location": "/projects/smarthome/#pics-video",
+            "text": "CLICK HERE TO View Our Instrution Video \uff08PLEASE DOWNLOAD IT FIRST\uff09",
+            "title": "Pics &amp; Video"
+        },
+        {
+            "location": "/projects/smarthome/#brief-introduction",
+            "text": "",
+            "title": "Brief Introduction"
+        },
+        {
+            "location": "/projects/smarthome/#abstract",
+            "text": "Our design is based  on the platform of Altera DE-2 development board based on WiFi communication of smart home model to simulate the home environment, controlling a number of peripheral modules, and complete the communication between board(server) and  mobile phones(client) . Through this course design, I have been familiar with the usage of HDL, qsys,  quartus 13 ,NIOS II Eclipse and a series of development environment.  In this design, we use Verilog HDL to prepare the DHT11 temperature and humidity sensor for reading temperature and humidity data , and control some surroundings such as breathing LEDs (PWM), a small fan; using Qsys to build a NIOS II core platform; NIOS II and WIFI module communication protocol written by C language, sending instructions to the client and decode the instructions sent by the client, after which parsing operation after a series of peripheral modules; using JAVA language and Android Studio platform to complete the building of the Android client; SOCKET communication based on TCP protocol to complete the two-way communication between the client and the server; finally using quartus13.0 to complete the final design.",
+            "title": "\u3010Abstract\u3011"
+        },
+        {
+            "location": "/projects/smarthome/#key-words",
+            "text": "FPGA\uff0cNIOS ii\uff0cPWM\uff0cUART\uff0cTCP\uff0cSOCKET\uff0cANDROID\uff0cC/S\uff0cWIFI\uff0cSmart Home",
+            "title": "\u3010Key Words\u3011"
+        },
+        {
+            "location": "/projects/smarthome/#report",
+            "text": "Click HERE TO Download Our Project Report  Click HERE TO Download Our Project Report2",
+            "title": "\u3010Report\u3011"
+        },
+        {
+            "location": "/projects/smarthome/#source-code",
+            "text": "Click HERE TO Download Android Platform Code  Click HERE TO Download Altera Platform Code  Click HERE TO Download Xilinx Platform Code",
+            "title": "\u3010Source Code\u3011"
+        },
+        {
+            "location": "/projects/ryan-im/",
+            "text": "Ryan's IM\n\n\nModified on Apr 3 2016 1:06AM\n\n\nOVERVIEW\n\n\nCLICK HERE TO VISIT THE WEBSITE \n HAVE A TRY WITH ITS FUNCTION\n\n\n\n\nREMAINING\n\n\n\n\nFINISH THE BACKEND BY FLASK\n\n\nUSE MYSQL AS ITS DATABASE\n\n\nOPTIMIZE JS\n\n\nUSE LESS \n COFFEE\n\n\n\n\nTIPS\n\n\n1. HOW TO DIVIDE A HTML INTO 3 PIECES\n\n\n\n\nDO NOT FORGET TO MAKE MIDDLE DIV THE LAST ONE!!\n\n\n2. GET FAMILIAR WITH JQUERY APIs\n\n\nESPECIALLY THE SELECTOR\n\n\nW3C JQUERY SCHOOL\n\n\n3. DISTINGUISH ARRAY FROM OBJECT\n\n\n    function db_init(){\n      session_count = $(\".contact_list_cell\").size();\n      for(var i = 0;i \n session_count; i++){\n        session_name = $(\".contact_list_cell\").eq(i).text().trim();\n\n        data[session_name] = new Array();\n        data[session_name][\"name\"] = new Array();\n        data[session_name][\"nickname\"] = new Array();\n        data[session_name][\"content\"] = new Array();\n        data[session_name][\"time\"] = new Array();\n        data[session_name][\"avatar_url\"] = new Array();\n      }\n    }\n\n\n\nIts a little complex\n\n\nI need to connect it to my backend server",
+            "title": "Ryan's IM"
+        },
+        {
+            "location": "/projects/ryan-im/#ryans-im",
+            "text": "Modified on Apr 3 2016 1:06AM",
+            "title": "Ryan's IM"
+        },
+        {
+            "location": "/projects/ryan-im/#overview",
+            "text": "CLICK HERE TO VISIT THE WEBSITE   HAVE A TRY WITH ITS FUNCTION",
+            "title": "OVERVIEW"
+        },
+        {
+            "location": "/projects/ryan-im/#remaining",
+            "text": "FINISH THE BACKEND BY FLASK  USE MYSQL AS ITS DATABASE  OPTIMIZE JS  USE LESS   COFFEE",
+            "title": "REMAINING"
+        },
+        {
+            "location": "/projects/ryan-im/#tips",
+            "text": "",
+            "title": "TIPS"
+        },
+        {
+            "location": "/projects/ryan-im/#1-how-to-divide-a-html-into-3-pieces",
+            "text": "DO NOT FORGET TO MAKE MIDDLE DIV THE LAST ONE!!",
+            "title": "1. HOW TO DIVIDE A HTML INTO 3 PIECES"
+        },
+        {
+            "location": "/projects/ryan-im/#2-get-familiar-with-jquery-apis",
+            "text": "ESPECIALLY THE SELECTOR  W3C JQUERY SCHOOL",
+            "title": "2. GET FAMILIAR WITH JQUERY APIs"
+        },
+        {
+            "location": "/projects/ryan-im/#3-distinguish-array-from-object",
+            "text": "function db_init(){\n      session_count = $(\".contact_list_cell\").size();\n      for(var i = 0;i   session_count; i++){\n        session_name = $(\".contact_list_cell\").eq(i).text().trim();\n\n        data[session_name] = new Array();\n        data[session_name][\"name\"] = new Array();\n        data[session_name][\"nickname\"] = new Array();\n        data[session_name][\"content\"] = new Array();\n        data[session_name][\"time\"] = new Array();\n        data[session_name][\"avatar_url\"] = new Array();\n      }\n    }  Its a little complex  I need to connect it to my backend server",
+            "title": "3. DISTINGUISH ARRAY FROM OBJECT"
+        },
+        {
             "location": "/fpga_programmes/smarthome/",
             "text": "SmartHome\n\n\nPics \n Video\n\n\nCLICK HERE TO View Our Instrution Video \uff08PLEASE DOWNLOAD IT FIRST\uff09\n\n\n\n\n\n\n\n\n\n\nBrief Introduction\n\n\n\u3010Abstract\u3011\n\n\nOur design is based  on the platform of Altera DE-2 development board based on WiFi communication of smart home model to simulate the home environment, controlling a number of peripheral modules, and complete the communication between board(server) and  mobile phones(client) . Through this course design, I have been familiar with the usage of HDL, qsys,  quartus 13 ,NIOS II Eclipse and a series of development environment.\n\n\nIn this design, we use Verilog HDL to prepare the DHT11 temperature and humidity sensor for reading temperature and humidity data , and control some surroundings such as breathing LEDs (PWM), a small fan; using Qsys to build a NIOS II core platform; NIOS II and WIFI module communication protocol written by C language, sending instructions to the client and decode the instructions sent by the client, after which parsing operation after a series of peripheral modules; using JAVA language and Android Studio platform to complete the building of the Android client; SOCKET communication based on TCP protocol to complete the two-way communication between the client and the server; finally using quartus13.0 to complete the final design.\n\n\n\n\n\u3010Key Words\u3011\n\n\nFPGA\uff0cNIOS ii\uff0cPWM\uff0cUART\uff0cTCP\uff0cSOCKET\uff0cANDROID\uff0cC/S\uff0cWIFI\uff0cSmart Home\n\n\n\n\n\u3010Report\u3011\n\n\nClick HERE TO Download Our Project Report\n\n\nClick HERE TO Download Our Project Report2\n\n\n\n\n\u3010Source Code\u3011\n\n\nClick HERE TO Download Android Platform Code\n\n\nClick HERE TO Download Altera Platform Code\n\n\nClick HERE TO Download Xilinx Platform Code",
             "title": "Smart Home"
@@ -372,13 +452,18 @@
         },
         {
             "location": "/at_company/jquery/",
-            "text": "JQUERY\n\n\nTips:\n\n\n1. USE trim to remove all the spaces when comparing strings\n\n\n    if(circlename_up.trim() != top_string.trim())\n    {\n      $(this).parent().parent().prev().children().first().text(circlename_down);\n      $(this).parent().prev().text(circlename_up);\n    }\n\n\n\n2. DO NOT FORGET TO REDECLARE METHODS WHEN YOU CREATE IT USING DOM\n\n\n    function insert_circle_li(){\n        circle_info_li = circle_info_li1 + circle_name + circle_info_li2;\n        $(\"#circle_info_wrapper\").append(circle_info_li);\n\n        $(\".mybtn_del\").click(function(){\n            $(this).parent().parent().hide();\n        });\n\n        $(\".mybtn_up_c\").click(function(){\n            var circlename_down = $(this).parent().prev().text();\n            var circlename_up = $(this).parent().parent().prev().children().first().text();\n            var top_string = \"\u5206\u7c7b\u8bbe\u7f6e\";\n            if(circlename_up.trim() != top_string.trim())\n            {\n              $(this).parent().parent().prev().children().first().text(circlename_down);\n              $(this).parent().prev().text(circlename_up);\n            }\n        });\n\n    }\n\n\n\n3. A USEFUL TOOL:\n\n\nconvert html to js var\n\n\nCLICK HERE\n\n\n4. HOW TO REDIRECT:\n\n\nwindow.location.href = \"http://ryan95.com:8080\"",
+            "text": "JQUERY\n\n\nMy Work\n\n\nCLICK HERE TO VIEW IT\n\n\nTips:\n\n\n1. USE trim to remove all the spaces when comparing strings\n\n\n    if(circlename_up.trim() != top_string.trim())\n    {\n      $(this).parent().parent().prev().children().first().text(circlename_down);\n      $(this).parent().prev().text(circlename_up);\n    }\n\n\n\n2. DO NOT FORGET TO REDECLARE METHODS WHEN YOU CREATE IT USING DOM\n\n\n    function insert_circle_li(){\n        circle_info_li = circle_info_li1 + circle_name + circle_info_li2;\n        $(\"#circle_info_wrapper\").append(circle_info_li);\n\n        $(\".mybtn_del\").click(function(){\n            $(this).parent().parent().hide();\n        });\n\n        $(\".mybtn_up_c\").click(function(){\n            var circlename_down = $(this).parent().prev().text();\n            var circlename_up = $(this).parent().parent().prev().children().first().text();\n            var top_string = \"\u5206\u7c7b\u8bbe\u7f6e\";\n            if(circlename_up.trim() != top_string.trim())\n            {\n              $(this).parent().parent().prev().children().first().text(circlename_down);\n              $(this).parent().prev().text(circlename_up);\n            }\n        });\n\n    }\n\n\n\n3. A USEFUL TOOL:\n\n\nconvert html to js var\n\n\nCLICK HERE\n\n\n4. HOW TO REDIRECT:\n\n\nwindow.location.href = \"http://ryan95.com:8080\"",
             "title": "JQUERY"
         },
         {
             "location": "/at_company/jquery/#jquery",
             "text": "",
             "title": "JQUERY"
+        },
+        {
+            "location": "/at_company/jquery/#my-work",
+            "text": "CLICK HERE TO VIEW IT",
+            "title": "My Work"
         },
         {
             "location": "/at_company/jquery/#tips",
@@ -467,7 +552,7 @@
         },
         {
             "location": "/at_company/nginx/",
-            "text": "Nginx\n\n\n1. INSTALL\n\n\nsudo apt-get install nginx\n\n\nsudo vim /etc/nginx/site-enabled/myconfig\n\n\n    server {\n        listen       1125;\n        server_name  ryan95.site localhost;\n    index index.html index.htm index.php;\n        root /home/ubuntu/ym/site;\n    }\n\n\n\nsudo nginx -s reload",
+            "text": "Nginx\n\n\n1. INSTALL\n\n\nsudo apt-get install nginx\n\n\nsudo vim /etc/nginx/site-enabled/myconfig\n\n\n    server {\n        listen       1125;\n        server_name  ryan95.site localhost;\n    index index.html index.htm index.php;\n        root /home/ubuntu/ym/site;\n    }\n\n\n\nsudo nginx -s reload\n\n\n2. INSTALL ON MACOSX\n\n\nCLICK HERE",
             "title": "Nginx"
         },
         {
@@ -479,6 +564,11 @@
             "location": "/at_company/nginx/#1-install",
             "text": "sudo apt-get install nginx  sudo vim /etc/nginx/site-enabled/myconfig      server {\n        listen       1125;\n        server_name  ryan95.site localhost;\n    index index.html index.htm index.php;\n        root /home/ubuntu/ym/site;\n    }  sudo nginx -s reload",
             "title": "1. INSTALL"
+        },
+        {
+            "location": "/at_company/nginx/#2-install-on-macosx",
+            "text": "CLICK HERE",
+            "title": "2. INSTALL ON MACOSX"
         },
         {
             "location": "/readme/",

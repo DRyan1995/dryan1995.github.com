@@ -13,3 +13,8 @@
         }
 
 `sudo nginx -s reload`
+
+
+## 2. INSTALL ON MACOSX
+
+[CLICK HERE](http://avnpc.com/pages/install-lnmp-on-osx)
