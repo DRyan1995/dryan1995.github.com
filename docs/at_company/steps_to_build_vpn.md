@@ -1,6 +1,6 @@
 #How To Build Your Own VPN
 
-##Using PPTP(weak sercurity)
+## PPTP(weak sercurity)
 1. 安装pptpd，这是个VPN服务器端软件
 `sudo apt-get install pptpd `
 
@@ -51,7 +51,7 @@ eth0是网卡名字，可以通过命令 ifconfig 查看 （插播悲剧：serve
 `nslookup google.com`
 不能的话，应该是服务器端的DNS设置有问题。
 
-## Using ShadowSocks
+## ShadowSocks
 **Already In Use**
 
 ####On Ubuntu Server:
