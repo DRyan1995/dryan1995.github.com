@@ -134,19 +134,13 @@
             
             
             
-                <li class="dropdown active">
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">WEB <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         
 <li >
     <a href="../debug_instructions/">HOW TO RUN DEBUG SERVER</a>
-</li>
-
-                    
-                        
-<li >
-    <a href="../git_instructions/">Git</a>
 </li>
 
                     
@@ -188,18 +182,6 @@
                     
                         
 <li >
-    <a href="../about_hotkeys/">HOTKEYS</a>
-</li>
-
-                    
-                        
-<li class="active">
-    <a href="./">VPN</a>
-</li>
-
-                    
-                        
-<li >
     <a href="../jquery/">JQUERY</a>
 </li>
 
@@ -227,6 +209,33 @@
             
             
             
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">TOOLS <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../git_instructions/">Git</a>
+</li>
+
+                    
+                        
+<li class="active">
+    <a href="./">VPN</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../about_hotkeys/">HOTKEYS</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
                 <li >
                     <a href="../../readme/">README</a>
                 </li>
@@ -242,12 +251,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../about_hotkeys/">
+                    <a rel="next" href="../git_instructions/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../jquery/">
+                    <a rel="prev" href="../about_hotkeys/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -338,18 +347,23 @@ eth0是网卡名字，可以通过命令 ifconfig 查看 （插播悲剧：serve
 </li>
 </ol>
 <h2 id="using-shadowsocks">Using ShadowSocks</h2>
-<p><strong>coming soon</strong></p>
-<p>very convenient:</p>
+<p><strong>Already In Use</strong></p>
+<h4 id="on-ubuntu-server">On Ubuntu Server:</h4>
 <ol>
 <li><code>pip install shadowsocks</code></li>
 <li><code>ssserver -p 8000 -k password -m rc4-md5 -d start</code></li>
 </ol>
-<p>On MACOSX: Simply use ShadowsocksX
-On Ubuntu:
-1. <code>sudo apt-get install shadowsocks-qt5</code>
-2. <a href="http://blog.csdn.net/weiqiangsu/article/details/46956977">browse the website for a solution</a>
-3. genpac -p "SOCKS5 127.0.0.1:1080" --gfwlist-proxy="SOCKS5 127.0.0.1:1080" --gfwlist-url="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt" --output="~/shadowsocks/autoproxy.pac"
-4. Use auto proxy mode to surf the Internet</p></div>
+<h4 id="on-macosx">On MACOSX:</h4>
+<ul>
+<li>Simply use ShadowsocksX</li>
+</ul>
+<h4 id="on-ubuntu">On Ubuntu:</h4>
+<ol>
+<li><code>sudo apt-get install shadowsocks-qt5</code></li>
+<li><a href="http://blog.csdn.net/weiqiangsu/article/details/46956977">browse the website for a solution</a></li>
+<li>genpac -p "SOCKS5 127.0.0.1:1080" --gfwlist-proxy="SOCKS5 127.0.0.1:1080" --gfwlist-url="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt" --output="~/shadowsocks/autoproxy.pac"</li>
+<li>Use auto proxy mode to surf the Internet</li>
+</ol></div>
         </div>
 
         <footer class="col-md-12">
