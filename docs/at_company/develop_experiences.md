@@ -26,6 +26,8 @@
 
 > + Use `args_helper.check_post_data(["key1","key2:type'])` to get body json content
 
+> + DO BE PATIENT AND PATIENT WHEN CODING!!!
+
 ##GREATE EXAMPLES
 
 ### Example 1

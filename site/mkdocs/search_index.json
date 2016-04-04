@@ -117,7 +117,7 @@
         },
         {
             "location": "/projects/ryan-im/",
-            "text": "Ryan's IM\n\n\nModified on Apr 3 2016 1:06AM\n\n\nOVERVIEW\n\n\nCLICK HERE TO VISIT THE WEBSITE \n HAVE A TRY WITH ITS FUNCTION\n\n\n\n\nREMAINING\n\n\n\n\nFINISH THE BACKEND BY FLASK\n\n\nUSE MYSQL AS ITS DATABASE\n\n\nOPTIMIZE JS\n\n\nUSE LESS \n COFFEE\n\n\n\n\nTIPS\n\n\n1. HOW TO DIVIDE A HTML INTO 3 PIECES\n\n\n\n\nDO NOT FORGET TO MAKE MIDDLE DIV THE LAST ONE!!\n\n\n2. GET FAMILIAR WITH JQUERY APIs\n\n\nESPECIALLY THE SELECTOR\n\n\nW3C JQUERY SCHOOL\n\n\n3. DISTINGUISH ARRAY FROM OBJECT\n\n\n    function db_init(){\n      session_count = $(\".contact_list_cell\").size();\n      for(var i = 0;i \n session_count; i++){\n        session_name = $(\".contact_list_cell\").eq(i).text().trim();\n\n        data[session_name] = new Array();\n        data[session_name][\"name\"] = new Array();\n        data[session_name][\"nickname\"] = new Array();\n        data[session_name][\"content\"] = new Array();\n        data[session_name][\"time\"] = new Array();\n        data[session_name][\"avatar_url\"] = new Array();\n      }\n    }\n\n\n\nIts a little complex\n\n\nI need to connect it to my backend server",
+            "text": "Ryan's IM\n\n\nModified on Apr 3 2016 1:06AM\n\n\nOVERVIEW\n\n\nonly chat function is available at present and not connected to backend server yet\n\n\nCLICK HERE TO VISIT THE WEBSITE \n HAVE A TRY WITH ITS FUNCTION\n\n\n\n\nREMAINING\n\n\n\n\nFINISH THE BACKEND BY FLASK\n\n\nUSE MYSQL AS ITS DATABASE\n\n\nOPTIMIZE JS\n\n\nUSE LESS \n COFFEE\n\n\n\n\nTIPS\n\n\n1. HOW TO DIVIDE A HTML INTO 3 PIECES\n\n\n\n\nDO NOT FORGET TO MAKE MIDDLE DIV THE LAST ONE!!\n\n\n2. GET FAMILIAR WITH JQUERY APIs\n\n\nESPECIALLY THE SELECTOR\n\n\nW3C JQUERY SCHOOL\n\n\n3. DISTINGUISH ARRAY FROM OBJECT IN JS\n\n\n    function db_init(){\n      session_count = $(\".contact_list_cell\").size();\n      for(var i = 0;i \n session_count; i++){\n        session_name = $(\".contact_list_cell\").eq(i).text().trim();\n\n        data[session_name] = new Array();\n        data[session_name][\"name\"] = new Array();\n        data[session_name][\"nickname\"] = new Array();\n        data[session_name][\"content\"] = new Array();\n        data[session_name][\"time\"] = new Array();\n        data[session_name][\"avatar_url\"] = new Array();\n      }\n    }\n\n\n\nIts a little complex\n\n\nI need to connect it to my backend server",
             "title": "Ryan's IM"
         },
         {
@@ -127,7 +127,7 @@
         },
         {
             "location": "/projects/ryan-im/#overview",
-            "text": "CLICK HERE TO VISIT THE WEBSITE   HAVE A TRY WITH ITS FUNCTION",
+            "text": "only chat function is available at present and not connected to backend server yet  CLICK HERE TO VISIT THE WEBSITE   HAVE A TRY WITH ITS FUNCTION",
             "title": "OVERVIEW"
         },
         {
@@ -151,9 +151,9 @@
             "title": "2. GET FAMILIAR WITH JQUERY APIs"
         },
         {
-            "location": "/projects/ryan-im/#3-distinguish-array-from-object",
+            "location": "/projects/ryan-im/#3-distinguish-array-from-object-in-js",
             "text": "function db_init(){\n      session_count = $(\".contact_list_cell\").size();\n      for(var i = 0;i   session_count; i++){\n        session_name = $(\".contact_list_cell\").eq(i).text().trim();\n\n        data[session_name] = new Array();\n        data[session_name][\"name\"] = new Array();\n        data[session_name][\"nickname\"] = new Array();\n        data[session_name][\"content\"] = new Array();\n        data[session_name][\"time\"] = new Array();\n        data[session_name][\"avatar_url\"] = new Array();\n      }\n    }  Its a little complex  I need to connect it to my backend server",
-            "title": "3. DISTINGUISH ARRAY FROM OBJECT"
+            "title": "3. DISTINGUISH ARRAY FROM OBJECT IN JS"
         },
         {
             "location": "/fpga_programmes/smarthome/",
@@ -312,7 +312,7 @@
         },
         {
             "location": "/at_company/develop_experiences/",
-            "text": "Develop Experiences\n\n\nTyping down what I've met and learnt in the web project\n\n\nAbout web server developing\n\n\n\n\nHow to get data from a POST request\n\n\n\n\ndata = args_helper.check_post_data([\"?reject_reason:str\"])\n\n\n\n\nDO NOT FORGET to check if the dict has the key!!!!\n\n\n\n\nif \"key\" in data\n and so as to use \ndata[key]\n\n\n\n\nHow to loop n times in Python3\n\n\n\n\nfor i in range(0,n)\n\n\n\n\n\n\nSOME TIPS\n\n\n\n\n\n\n\n\nPay Special Attention to the FORMAT \n NAME of coding\n\n\n\n\n\n\nDONOT FORGET CHECK GRAMMAR ONCE YOU MODIFY THE PROGRAM\n\n\n\n\n\n\nDONOT FORGET \nutils.gen_hash_id()\n when creating a \nHashIdModel\n\n\n\n\n\n\nUse \nargs_helper.check_post_data([\"key1\",\"key2:type'])\n to get body json content\n\n\n\n\n\n\n\n\nGREATE EXAMPLES\n\n\nExample 1\n\n\n\n\nExample 2\n\n\n\n\nExample 3",
+            "text": "Develop Experiences\n\n\nTyping down what I've met and learnt in the web project\n\n\nAbout web server developing\n\n\n\n\nHow to get data from a POST request\n\n\n\n\ndata = args_helper.check_post_data([\"?reject_reason:str\"])\n\n\n\n\nDO NOT FORGET to check if the dict has the key!!!!\n\n\n\n\nif \"key\" in data\n and so as to use \ndata[key]\n\n\n\n\nHow to loop n times in Python3\n\n\n\n\nfor i in range(0,n)\n\n\n\n\n\n\nSOME TIPS\n\n\n\n\n\n\n\n\nPay Special Attention to the FORMAT \n NAME of coding\n\n\n\n\n\n\nDONOT FORGET CHECK GRAMMAR ONCE YOU MODIFY THE PROGRAM\n\n\n\n\n\n\nDONOT FORGET \nutils.gen_hash_id()\n when creating a \nHashIdModel\n\n\n\n\n\n\nUse \nargs_helper.check_post_data([\"key1\",\"key2:type'])\n to get body json content\n\n\n\n\n\n\nDO BE PATIENT AND PATIENT WHEN CODING!!!\n\n\n\n\n\n\n\n\nGREATE EXAMPLES\n\n\nExample 1\n\n\n\n\nExample 2\n\n\n\n\nExample 3",
             "title": "EXPERIENCES"
         },
         {
@@ -327,7 +327,7 @@
         },
         {
             "location": "/at_company/develop_experiences/#some-tips",
-            "text": "Pay Special Attention to the FORMAT   NAME of coding    DONOT FORGET CHECK GRAMMAR ONCE YOU MODIFY THE PROGRAM    DONOT FORGET  utils.gen_hash_id()  when creating a  HashIdModel    Use  args_helper.check_post_data([\"key1\",\"key2:type'])  to get body json content",
+            "text": "Pay Special Attention to the FORMAT   NAME of coding    DONOT FORGET CHECK GRAMMAR ONCE YOU MODIFY THE PROGRAM    DONOT FORGET  utils.gen_hash_id()  when creating a  HashIdModel    Use  args_helper.check_post_data([\"key1\",\"key2:type'])  to get body json content    DO BE PATIENT AND PATIENT WHEN CODING!!!",
             "title": "SOME TIPS"
         },
         {

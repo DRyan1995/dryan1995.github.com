@@ -4,6 +4,8 @@
 
 ## OVERVIEW
 
+**only chat function is available at present and not connected to backend server yet**
+
 [CLICK HERE TO VISIT THE WEBSITE & HAVE A TRY WITH ITS FUNCTION](http://ryan95.site:8080/php_here/ryan-im/index.php)
 
 ![main](http://120.27.114.115:8088/proj/main.png)
@@ -31,7 +33,7 @@
 
 [W3C JQUERY SCHOOL](http://www.w3schools.com/jquery/)
 
-### 3. DISTINGUISH ARRAY FROM OBJECT
+### 3. DISTINGUISH ARRAY FROM OBJECT IN JS
 
         function db_init(){
           session_count = $(".contact_list_cell").size();
