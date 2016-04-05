@@ -53,13 +53,17 @@ Content-length:102
 
 > + 5xx服务器错误——服务器在处理某个正确请求时发生错误
 
-##4. Jason
+##4. Json
 
 *(JavaScript Object Notation)*
 
 > Official Documents:
 
 > <http://www.json.org/json-zh.html>
+
+> USE `JSON.parse()` TO DECODE JSON IN JS
+
+> USE `JSON.stingify()` TO ENCODE JSON IN JS
 
 ##5. Flask
 
