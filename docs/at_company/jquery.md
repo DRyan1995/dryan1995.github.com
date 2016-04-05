@@ -82,3 +82,7 @@
         IsValidDate 验证日期有效性
         CheckDateTime 完整日期时间检查
         daysBetween 日期天数差
+
+### 6. COUNT OBJECTS
+
+USE `$(".class").size();`

@@ -1,6 +1,6 @@
 # Ryan's IM
 
-*Modified on Apr 3 2016 1:06AM*
+*Modified on Apr 5 2016 8:00PM*
 
 ## OVERVIEW
 
@@ -10,13 +10,14 @@
 
 ![main](http://120.27.114.115:8088/proj/main.png)
 
+## LOG ON 2016.4.5
 
+*optimized js code and structure*
 
 ## REMAINING
 
 1. FINISH THE BACKEND BY FLASK
 2. USE MYSQL AS ITS DATABASE
-3. OPTIMIZE JS
 4. USE LESS && COFFEE
 
 ## TIPS
@@ -52,3 +53,83 @@
 *Its a little complex*
 
 *I need to connect it to my backend server*
+
+### 4. IMPROVE THE WAY OF DATA STORAGE
+
+        ChatDatas.id111 = {};
+        ChatDatas.id111.username = "GiyyaPan";
+        ChatDatas.id111.nickname = "潘潘";
+        ChatDatas.id111.avatar = "http://120.27.114.115:8088/ourteam/emma.jpeg";
+        ChatDatas.id111.content = [];
+        ChatDatas.id111.content.push({text: "hello", time: get_time(), me: false});
+        ChatDatas.id111.content.push({text: "hello again", time: get_time(), me: false});
+        ChatDatas.id111.content.push({text: "hello", time: get_time(), me: true});
+
+*its more convenient and easy to understand*
+
+**The NEXT STEP is CONNECT THE BACKEND SERVER**
+
+### 5. USE MULTI CLASSES WHEN NEEDED
+
+**IN CSS:**
+
+        .contact_list_cell{
+          display: block;
+          padding: 10px;
+        }
+
+        .contact_list_cell:hover{
+          background-color: #dfdfdf;
+          border-radius: 3%;
+        }
+
+        .cell_active{
+          padding: 10px;
+          background-color: lightgreen;
+        }
+
+**IN JS:**
+
+        $(this).siblings().removeClass("cell_active")
+        $(this).addClass("cell_active");
+
+### 6. IMPROVE THE WAY OF ADDING STASTIC ELEMENTS IN HTML
+
+        function renderPage(){
+            $(".content_body_section").children().remove();
+            if(!ChatDatas[currentSessoinId].hasOwnProperty('content')){
+              console.log("no content");
+              return;
+            }
+            var prevIsMe;
+            var presIsMe;
+            for(var i = 0; i < ChatDatas[currentSessoinId]["content"].length;i++){
+              text =  ChatDatas[currentSessoinId]["content"][i]["text"];
+              time =  ChatDatas[currentSessoinId]["content"][i]["time"];
+              presIsMe = ChatDatas[currentSessoinId]["content"][i]["me"];
+
+              if(i==0){
+                if(presIsMe){
+                  insertDiff(myId, text, time);
+                  prevIsMe = true;
+                }
+                else {
+                  insertDiff(currentSessoinId, text, time);
+                  prevIsMe = false;
+                }
+              }
+              else {
+                if (presIsMe == prevIsMe) {
+                  insertSame(text);
+                }
+                else if (presIsMe) {
+                  insertDiff(myId, text, time);
+                  prevIsMe = presIsMe;
+                }
+                else {
+                  insertDiff(currentSessoinId, text, time);
+                  prevIsMe = presIsMe;
+                }
+              }
+            }
+          }
