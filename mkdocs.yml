@@ -1,7 +1,7 @@
 site_name: "Ryan's Blog"
 pages:
     - Index: index.md
-    - Hello My Blog:
+    - Hello:
         - Hello World! : helloworld.md
         - Setting Up My First Blog: set_steps.md
         - Helloworld again!: hello_world_again.md
@@ -20,24 +20,28 @@ pages:
     #     - 2016.1.13: 2016_1/13.md
     # - Diaries On Mar 2016:
     #     - 2016.3.13: 2016_3/13.md
+    - PROJECTS:
+        - Smart Home: projects/smarthome.md
+        - Ryan's IM: projects/ryan-im.md
     - FPGA:
         - Smart Home: fpga_programmes/smarthome.md
     - LINUX:
         - INSTRUCTIONS: summeries/instructions_in_linux.md
     - WEB:
         - HOW TO RUN DEBUG SERVER: at_company/debug_instructions.md
-        - Git: at_company/git_instructions.md
         - HTTP Protocol: at_company/about_http.md
         - My First Flask Program: at_company/flask_demo.md
         - DATABASE: at_company/about_db.md
         - EXPERIENCES: at_company/develop_experiences.md
         - SQLAlchemy: at_company/about_sqlalchemy.md
         - DOCKER: at_company/docker.md
-        - HOTKEYS: at_company/about_hotkeys.md
-        - VPN: at_company/steps_to_build_vpn.md
         - JQUERY: at_company/jquery.md
         - CSS: at_company/css.md
         - NODE: at_company/node.md
         - Nginx: at_company/nginx.md
+    - TOOLS:
+        - Git: at_company/git_instructions.md
+        - VPN: at_company/steps_to_build_vpn.md
+        - HOTKEYS: at_company/about_hotkeys.md
     - README: readme.md
-theme: journal
+theme: yeti

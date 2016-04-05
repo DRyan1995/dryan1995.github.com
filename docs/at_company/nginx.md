@@ -13,3 +13,15 @@
         }
 
 `sudo nginx -s reload`
+
+
+## 2. INSTALL ON MACOSX
+
+[CLICK HERE](http://avnpc.com/pages/install-lnmp-on-osx)
+
+## 3. HOW TO START ON MY MAC
+
+`sudo nginx -s reopen`
+
+`sudo php-fpm -D`
+**DO NOT FORGET THIS STEP OTHERWISE IT WILL TURN OUT 502 ERROR**

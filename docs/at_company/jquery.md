@@ -1,8 +1,14 @@
 #JQUERY
 
+
 ##REFERENCE
 
 [REFERENCE ON W3C](http://www.w3school.com.cn/jquery/jquery_reference.asp)
+
+##My Work
+
+[CLICK HERE TO VIEW IT](http://ryan95.site:8080/php_here/ryan-im/index.php)
+
 
 ##Tips:
 
