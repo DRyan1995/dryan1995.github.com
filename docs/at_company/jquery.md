@@ -86,3 +86,7 @@
 ### 6. COUNT OBJECTS
 
 USE `$(".class").size();`
+
+### 7. HOW TO CHANGE SRC OF A IMAGE
+
+        $(".contact_list_cell:last").children().eq(0).attr("src", ChatDatas[idCode]["avatar"]);
