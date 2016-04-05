@@ -52,3 +52,5 @@
 SET:
 
 `overflow-y:auto`
+
+`overflow-x:auto`
