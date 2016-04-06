@@ -154,7 +154,9 @@
             return;
           }
 
-          $newDom = $($("#contact_list_tpl").html())
-$newDom.find(".contact_avatar").attr("src",ChatDatas[idCode]["avatar"])
-$newDom.find(".contact_name").text(ChatDatas[idCode]["username"])
-$(".contact_list_box").append($newDom)
+### 7. USE JQUERY OBJECTS TO INSERT ELEMENTS
+
+        $newDom = $($("#contact_list_tpl").html())
+        $newDom.find(".contact_avatar").attr("src",ChatDatas[idCode]["avatar"])
+        $newDom.find(".contact_name").text(ChatDatas[idCode]["username"])
+        $(".contact_list_box").append($newDom)

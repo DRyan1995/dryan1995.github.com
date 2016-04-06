@@ -395,6 +395,32 @@
           }
         }
       }
+
+      function insertSame(contentText){
+        $(".content_cell:last").children().last().append($("#chat_content_same_tpl").html());
+        $("p:last").text(contentText);
+        $("p:last").append($("#chat_content_cell_icon").html());
+        bindIcon();
+        return;
+      }
+
+      function insertDiff(userId, contentText, time){
+        $(".content_body_section").append($("#chat_content_cell_tpl").html());
+        $(".chat_avatar:last").attr("src",ChatDatas[userId]["avatar"]);
+        $(".chat_name:last").text(ChatDatas[userId]["username"]);
+        $(".chat_nickname:last").text(ChatDatas[userId]["nickname"]);
+        $(".chat_time:last").text(time);
+        $("p:last").text(contentText);
+        $("p:last").append($("#chat_content_cell_icon").html());
+        bindIcon();
+        return;
+      }
+</code></pre>
+<h3 id="7-use-jquery-objects-to-insert-elements">7. USE JQUERY OBJECTS TO INSERT ELEMENTS</h3>
+<pre><code>    $newDom = $($("#contact_list_tpl").html())
+    $newDom.find(".contact_avatar").attr("src",ChatDatas[idCode]["avatar"])
+    $newDom.find(".contact_name").text(ChatDatas[idCode]["username"])
+    $(".contact_list_box").append($newDom)
 </code></pre></div>
         </div>
 
