@@ -169,3 +169,50 @@
 ### 8. PAY SPECIAL ATTENTION TO AJAX
 
 **U NEED TO NOTICE THE ARRANGEMENT OF FUNCTIONS WHEN USING AJAX OTHERWISE SOME FxxKING PROBLEMS WILL APPEAR**
+
+### 9. TURN TO OBJECTIVE
+
+          function ChatMsg(msg) {
+            this.content = msg.content;
+            this.targetid = msg.targetid;
+            this.timestamp = msg.timestamp;
+            this.$ = $($("#chat-msg-tpl").html())
+            this.dom = this.$[0]
+            self = this
+            this.dom.onclick = function () {
+              console.log("chat mesg was clicked, id is ", self.id);
+            }
+            this.$.find(".delete-btn") = function () {
+              self.delete()
+            }
+          }
+          ChatMsg.prototype.getTimeFromNow = function () {
+            return (Date.now() - this.timestamp)
+          }
+          ChatMsg.prototype.appendTo = function (target) {
+            this.$.appendTo(target)
+          }
+          ChatMsg.prototype.delete = function () {
+            console.log("delete chat msg, id is ", self.id);
+            $.post("/delete_item.php",{id:self.id})
+            .success(function () {
+              self.$.remove()
+              for (var i = 0; i < chatMsgList.length; i++) {
+                if(chatMsgList[i] === self){
+                  //删掉这个元素
+                }
+              }
+            })
+          }
+
+          msg = {id:1, content:1,targetid:'panapn1',timestamp:Date.now()}
+          chatMsg1 = new ChatMsg(msg)
+          chatMsg1.appendTo($("#msg-container"))
+          chatMsg1.delete()
+
+          chatMsgList = []
+          chatMsgList.push(chatMsg1)
+
+### 10. Mysql Primary Key auto incredement
+
+    alter table user modify id integer auto_increment ;
