@@ -22,6 +22,7 @@ pages:
     #     - 2016.3.13: 2016_3/13.md
     - PROJECTS:
         - Smart Home: projects/smarthome.md
+        - Client Page: projects/client_page.md
         - Ryan's IM: projects/ryan-im.md
     - FPGA:
         - Smart Home: fpga_programmes/smarthome.md

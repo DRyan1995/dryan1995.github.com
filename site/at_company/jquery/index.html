@@ -95,6 +95,12 @@
                     
                         
 <li >
+    <a href="../../projects/client_page/">Client Page</a>
+</li>
+
+                    
+                        
+<li >
     <a href="../../projects/ryan-im/">Ryan's IM</a>
 </li>
 
@@ -325,12 +331,12 @@
     }
 </code></pre>
 <h3 id="3-a-useful-tool">3. A USEFUL TOOL:</h3>
-<p><em>convert html to js var</em></p>
+<p><em>convert html to js string</em></p>
 <p><a href="http://www.css88.com/tool/html2js/">CLICK HERE</a></p>
 <h3 id="4-how-to-redirect">4. HOW TO REDIRECT:</h3>
 <pre><code>window.location.href = "http://ryan95.com:8080"
 </code></pre>
-<h3 id="5-about-database">5. About DATABASE</h3>
+<h3 id="5-about-date">5. ABOUT DATE</h3>
 <pre><code>    var myDate = new Date();
     myDate.getYear();        //获取当前年份(2位)
     myDate.getFullYear();    //获取完整的年份(4位,1970-????)
@@ -363,6 +369,40 @@
 <p>USE <code>$(".class").size();</code></p>
 <h3 id="7-how-to-change-src-of-a-image">7. HOW TO CHANGE SRC OF A IMAGE</h3>
 <pre><code>    $(".contact_list_cell:last").children().eq(0).attr("src", ChatDatas[idCode]["avatar"]);
+</code></pre>
+<h3 id="8-ajax-get-post-method">8. AJAX GET &amp; POST METHOD</h3>
+<pre><code>    function contactsInit(){
+      $.get("server.php?command=contacts&amp;ownerId="+myId,function(data,status){
+        if (status=="success") {
+          contactList = JSON.parse(data);
+          for(var i = 0;i &lt; contactList.length;i++){
+            if (myId == contactList[i]["userid"]) {
+              continue;
+            }
+            $newDom = $($("#contact_list_tpl").html());
+            $newDom.find(".contact_avatar").attr("src",contactList[i]["avatar"]);
+            $newDom.find(".contact_name").text(contactList[i]["username"])
+            $(".contact_list_box").append($newDom);
+          }
+          pageInit();
+        }
+        else {
+          alert("server error! 401");
+        }
+      });
+    }
+
+    function PostData(ownerId, targetId, content, me){
+        postData = {};
+        postData.ownerId = ownerId;
+        postData.targetId = targetId;
+        postData.content = content;
+        postData.me = me;
+        $.post("post.php",JSON.stringify(postData),function(data,status){
+          if(status != "success"){
+            alert("server error! 403");
+          }
+        });
 </code></pre></div>
         </div>
 

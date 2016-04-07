@@ -95,6 +95,12 @@
                     
                         
 <li >
+    <a href="../../projects/client_page/">Client Page</a>
+</li>
+
+                    
+                        
+<li >
     <a href="../../projects/ryan-im/">Ryan's IM</a>
 </li>
 
@@ -278,122 +284,139 @@
     
         <li class="main active"><a href="#php">PHP</a></li>
         
+            <li><a href="#1-how-to-loop-through-each-keyvalue-pair-in-an-array">1. How to loop through each key/value pair in an array</a></li>
+        
+            <li><a href="#2-an-easy-example-for-php-api-server">2. An easy example for PHP API SERVER</a></li>
+        
+            <li><a href="#3-deal-with-json-data">3. DEAL WITH JSON DATA</a></li>
+        
+            <li><a href="#4-how-to-get-data-from-http-request">4. HOW TO GET DATA FROM HTTP REQUEST</a></li>
+        
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
 <h1 id="php">PHP</h1>
-<ol>
-<li>
-<p>How to loop through each key/value pair in an array</p>
-<pre><code>&lt;?php
-$age=array("Bill"=&gt;"35","Steve"=&gt;"37","Peter"=&gt;"43");
+<h3 id="1-how-to-loop-through-each-keyvalue-pair-in-an-array">1. How to loop through each key/value pair in an array</h3>
+<pre><code>    &lt;?php
+    $age=array("Bill"=&gt;"35","Steve"=&gt;"37","Peter"=&gt;"43");
 
-foreach($age as $x=&gt;$x_value) {
-  echo "Key=" . $x . ", Value=" . $x_value;
-  echo "&lt;br&gt;";
-}
-?&gt;
+    foreach($age as $x=&gt;$x_value) {
+      echo "Key=" . $x . ", Value=" . $x_value;
+      echo "&lt;br&gt;";
+    }
+    ?&gt;
 </code></pre>
+<h3 id="2-an-easy-example-for-php-api-server">2. An easy example for PHP API SERVER</h3>
+<pre><code>    &lt;?php
+    $output = array();
+    $a = @$_GET['a'] ? $_GET['a'] : '';
+    $uid = @$_GET['uid'] ? $_GET['uid'] : 0;
+
+    if (empty($a)) {
+      $output = array('data'=&gt;NULL, 'info'=&gt;'坑爹啊!', 'code'=&gt;-201);
+      exit(json_encode($output));
+    }
+
+    //走接口
+    if ($a == 'get_users') {
+      //检查用户
+      if ($uid == 0) {
+          $output = array('data'=&gt;NULL, 'info'=&gt;'The uid is null!', 'code'=&gt;-401);
+          exit(json_encode($output));
+      }
+
+      //假设 $mysql 是数据库
+      $mysql = array(
+          10001 =&gt; array(
+              'uid'=&gt;10001,
+              'vip'=&gt;5,
+              'nickname' =&gt; 'Shine X',
+              'email'=&gt;'979137@qq.com',
+              'qq'=&gt;979137,
+              'gold'=&gt;1500,
+              'powerplay'=&gt; array('2xp'=&gt;12,'gem'=&gt;12,'bingo'=&gt;5,'keys'=&gt;5,'chest'=&gt;8),
+              'gems'=&gt; array('red'=&gt;13,'green'=&gt;3,'blue'=&gt;8,'yellow'=&gt;17),
+              'ctime'=&gt;1376523234,
+              'lastLogin'=&gt;1377123144,
+              'level'=&gt;19,
+              'exp'=&gt;16758,
+          ),
+          10002 =&gt; array(
+              'uid'=&gt;10002,
+              'vip'=&gt;50,
+              'nickname' =&gt; 'elva',
+              'email'=&gt;'elva@ezhi.net',
+              'qq'=&gt;NULL,
+              'gold'=&gt;14320,
+              'powerplay'=&gt; array('2xp'=&gt;1,'gem'=&gt;120,'bingo'=&gt;51,'keys'=&gt;5,'chest'=&gt;8),
+              'gems'=&gt; array('red'=&gt;13,'green'=&gt;3,'blue'=&gt;8,'yellow'=&gt;17),
+              'ctime'=&gt;1376523234,
+              'lastLogin'=&gt;1377123144,
+              'level'=&gt;112,
+              'exp'=&gt;167588,
+          ),
+          10003 =&gt; array(
+              'uid' =&gt; 10003,
+              'vip' =&gt; 5,
+              'nickname' =&gt; 'Lily',
+              'email' =&gt; 'Lily@ezhi.net',
+              'qq' =&gt; NULL,
+              'gold' =&gt; 1541,
+              'powerplay'=&gt; array('2xp'=&gt;2,'gem'=&gt;112,'bingo'=&gt;4,'keys'=&gt;7,'chest'=&gt;8),
+              'gems' =&gt; array('red'=&gt;13,'green'=&gt;3,'blue'=&gt;9,'yellow'=&gt;7),
+              'ctime' =&gt; 1376523234,
+              'lastLogin'=&gt; 1377123144,
+              'level' =&gt; 10,
+              'exp' =&gt; 1758,
+          ),
+      );
+
+      $uidArr = array(10001,10002,10003);
+      if (in_array($uid, $uidArr, true)) {
+          $output = array('data' =&gt; NULL, 'info'=&gt;'The user does not exist!', 'code' =&gt; -402);
+          exit(json_encode($output));
+      }
+
+      //查询数据库
+      $userInfo = $mysql[$uid];
+
+      //输出数据
+      $output = array(
+          'data' =&gt; array(
+              'userInfo' =&gt; $userInfo,
+              'isLogin' =&gt; true,//是否首次登陆
+              'unread' =&gt; 4,//未读消息数量
+              'untask' =&gt; 3,//未完成任务
+          ),
+          'info' =&gt; 'Here is the message which, commonly used in popup window', //消息提示，客户端常会用此作为给弹窗信息。
+          'code' =&gt; 200, //成功与失败的代码，一般都是正数或者负数
+      );
+      exit(json_encode($output));
+    } elseif ($a == 'get_games_result') {
+      //...
+      die('您正在调 get_games_result 接口!');
+    } elseif ($a == 'upload_avatars') {
+      //....
+      die('您正在调 upload_avatars 接口!');
+    }
+</code></pre>
+<hr />
+<h3 id="3-deal-with-json-data">3. DEAL WITH JSON DATA</h3>
+<p>use <code>json_encode()</code> to encode an array into a json string</p>
+<p>use <code>json_decode(string, true)</code> to decode a json string into an PHP array</p>
+<h3 id="4-how-to-get-data-from-http-request">4. HOW TO GET DATA FROM HTTP REQUEST</h3>
+<ul>
+<li>
+<p>Get POST json data:
+<code>$postData = file_get_contents("php://input");</code></p>
 </li>
 <li>
-<p>An easy example for API server:</p>
-<pre><code>&lt;?php
-$output = array();
-$a = @$_GET['a'] ? $_GET['a'] : '';
-$uid = @$_GET['uid'] ? $_GET['uid'] : 0;
-
-if (empty($a)) {
-  $output = array('data'=&gt;NULL, 'info'=&gt;'坑爹啊!', 'code'=&gt;-201);
-  exit(json_encode($output));
-}
-
-//走接口
-if ($a == 'get_users') {
-  //检查用户
-  if ($uid == 0) {
-      $output = array('data'=&gt;NULL, 'info'=&gt;'The uid is null!', 'code'=&gt;-401);
-      exit(json_encode($output));
-  }
-
-  //假设 $mysql 是数据库
-  $mysql = array(
-      10001 =&gt; array(
-          'uid'=&gt;10001,
-          'vip'=&gt;5,
-          'nickname' =&gt; 'Shine X',
-          'email'=&gt;'979137@qq.com',
-          'qq'=&gt;979137,
-          'gold'=&gt;1500,
-          'powerplay'=&gt; array('2xp'=&gt;12,'gem'=&gt;12,'bingo'=&gt;5,'keys'=&gt;5,'chest'=&gt;8),
-          'gems'=&gt; array('red'=&gt;13,'green'=&gt;3,'blue'=&gt;8,'yellow'=&gt;17),
-          'ctime'=&gt;1376523234,
-          'lastLogin'=&gt;1377123144,
-          'level'=&gt;19,
-          'exp'=&gt;16758,
-      ),
-      10002 =&gt; array(
-          'uid'=&gt;10002,
-          'vip'=&gt;50,
-          'nickname' =&gt; 'elva',
-          'email'=&gt;'elva@ezhi.net',
-          'qq'=&gt;NULL,
-          'gold'=&gt;14320,
-          'powerplay'=&gt; array('2xp'=&gt;1,'gem'=&gt;120,'bingo'=&gt;51,'keys'=&gt;5,'chest'=&gt;8),
-          'gems'=&gt; array('red'=&gt;13,'green'=&gt;3,'blue'=&gt;8,'yellow'=&gt;17),
-          'ctime'=&gt;1376523234,
-          'lastLogin'=&gt;1377123144,
-          'level'=&gt;112,
-          'exp'=&gt;167588,
-      ),
-      10003 =&gt; array(
-          'uid' =&gt; 10003,
-          'vip' =&gt; 5,
-          'nickname' =&gt; 'Lily',
-          'email' =&gt; 'Lily@ezhi.net',
-          'qq' =&gt; NULL,
-          'gold' =&gt; 1541,
-          'powerplay'=&gt; array('2xp'=&gt;2,'gem'=&gt;112,'bingo'=&gt;4,'keys'=&gt;7,'chest'=&gt;8),
-          'gems' =&gt; array('red'=&gt;13,'green'=&gt;3,'blue'=&gt;9,'yellow'=&gt;7),
-          'ctime' =&gt; 1376523234,
-          'lastLogin'=&gt; 1377123144,
-          'level' =&gt; 10,
-          'exp' =&gt; 1758,
-      ),
-  );
-
-  $uidArr = array(10001,10002,10003);
-  if (in_array($uid, $uidArr, true)) {
-      $output = array('data' =&gt; NULL, 'info'=&gt;'The user does not exist!', 'code' =&gt; -402);
-      exit(json_encode($output));
-  }
-
-  //查询数据库
-  $userInfo = $mysql[$uid];
-
-  //输出数据
-  $output = array(
-      'data' =&gt; array(
-          'userInfo' =&gt; $userInfo,
-          'isLogin' =&gt; true,//是否首次登陆
-          'unread' =&gt; 4,//未读消息数量
-          'untask' =&gt; 3,//未完成任务
-      ),
-      'info' =&gt; 'Here is the message which, commonly used in popup window', //消息提示，客户端常会用此作为给弹窗信息。
-      'code' =&gt; 200, //成功与失败的代码，一般都是正数或者负数
-  );
-  exit(json_encode($output));
-} elseif ($a == 'get_games_result') {
-  //...
-  die('您正在调 get_games_result 接口!');
-} elseif ($a == 'upload_avatars') {
-  //....
-  die('您正在调 upload_avatars 接口!');
-}
-</code></pre>
+<p>Get GET paras:
+<code>$command = @$_GET["command"]?$_GET["command"]:"";</code></p>
 </li>
-</ol></div>
+</ul></div>
         </div>
 
         <footer class="col-md-12">

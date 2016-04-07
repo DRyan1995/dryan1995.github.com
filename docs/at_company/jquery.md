@@ -45,7 +45,7 @@
 
 ### 3. A USEFUL TOOL:
 
-*convert html to js var*
+*convert html to js string*
 
 [CLICK HERE](http://www.css88.com/tool/html2js/)
 
@@ -53,7 +53,7 @@
 
     window.location.href = "http://ryan95.com:8080"
 
-### 5. About DATABASE
+### 5. ABOUT DATE
 
         var myDate = new Date();
         myDate.getYear();        //获取当前年份(2位)
@@ -90,3 +90,38 @@ USE `$(".class").size();`
 ### 7. HOW TO CHANGE SRC OF A IMAGE
 
         $(".contact_list_cell:last").children().eq(0).attr("src", ChatDatas[idCode]["avatar"]);
+
+### 8. AJAX GET & POST METHOD
+
+        function contactsInit(){
+          $.get("server.php?command=contacts&ownerId="+myId,function(data,status){
+            if (status=="success") {
+              contactList = JSON.parse(data);
+              for(var i = 0;i < contactList.length;i++){
+                if (myId == contactList[i]["userid"]) {
+                  continue;
+                }
+                $newDom = $($("#contact_list_tpl").html());
+                $newDom.find(".contact_avatar").attr("src",contactList[i]["avatar"]);
+                $newDom.find(".contact_name").text(contactList[i]["username"])
+                $(".contact_list_box").append($newDom);
+              }
+              pageInit();
+            }
+            else {
+              alert("server error! 401");
+            }
+          });
+        }
+
+        function PostData(ownerId, targetId, content, me){
+            postData = {};
+            postData.ownerId = ownerId;
+            postData.targetId = targetId;
+            postData.content = content;
+            postData.me = me;
+            $.post("post.php",JSON.stringify(postData),function(data,status){
+              if(status != "success"){
+                alert("server error! 403");
+              }
+            });

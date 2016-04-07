@@ -94,6 +94,12 @@
 
                     
                         
+<li >
+    <a href="../client_page/">Client Page</a>
+</li>
+
+                    
+                        
 <li class="active">
     <a href="./">Ryan's IM</a>
 </li>
@@ -257,7 +263,7 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../smarthome/">
+                    <a rel="next" href="../client_page/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
@@ -282,6 +288,8 @@
         
             <li><a href="#log-on-201645">LOG ON 2016.4.5</a></li>
         
+            <li><a href="#log-on-201647">LOG ON 2016.4.7</a></li>
+        
             <li><a href="#remaining">REMAINING</a></li>
         
             <li><a href="#tips">TIPS</a></li>
@@ -299,11 +307,12 @@
 <p><img alt="main" src="http://120.27.114.115:8088/proj/main.png" /></p>
 <h2 id="log-on-201645">LOG ON 2016.4.5</h2>
 <p><em>optimized js code and structure</em></p>
+<h2 id="log-on-201647">LOG ON 2016.4.7</h2>
+<p><em>finished the backend server and connected to mysql by using PHP</em></p>
 <h2 id="remaining">REMAINING</h2>
 <ol>
-<li>FINISH THE BACKEND BY FLASK</li>
-<li>USE MYSQL AS ITS DATABASE</li>
-<li>USE LESS &amp;&amp; COFFEE</li>
+<li>USE LESS &amp;&amp; COFFEE TO OPTIMIZE CODE</li>
+<li>OPTIMIZE THE WORKFLOW OF PHP AND JQUERY</li>
 </ol>
 <h2 id="tips">TIPS</h2>
 <h3 id="1-how-to-divide-a-html-into-3-pieces">1. HOW TO DIVIDE A HTML INTO 3 PIECES</h3>
@@ -328,7 +337,8 @@
     }
 </code></pre>
 <p><em>Its a little complex</em></p>
-<p><em>I need to connect it to my backend server</em></p>
+<p><em>I need to connect it to my backend server</em>
+<em>(DONE ON APRIL 7)</em></p>
 <h3 id="4-improve-the-way-of-data-storage">4. IMPROVE THE WAY OF DATA STORAGE</h3>
 <pre><code>    ChatDatas.id111 = {};
     ChatDatas.id111.username = "GiyyaPan";
@@ -340,7 +350,8 @@
     ChatDatas.id111.content.push({text: "hello", time: get_time(), me: true});
 </code></pre>
 <p><em>its more convenient and easy to understand</em></p>
-<p><strong>The NEXT STEP is CONNECT THE BACKEND SERVER</strong></p>
+<p><strong>The NEXT STEP is CONNECT THE BACKEND SERVER</strong>
+<em>(DONE ON APRIL 7)</em></p>
 <h3 id="5-use-multi-classes-when-needed">5. USE MULTI CLASSES WHEN NEEDED</h3>
 <p><strong>IN CSS:</strong></p>
 <pre><code>    .contact_list_cell{
@@ -427,7 +438,9 @@
     $newDom.find(".contact_avatar").attr("src",ChatDatas[idCode]["avatar"])
     $newDom.find(".contact_name").text(ChatDatas[idCode]["username"])
     $(".contact_list_box").append($newDom)
-</code></pre></div>
+</code></pre>
+<h3 id="8-pay-special-attention-to-ajax">8. PAY SPECIAL ATTENTION TO AJAX</h3>
+<p><strong>U NEED TO NOTICE THE ARRANGEMENT OF FUNCTIONS WHEN USING AJAX OTHERWISE SOME FxxKING PROBLEMS WILL APPEAR</strong></p></div>
         </div>
 
         <footer class="col-md-12">

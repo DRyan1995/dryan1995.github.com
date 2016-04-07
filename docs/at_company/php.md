@@ -1,6 +1,6 @@
 # PHP
 
-1. How to loop through each key/value pair in an array
+### 1. How to loop through each key/value pair in an array
 
         <?php
         $age=array("Bill"=>"35","Steve"=>"37","Peter"=>"43");
@@ -11,7 +11,7 @@
         }
         ?>
 
-2. An easy example for API server:
+### 2. An easy example for PHP API SERVER
 
         <?php
         $output = array();
@@ -105,3 +105,19 @@
           //....
           die('您正在调 upload_avatars 接口!');
         }
+
+---
+
+### 3. DEAL WITH JSON DATA
+
+use `json_encode()` to encode an array into a json string
+
+use `json_decode(string, true)` to decode a json string into an PHP array
+
+### 4. HOW TO GET DATA FROM HTTP REQUEST
+
+- Get POST json data:
+`$postData = file_get_contents("php://input");`
+
+- Get GET paras:
+`$command = @$_GET["command"]?$_GET["command"]:"";`

@@ -14,11 +14,14 @@
 
 *optimized js code and structure*
 
+## LOG ON 2016.4.7
+
+*finished the backend server and connected to mysql by using PHP*
+
 ## REMAINING
 
-1. FINISH THE BACKEND BY FLASK
-2. USE MYSQL AS ITS DATABASE
-4. USE LESS && COFFEE
+1. USE LESS && COFFEE TO OPTIMIZE CODE
+2. OPTIMIZE THE WORKFLOW OF PHP AND JQUERY
 
 ## TIPS
 
@@ -53,6 +56,7 @@
 *Its a little complex*
 
 *I need to connect it to my backend server*
+*(DONE ON APRIL 7)*
 
 ### 4. IMPROVE THE WAY OF DATA STORAGE
 
@@ -68,6 +72,7 @@
 *its more convenient and easy to understand*
 
 **The NEXT STEP is CONNECT THE BACKEND SERVER**
+*(DONE ON APRIL 7)*
 
 ### 5. USE MULTI CLASSES WHEN NEEDED
 
@@ -160,3 +165,7 @@
         $newDom.find(".contact_avatar").attr("src",ChatDatas[idCode]["avatar"])
         $newDom.find(".contact_name").text(ChatDatas[idCode]["username"])
         $(".contact_list_box").append($newDom)
+
+### 8. PAY SPECIAL ATTENTION TO AJAX
+
+**U NEED TO NOTICE THE ARRANGEMENT OF FUNCTIONS WHEN USING AJAX OTHERWISE SOME FxxKING PROBLEMS WILL APPEAR**
