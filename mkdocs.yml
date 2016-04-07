@@ -39,6 +39,7 @@ pages:
         - CSS: at_company/css.md
         - NODE: at_company/node.md
         - Nginx: at_company/nginx.md
+        - PHP: at_company/php.md
     - TOOLS:
         - Git: at_company/git_instructions.md
         - VPN: at_company/steps_to_build_vpn.md
