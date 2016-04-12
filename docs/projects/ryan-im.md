@@ -6,7 +6,7 @@
 
 **only chat function is available at present and not connected to backend server yet**
 
-[CLICK HERE TO VISIT THE WEBSITE & HAVE A TRY WITH ITS FUNCTION](http://ryan95.site:8080/php_here/ryan-im/index.php)
+[CLICK HERE TO VISIT THE WEBSITE & HAVE A TRY WITH ITS FUNCTION](http://ryan95.site:8080/php_here/ryan-im/index.php?userId=id000)
 
 ![main](http://120.27.114.115:8088/proj/main.png)
 

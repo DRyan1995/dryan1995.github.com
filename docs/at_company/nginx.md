@@ -21,6 +21,8 @@
 
 ## 3. HOW TO START ON MY MAC
 
+`export PATH="/usr/local/bin:/usr/local/sbin:$PATH"`
+
 `sudo nginx -s reopen`
 
 `sudo php-fpm -D`
