@@ -18,10 +18,20 @@
 
 *finished the backend server and connected to mysql by using PHP*
 
+## LOG ON 2016.4.12
+
+*rebuild the project with visual programming method*
+
+*remaining to hanlde the modify function*
+
+*There is soming wrong with mysql APIs in PHP*
+
 ## REMAINING
 
 1. USE LESS && COFFEE TO OPTIMIZE CODE
 2. OPTIMIZE THE WORKFLOW OF PHP AND JQUERY
+3. FINISH THE MODIFY FUNCTION
+4. USE `mysqli` APIs INSTEAD OF `mysql` IN PHP (FOR SECURITY)
 
 ## TIPS
 
@@ -216,3 +226,115 @@
 ### 10. Mysql Primary Key auto incredement
 
     alter table user modify id integer auto_increment ;
+
+### 11. AJAX LONG POLLING
+
+    It's an EASY METHOD to sync with server data, But It has high cost.
+
+---
+
+    function startListen(){
+      serverQueryEvent = setInterval(getChatMsg,"3000");
+    }
+
+### 12. ABOUT OBJECTIVE PROGRAMMING
+
+*Provided By GiyyaPan*
+
+        function ChatMsg(msg){
+          this.messageId = msg.id;
+          this.chatContent = msg.content;
+          this.me = msg.me;
+          this.commentTime = msg.time;
+          this.$diff = $($("#chat_content_cell_tpl").html());
+          this.$p = $($("#chat_content_p_tpl").html());
+          this.$icon = $($("#chat_content_cell_icon").html());
+          this.firstParagraph = false;  // Judge If the content is the first one so as to delete the $diff if needed
+          this.totalParagraph = -1; // Only make sense when thisdom is a diff one
+        }
+
+        ChatMsg.prototype.autoAppend = function() {
+          presIsMe = (this.me == "1") ? 1 : -1;
+          same = (prevIsMe == presIsMe) ? true : false;
+          var self = this;
+          var data = {};
+          data.id = self.messageId;
+          if (same) {
+            this.$father = $father;
+            this.$father.totalParagraph++;
+            this.$p.text(this.chatContent);
+            var self = this;
+            this.$icon.find("#del_btn").click(function(){
+              $.post("delete.php",JSON.stringify(data), function(data, status){
+                if (status == "success") {
+                  if(self.$father.totalParagraph == 1){
+                    self.$father.$diff.remove();
+                  }
+                  else {
+                    self.$p.remove();
+                  }
+                  self.$father.totalParagraph--;
+                }
+                else {
+                  alert("server error! code: 404 status: ", status);
+                }
+              });
+            });
+            this.$p.append(this.$icon);
+            this.$father.$diff.find(".chat_content_cell").append(this.$p);
+          }
+          else {
+            prevIsMe = presIsMe;
+            $father = this;
+            this.totalParagraph = 1;
+            var index = (presIsMe == 1)? myIndex : this.targetUserIndex;
+            this.$diff.find(".chat_avatar").attr("src", UserList[index].avatar);
+            this.$diff.find(".chat_name").text(UserList[index].username);
+            this.$diff.find(".chat_nickname").text(UserList[index].nickname);
+            this.$diff.find(".chat_time").text(this.commentTime);
+            this.$p.text(this.chatContent);
+            this.$icon.find("#del_btn").click(function(){
+              $.post("delete.php",JSON.stringify(data), function(data, status){
+                if (status == "success") {
+                  if (self.totalParagraph > 1) {
+                    self.$p.remove();
+                  }
+                  else {
+                    self.$diff.remove();
+                  }
+                  self.totalParagraph--;
+                }
+                else {
+                  alert("server error! code: 404 status: ", status);
+                }
+              });
+            });
+            this.$p.append(this.$icon);
+            this.$diff.find(".chat_content_cell").append(this.$p);
+            this.$diff.appendTo(".content_body_section");
+          }
+          bindIcon();
+        }
+
+        function User(user){
+          this.avatar = user.avatar;
+          this.nickname = user.nickname;
+          this.userid = user.userid;
+          this.username = user.username;
+          this.$ = $($("#contact_list_tpl").html());
+        }
+
+        User.prototype.autoAppend = function () {
+          this.$.find(".contact_avatar").attr("src",this.avatar);
+          this.$.find(".contact_name").text(this.username);
+          var self = this
+          this.$.click(function(){
+            $(".contact_list_cell").removeClass("active");
+            self.$.addClass("active");
+            $(".session_name").text(self.username);
+            $(".contact_nickname").text(self.nickname);
+            targetId = self.userid;
+            getChatMsg();
+          });
+          $(".contact_list_box").append(this.$);
+        }

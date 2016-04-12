@@ -290,6 +290,8 @@
         
             <li><a href="#log-on-201647">LOG ON 2016.4.7</a></li>
         
+            <li><a href="#log-on-2016412">LOG ON 2016.4.12</a></li>
+        
             <li><a href="#remaining">REMAINING</a></li>
         
             <li><a href="#tips">TIPS</a></li>
@@ -309,10 +311,16 @@
 <p><em>optimized js code and structure</em></p>
 <h2 id="log-on-201647">LOG ON 2016.4.7</h2>
 <p><em>finished the backend server and connected to mysql by using PHP</em></p>
+<h2 id="log-on-2016412">LOG ON 2016.4.12</h2>
+<p><em>rebuild the project with visual programming method</em></p>
+<p><em>remaining to hanlde the modify function</em></p>
+<p><em>There is soming wrong with mysql APIs in PHP</em></p>
 <h2 id="remaining">REMAINING</h2>
 <ol>
 <li>USE LESS &amp;&amp; COFFEE TO OPTIMIZE CODE</li>
 <li>OPTIMIZE THE WORKFLOW OF PHP AND JQUERY</li>
+<li>FINISH THE MODIFY FUNCTION</li>
+<li>USE <code>mysqli</code> APIs INSTEAD OF <code>mysql</code> IN PHP (FOR SECURITY)</li>
 </ol>
 <h2 id="tips">TIPS</h2>
 <h3 id="1-how-to-divide-a-html-into-3-pieces">1. HOW TO DIVIDE A HTML INTO 3 PIECES</h3>
@@ -485,6 +493,114 @@
 </code></pre>
 <h3 id="10-mysql-primary-key-auto-incredement">10. Mysql Primary Key auto incredement</h3>
 <pre><code>alter table user modify id integer auto_increment ;
+</code></pre>
+<h3 id="11-ajax-long-polling">11. AJAX LONG POLLING</h3>
+<pre><code>It's an EASY METHOD to sync with server data, But It has high cost.
+</code></pre>
+<hr />
+<pre><code>function startListen(){
+  serverQueryEvent = setInterval(getChatMsg,"3000");
+}
+</code></pre>
+<h3 id="12-about-objective-programming">12. ABOUT OBJECTIVE PROGRAMMING</h3>
+<p><em>Provided By GiyyaPan</em></p>
+<pre><code>    function ChatMsg(msg){
+      this.messageId = msg.id;
+      this.chatContent = msg.content;
+      this.me = msg.me;
+      this.commentTime = msg.time;
+      this.$diff = $($("#chat_content_cell_tpl").html());
+      this.$p = $($("#chat_content_p_tpl").html());
+      this.$icon = $($("#chat_content_cell_icon").html());
+      this.firstParagraph = false;  // Judge If the content is the first one so as to delete the $diff if needed
+      this.totalParagraph = -1; // Only make sense when thisdom is a diff one
+    }
+
+    ChatMsg.prototype.autoAppend = function() {
+      presIsMe = (this.me == "1") ? 1 : -1;
+      same = (prevIsMe == presIsMe) ? true : false;
+      var self = this;
+      var data = {};
+      data.id = self.messageId;
+      if (same) {
+        this.$father = $father;
+        this.$father.totalParagraph++;
+        this.$p.text(this.chatContent);
+        var self = this;
+        this.$icon.find("#del_btn").click(function(){
+          $.post("delete.php",JSON.stringify(data), function(data, status){
+            if (status == "success") {
+              if(self.$father.totalParagraph == 1){
+                self.$father.$diff.remove();
+              }
+              else {
+                self.$p.remove();
+              }
+              self.$father.totalParagraph--;
+            }
+            else {
+              alert("server error! code: 404 status: ", status);
+            }
+          });
+        });
+        this.$p.append(this.$icon);
+        this.$father.$diff.find(".chat_content_cell").append(this.$p);
+      }
+      else {
+        prevIsMe = presIsMe;
+        $father = this;
+        this.totalParagraph = 1;
+        var index = (presIsMe == 1)? myIndex : this.targetUserIndex;
+        this.$diff.find(".chat_avatar").attr("src", UserList[index].avatar);
+        this.$diff.find(".chat_name").text(UserList[index].username);
+        this.$diff.find(".chat_nickname").text(UserList[index].nickname);
+        this.$diff.find(".chat_time").text(this.commentTime);
+        this.$p.text(this.chatContent);
+        this.$icon.find("#del_btn").click(function(){
+          $.post("delete.php",JSON.stringify(data), function(data, status){
+            if (status == "success") {
+              if (self.totalParagraph &gt; 1) {
+                self.$p.remove();
+              }
+              else {
+                self.$diff.remove();
+              }
+              self.totalParagraph--;
+            }
+            else {
+              alert("server error! code: 404 status: ", status);
+            }
+          });
+        });
+        this.$p.append(this.$icon);
+        this.$diff.find(".chat_content_cell").append(this.$p);
+        this.$diff.appendTo(".content_body_section");
+      }
+      bindIcon();
+    }
+
+    function User(user){
+      this.avatar = user.avatar;
+      this.nickname = user.nickname;
+      this.userid = user.userid;
+      this.username = user.username;
+      this.$ = $($("#contact_list_tpl").html());
+    }
+
+    User.prototype.autoAppend = function () {
+      this.$.find(".contact_avatar").attr("src",this.avatar);
+      this.$.find(".contact_name").text(this.username);
+      var self = this
+      this.$.click(function(){
+        $(".contact_list_cell").removeClass("active");
+        self.$.addClass("active");
+        $(".session_name").text(self.username);
+        $(".contact_nickname").text(self.nickname);
+        targetId = self.userid;
+        getChatMsg();
+      });
+      $(".contact_list_box").append(this.$);
+    }
 </code></pre></div>
         </div>
 
