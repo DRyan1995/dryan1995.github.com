@@ -18,13 +18,23 @@
 
 *finished the backend server and connected to mysql by using PHP*
 
-## LOG ON 2016.4.12
+## LOG ON 2016.4.11
 
 *rebuild the project with visual programming method*
 
-*remaining to hanlde the modify function*
+*remaining to handle the modify function*
 
-*There is soming wrong with mysql APIs in PHP*
+*There is something wrong with mysql APIs in PHP*
+
+## LOG ON 2016.4.12
+
+*finished modify function*
+
+*pay attention not to rebind one event on a jquery object*
+
+*need to improve the method of sync data...* **WebSocket or SSE (need to solve the nginx config)**
+
+*finish multi-user function*
 
 ## REMAINING
 

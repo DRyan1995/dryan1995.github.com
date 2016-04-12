@@ -125,3 +125,7 @@ USE `$(".class").size();`
                 alert("server error! 403");
               }
             });
+
+### 9. DO NOT FORGET UNBIND AFTER ONE BIND
+
+`      $modifyDialog.find(".dialog_btn_confirm").unbind("click");`
