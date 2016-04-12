@@ -296,6 +296,30 @@
         
             <li><a href="#tips">TIPS</a></li>
         
+            <li><a href="#1-how-to-divide-a-html-into-3-pieces">1. HOW TO DIVIDE A HTML INTO 3 PIECES</a></li>
+        
+            <li><a href="#2-get-familiar-with-jquery-apis">2. GET FAMILIAR WITH JQUERY APIs</a></li>
+        
+            <li><a href="#3-distinguish-array-from-object-in-js">3. DISTINGUISH ARRAY FROM OBJECT IN JS</a></li>
+        
+            <li><a href="#4-improve-the-way-of-data-storage">4. IMPROVE THE WAY OF DATA STORAGE</a></li>
+        
+            <li><a href="#5-use-multi-classes-when-needed">5. USE MULTI CLASSES WHEN NEEDED</a></li>
+        
+            <li><a href="#6-improve-the-way-of-adding-stastic-elements-in-html">6. IMPROVE THE WAY OF ADDING STASTIC ELEMENTS IN HTML</a></li>
+        
+            <li><a href="#7-use-jquery-objects-to-insert-elements">7. USE JQUERY OBJECTS TO INSERT ELEMENTS</a></li>
+        
+            <li><a href="#8-pay-special-attention-to-ajax">8. PAY SPECIAL ATTENTION TO AJAX</a></li>
+        
+            <li><a href="#9-turn-to-objective">9. TURN TO OBJECTIVE</a></li>
+        
+            <li><a href="#10-set-mysql-primary-key-auto-increment">10. SET MYSQL PRIMARY KEY AUTO INCREMENT</a></li>
+        
+            <li><a href="#11-ajax-long-polling">11. AJAX LONG POLLING</a></li>
+        
+            <li><a href="#12-about-objective-programming">12. ABOUT OBJECTIVE PROGRAMMING</a></li>
+        
     
     </ul>
 </div></div>
@@ -323,13 +347,13 @@
 <li>USE <code>mysqli</code> APIs INSTEAD OF <code>mysql</code> IN PHP (FOR SECURITY)</li>
 </ol>
 <h2 id="tips">TIPS</h2>
-<h3 id="1-how-to-divide-a-html-into-3-pieces">1. HOW TO DIVIDE A HTML INTO 3 PIECES</h3>
+<h2 id="1-how-to-divide-a-html-into-3-pieces">1. HOW TO DIVIDE A HTML INTO 3 PIECES</h2>
 <p><img alt="layout" src="http://120.27.114.115:8088/proj/layout.png" /></p>
 <p><strong>DO NOT FORGET TO MAKE MIDDLE DIV THE LAST ONE!!</strong></p>
-<h3 id="2-get-familiar-with-jquery-apis">2. GET FAMILIAR WITH JQUERY APIs</h3>
+<h2 id="2-get-familiar-with-jquery-apis">2. GET FAMILIAR WITH JQUERY APIs</h2>
 <p><strong>ESPECIALLY THE SELECTOR</strong></p>
 <p><a href="http://www.w3schools.com/jquery/">W3C JQUERY SCHOOL</a></p>
-<h3 id="3-distinguish-array-from-object-in-js">3. DISTINGUISH ARRAY FROM OBJECT IN JS</h3>
+<h2 id="3-distinguish-array-from-object-in-js">3. DISTINGUISH ARRAY FROM OBJECT IN JS</h2>
 <pre><code>    function db_init(){
       session_count = $(".contact_list_cell").size();
       for(var i = 0;i &lt; session_count; i++){
@@ -347,7 +371,7 @@
 <p><em>Its a little complex</em></p>
 <p><em>I need to connect it to my backend server</em>
 <em>(DONE ON APRIL 7)</em></p>
-<h3 id="4-improve-the-way-of-data-storage">4. IMPROVE THE WAY OF DATA STORAGE</h3>
+<h2 id="4-improve-the-way-of-data-storage">4. IMPROVE THE WAY OF DATA STORAGE</h2>
 <pre><code>    ChatDatas.id111 = {};
     ChatDatas.id111.username = "GiyyaPan";
     ChatDatas.id111.nickname = "潘潘";
@@ -360,7 +384,7 @@
 <p><em>its more convenient and easy to understand</em></p>
 <p><strong>The NEXT STEP is CONNECT THE BACKEND SERVER</strong>
 <em>(DONE ON APRIL 7)</em></p>
-<h3 id="5-use-multi-classes-when-needed">5. USE MULTI CLASSES WHEN NEEDED</h3>
+<h2 id="5-use-multi-classes-when-needed">5. USE MULTI CLASSES WHEN NEEDED</h2>
 <p><strong>IN CSS:</strong></p>
 <pre><code>    .contact_list_cell{
       display: block;
@@ -381,7 +405,7 @@
 <pre><code>    $(this).siblings().removeClass("cell_active")
     $(this).addClass("cell_active");
 </code></pre>
-<h3 id="6-improve-the-way-of-adding-stastic-elements-in-html">6. IMPROVE THE WAY OF ADDING STASTIC ELEMENTS IN HTML</h3>
+<h2 id="6-improve-the-way-of-adding-stastic-elements-in-html">6. IMPROVE THE WAY OF ADDING STASTIC ELEMENTS IN HTML</h2>
 <pre><code>    function renderPage(){
         $(".content_body_section").children().remove();
         if(!ChatDatas[currentSessoinId].hasOwnProperty('content')){
@@ -441,15 +465,15 @@
         return;
       }
 </code></pre>
-<h3 id="7-use-jquery-objects-to-insert-elements">7. USE JQUERY OBJECTS TO INSERT ELEMENTS</h3>
+<h2 id="7-use-jquery-objects-to-insert-elements">7. USE JQUERY OBJECTS TO INSERT ELEMENTS</h2>
 <pre><code>    $newDom = $($("#contact_list_tpl").html())
     $newDom.find(".contact_avatar").attr("src",ChatDatas[idCode]["avatar"])
     $newDom.find(".contact_name").text(ChatDatas[idCode]["username"])
     $(".contact_list_box").append($newDom)
 </code></pre>
-<h3 id="8-pay-special-attention-to-ajax">8. PAY SPECIAL ATTENTION TO AJAX</h3>
+<h2 id="8-pay-special-attention-to-ajax">8. PAY SPECIAL ATTENTION TO AJAX</h2>
 <p><strong>U NEED TO NOTICE THE ARRANGEMENT OF FUNCTIONS WHEN USING AJAX OTHERWISE SOME FxxKING PROBLEMS WILL APPEAR</strong></p>
-<h3 id="9-turn-to-objective">9. TURN TO OBJECTIVE</h3>
+<h2 id="9-turn-to-objective">9. TURN TO OBJECTIVE</h2>
 <pre><code>      function ChatMsg(msg) {
         this.content = msg.content;
         this.targetid = msg.targetid;
@@ -491,10 +515,10 @@
       chatMsgList = []
       chatMsgList.push(chatMsg1)
 </code></pre>
-<h3 id="10-mysql-primary-key-auto-incredement">10. Mysql Primary Key auto incredement</h3>
+<h2 id="10-set-mysql-primary-key-auto-increment">10. SET MYSQL PRIMARY KEY AUTO INCREMENT</h2>
 <pre><code>alter table user modify id integer auto_increment ;
 </code></pre>
-<h3 id="11-ajax-long-polling">11. AJAX LONG POLLING</h3>
+<h2 id="11-ajax-long-polling">11. AJAX LONG POLLING</h2>
 <pre><code>It's an EASY METHOD to sync with server data, But It has high cost.
 </code></pre>
 <hr />
@@ -502,7 +526,7 @@
   serverQueryEvent = setInterval(getChatMsg,"3000");
 }
 </code></pre>
-<h3 id="12-about-objective-programming">12. ABOUT OBJECTIVE PROGRAMMING</h3>
+<h2 id="12-about-objective-programming">12. ABOUT OBJECTIVE PROGRAMMING</h2>
 <p><em>Provided By GiyyaPan</em></p>
 <pre><code>    function ChatMsg(msg){
       this.messageId = msg.id;

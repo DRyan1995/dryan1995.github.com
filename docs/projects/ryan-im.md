@@ -35,19 +35,19 @@
 
 ## TIPS
 
-### 1. HOW TO DIVIDE A HTML INTO 3 PIECES
+## 1. HOW TO DIVIDE A HTML INTO 3 PIECES
 
 ![layout](http://120.27.114.115:8088/proj/layout.png)
 
 **DO NOT FORGET TO MAKE MIDDLE DIV THE LAST ONE!!**
 
-### 2. GET FAMILIAR WITH JQUERY APIs
+## 2. GET FAMILIAR WITH JQUERY APIs
 
 **ESPECIALLY THE SELECTOR**
 
 [W3C JQUERY SCHOOL](http://www.w3schools.com/jquery/)
 
-### 3. DISTINGUISH ARRAY FROM OBJECT IN JS
+## 3. DISTINGUISH ARRAY FROM OBJECT IN JS
 
         function db_init(){
           session_count = $(".contact_list_cell").size();
@@ -68,7 +68,7 @@
 *I need to connect it to my backend server*
 *(DONE ON APRIL 7)*
 
-### 4. IMPROVE THE WAY OF DATA STORAGE
+## 4. IMPROVE THE WAY OF DATA STORAGE
 
         ChatDatas.id111 = {};
         ChatDatas.id111.username = "GiyyaPan";
@@ -84,7 +84,7 @@
 **The NEXT STEP is CONNECT THE BACKEND SERVER**
 *(DONE ON APRIL 7)*
 
-### 5. USE MULTI CLASSES WHEN NEEDED
+## 5. USE MULTI CLASSES WHEN NEEDED
 
 **IN CSS:**
 
@@ -108,7 +108,7 @@
         $(this).siblings().removeClass("cell_active")
         $(this).addClass("cell_active");
 
-### 6. IMPROVE THE WAY OF ADDING STASTIC ELEMENTS IN HTML
+## 6. IMPROVE THE WAY OF ADDING STASTIC ELEMENTS IN HTML
 
         function renderPage(){
             $(".content_body_section").children().remove();
@@ -169,18 +169,18 @@
             return;
           }
 
-### 7. USE JQUERY OBJECTS TO INSERT ELEMENTS
+## 7. USE JQUERY OBJECTS TO INSERT ELEMENTS
 
         $newDom = $($("#contact_list_tpl").html())
         $newDom.find(".contact_avatar").attr("src",ChatDatas[idCode]["avatar"])
         $newDom.find(".contact_name").text(ChatDatas[idCode]["username"])
         $(".contact_list_box").append($newDom)
 
-### 8. PAY SPECIAL ATTENTION TO AJAX
+## 8. PAY SPECIAL ATTENTION TO AJAX
 
 **U NEED TO NOTICE THE ARRANGEMENT OF FUNCTIONS WHEN USING AJAX OTHERWISE SOME FxxKING PROBLEMS WILL APPEAR**
 
-### 9. TURN TO OBJECTIVE
+## 9. TURN TO OBJECTIVE
 
           function ChatMsg(msg) {
             this.content = msg.content;
@@ -223,11 +223,11 @@
           chatMsgList = []
           chatMsgList.push(chatMsg1)
 
-### 10. Mysql Primary Key auto incredement
+## 10. SET MYSQL PRIMARY KEY AUTO INCREMENT
 
     alter table user modify id integer auto_increment ;
 
-### 11. AJAX LONG POLLING
+## 11. AJAX LONG POLLING
 
     It's an EASY METHOD to sync with server data, But It has high cost.
 
@@ -237,7 +237,7 @@
       serverQueryEvent = setInterval(getChatMsg,"3000");
     }
 
-### 12. ABOUT OBJECTIVE PROGRAMMING
+## 12. ABOUT OBJECTIVE PROGRAMMING
 
 *Provided By GiyyaPan*
 
