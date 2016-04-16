@@ -46,11 +46,16 @@
 4. BIND KEYBOARD ACTIONS (ENTER TO SEND MESSAGE)
 5. USE SSE OR WEBSOCKET RATHER THAN LONG POLLING
 
+## LOG ON 2016.4.16
+
+*Finished almost all the base functions*
+
+*The performance of it seems terrible!*
+
 ## REMAINING
 
 1. USE LESS && COFFEE TO OPTIMIZE CODE
 2. OPTIMIZE THE WORKFLOW OF PHP AND JQUERY
-3. FINISH THE MODIFY FUNCTION
 4. USE `mysqli` APIs INSTEAD OF `mysql` IN PHP (FOR SECURITY)
 
 ## TIPS
@@ -67,7 +72,7 @@
 
 [W3C JQUERY SCHOOL](http://www.w3schools.com/jquery/)
 
-## 3. DISTINGUISH ARRAY FROM OBJECT IN JS
+## 3. DISTINGUISH ARRAY FROM OBJECT IN JS (Its NOT A GOOD WAY)
 
         function db_init(){
           session_count = $(".contact_list_cell").size();
@@ -357,4 +362,30 @@
             getChatMsg();
           });
           $(".contact_list_box").append(this.$);
+        }
+
+## 13. USE A MAGIC WAY TO LOOP IN AJAX
+
+        function queryAsk(refreshingIndex){
+          if (refreshingIndex == UserList.length - 1) {
+            return;
+          }
+          var requestUrl = "apis/server.php?command=content&ownerId=" + myId
+                            + "&targetId=" + UserList[refreshingIndex].userid;
+          $.get(requestUrl, function(data,status){
+            if (status == "success") {
+              UserList[refreshingIndex].newChatMsgs = [];
+              var chatMsg = JSON.parse(data);
+              for (var j = 0; j < chatMsg.length; j++) {
+                var ChatMsg1 = new ChatMsg(chatMsg[j]);
+                ChatMsg1.targetUserIndex = refreshingIndex;
+                UserList[refreshingIndex].newChatMsgs.push(ChatMsg1);
+              }
+              UserList[refreshingIndex].newChatMsgs.sort(mysort);
+          }
+            else {
+              alert("server error!");
+            }
+            queryAsk(++refreshingIndex);
+          });
         }

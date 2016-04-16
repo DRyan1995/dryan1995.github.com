@@ -296,6 +296,8 @@
         
             <li><a href="#log-on-2016413">LOG ON 2016.4.13</a></li>
         
+            <li><a href="#log-on-2016416">LOG ON 2016.4.16</a></li>
+        
             <li><a href="#remaining">REMAINING</a></li>
         
             <li><a href="#tips">TIPS</a></li>
@@ -304,7 +306,7 @@
         
             <li><a href="#2-get-familiar-with-jquery-apis">2. GET FAMILIAR WITH JQUERY APIs</a></li>
         
-            <li><a href="#3-distinguish-array-from-object-in-js">3. DISTINGUISH ARRAY FROM OBJECT IN JS</a></li>
+            <li><a href="#3-distinguish-array-from-object-in-js-its-not-a-good-way">3. DISTINGUISH ARRAY FROM OBJECT IN JS (Its NOT A GOOD WAY)</a></li>
         
             <li><a href="#4-improve-the-way-of-data-storage">4. IMPROVE THE WAY OF DATA STORAGE</a></li>
         
@@ -323,6 +325,8 @@
             <li><a href="#11-ajax-long-polling">11. AJAX LONG POLLING</a></li>
         
             <li><a href="#12-about-objective-programming">12. ABOUT OBJECTIVE PROGRAMMING</a></li>
+        
+            <li><a href="#13-use-a-magic-way-to-loop-in-ajax">13. USE A MAGIC WAY TO LOOP IN AJAX</a></li>
         
     
     </ul>
@@ -357,11 +361,13 @@
 <li>BIND KEYBOARD ACTIONS (ENTER TO SEND MESSAGE)</li>
 <li>USE SSE OR WEBSOCKET RATHER THAN LONG POLLING</li>
 </ol>
+<h2 id="log-on-2016416">LOG ON 2016.4.16</h2>
+<p><em>Finished almost all the base functions</em></p>
+<p><em>The performance of it seems terrible!</em></p>
 <h2 id="remaining">REMAINING</h2>
 <ol>
 <li>USE LESS &amp;&amp; COFFEE TO OPTIMIZE CODE</li>
 <li>OPTIMIZE THE WORKFLOW OF PHP AND JQUERY</li>
-<li>FINISH THE MODIFY FUNCTION</li>
 <li>USE <code>mysqli</code> APIs INSTEAD OF <code>mysql</code> IN PHP (FOR SECURITY)</li>
 </ol>
 <h2 id="tips">TIPS</h2>
@@ -371,7 +377,7 @@
 <h2 id="2-get-familiar-with-jquery-apis">2. GET FAMILIAR WITH JQUERY APIs</h2>
 <p><strong>ESPECIALLY THE SELECTOR</strong></p>
 <p><a href="http://www.w3schools.com/jquery/">W3C JQUERY SCHOOL</a></p>
-<h2 id="3-distinguish-array-from-object-in-js">3. DISTINGUISH ARRAY FROM OBJECT IN JS</h2>
+<h2 id="3-distinguish-array-from-object-in-js-its-not-a-good-way">3. DISTINGUISH ARRAY FROM OBJECT IN JS (Its NOT A GOOD WAY)</h2>
 <pre><code>    function db_init(){
       session_count = $(".contact_list_cell").size();
       for(var i = 0;i &lt; session_count; i++){
@@ -642,6 +648,31 @@
         getChatMsg();
       });
       $(".contact_list_box").append(this.$);
+    }
+</code></pre>
+<h2 id="13-use-a-magic-way-to-loop-in-ajax">13. USE A MAGIC WAY TO LOOP IN AJAX</h2>
+<pre><code>    function queryAsk(refreshingIndex){
+      if (refreshingIndex == UserList.length - 1) {
+        return;
+      }
+      var requestUrl = "apis/server.php?command=content&amp;ownerId=" + myId
+                        + "&amp;targetId=" + UserList[refreshingIndex].userid;
+      $.get(requestUrl, function(data,status){
+        if (status == "success") {
+          UserList[refreshingIndex].newChatMsgs = [];
+          var chatMsg = JSON.parse(data);
+          for (var j = 0; j &lt; chatMsg.length; j++) {
+            var ChatMsg1 = new ChatMsg(chatMsg[j]);
+            ChatMsg1.targetUserIndex = refreshingIndex;
+            UserList[refreshingIndex].newChatMsgs.push(ChatMsg1);
+          }
+          UserList[refreshingIndex].newChatMsgs.sort(mysort);
+      }
+        else {
+          alert("server error!");
+        }
+        queryAsk(++refreshingIndex);
+      });
     }
 </code></pre></div>
         </div>
