@@ -52,6 +52,18 @@
 
 *The performance of it seems terrible!*
 
+## LOG ON 2016.4.17
+
+*This project will temporarily come to an end*
+
+*It is not easy to add new features to this project because of the poor structure as well as the stupid algorithmn*
+
+*I will get to php and coffee study in the coming weeks.*
+
+*If I have spare time later I will get to polish this project*
+
+*Of course rewrite it.*
+
 ## REMAINING
 
 1. USE LESS && COFFEE TO OPTIMIZE CODE
