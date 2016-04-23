@@ -410,7 +410,8 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
     pageName = pageName.replace(/-/g,'');
     pageName = pageName.replace(/"/g,'');
     console.log(pageName);
-    serverApiUrl = "http://ryan95.com/apis/"
+    serverApiUrl = "http://ryan95.com/apis/";
+    // serverApiUrl = "http://localhost:8008/comment_section/apis/"
 
     pageInit();
 
@@ -458,9 +459,21 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
       datas.author = author;
       datas.email = email;
       datas.commentTime = getTime();
+      if (datas.content == "") {
+        alert("Please Say Something!");
+        return;
+      }
+      if (datas.author == "") {
+        alert("Please Enter Your Name!");
+        return;
+      }
+      if (datas.email == "") {
+        alert("Please Enter Your Email!");
+        return;
+      }
       $.post(serverApiUrl+"post.php", JSON.stringify(datas), function(data, status){
         if (status == "success") {
-          console.log(data);
+          $("#comment-content-input").val();
           addCommentData(datas);
         }
         else {
