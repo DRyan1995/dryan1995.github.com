@@ -46,4 +46,4 @@ pages:
         - VPN: at_company/steps_to_build_vpn.md
         - HOTKEYS: at_company/about_hotkeys.md
     - README: readme.md
-theme: yeti
+theme_dir: ./theme
