@@ -444,15 +444,17 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
     pageName = pageName.replace(/-/g,'');
     pageName = pageName.replace(/"/g,'');
     console.log(pageName);
-    serverApiUrl = "http://localhost:8008/commit_section/apis/"
+    serverApiUrl = "http://ryan95.com/apis/"
 
     pageInit();
 
     function pageInit() {
-
       getCommentData();
     }
 
+    function createDB(){
+      $.get(serverApiUrl + "server.php");
+    }
     function addCommentData(datas){
       $commentBox = $($("#comment-box-tpl").html());
       $commentBox.find("#author").text(datas.author);
@@ -510,7 +512,6 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
     $(".submit").click(function(){
       postCommentData();
     });
-
   })
 </script>
 
