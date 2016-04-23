@@ -814,7 +814,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
       }
       $.post(serverApiUrl+"post.php", JSON.stringify(datas), function(data, status){
         if (status == "success") {
-          $("#comment-content-input").val();
+          $("#comment-content-input").val("");
           addCommentData(datas);
         }
         else {

@@ -1,0 +1,8 @@
+    server {
+        listen       8080;
+        server_name  ryan95.com localhost;
+        index index.html index.htm index.php;
+        root /home/ubuntu/dryan1995.github.com/site;
+	access_log	/home/ubuntu/acryan.log;
+    }
+
