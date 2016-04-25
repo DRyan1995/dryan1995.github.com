@@ -438,24 +438,41 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 <script type="text/javascript">
   $(document).ready(function () {
     $commentBoxs = [];
-    pageName = $("title").text();
-    pageName = pageName.replace(/'/g,'');
-    pageName = pageName.replace(/ /g,'');
-    pageName = pageName.replace(/-/g,'');
-    pageName = pageName.replace(/"/g,'');
-    console.log(pageName);
-    serverApiUrl = "http://ryan95.com/apis/";
-    // serverApiUrl = "http://localhost:8008/comment_section/apis/"
+    var pageName;
+    var Guest;
+    var serverApiUrl;
 
     pageInit();
 
+    function getPageName() {
+      pageName = $("title").text();
+      pageName = pageName.replace(/'/g,'');
+      pageName = pageName.replace(/ /g,'');
+      pageName = pageName.replace(/-/g,'');
+      pageName = pageName.replace(/"/g,'');
+    }
+
+    function getEnv() {
+      var env = getUrlPara("env");
+      if (env == "local" || env == "l") {
+        serverApiUrl = "http://localhost:8008/blog/apis/"
+      }
+      else {
+        serverApiUrl = "http://ryan95.com/apis/";
+      }
+    }
+
     function pageInit() {
+      getEnv();
+      getPageName();
       getCommentData();
+      Guest = getUrlPara("guest");
     }
 
     function createDB(){
       $.get(serverApiUrl + "server.php");
     }
+
     function addCommentData(datas){
       $commentBox = $($("#comment-box-tpl").html());
       $commentBox.find("#author").text(datas.author);
@@ -472,7 +489,6 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
         if (status == "success") {
           console.log(data);
           var CommentList = JSON.parse(data);
-          console.log(CommentList);
           for (var i = 0; i < CommentList.length; i++) {
             addCommentData(CommentList[i]);
           }
@@ -481,6 +497,15 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
           alert("Server Error! 4042");
         }
       });
+    }
+
+    function checkEmail(email){
+        var pattern = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+        if(pattern.test(email)){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     function postCommentData(){
@@ -505,6 +530,10 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
         alert("Please Enter Your Email!");
         return;
       }
+      if (!checkEmail(datas.email)) {
+        alert("Please Enter Your Correct Email Address!");
+        return;
+      }
       $.post(serverApiUrl+"post.php", JSON.stringify(datas), function(data, status){
         if (status == "success") {
           $("#comment-content-input").val("");
@@ -514,6 +543,21 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
           alert("Server Error! 4041");
         }
       });
+    }
+
+    function getUrlPara(paras){
+      var url = location.href;
+      var paraString = url.substring(url.indexOf("?")+1,url.length).split("&");
+      var paraObj = {}
+      for (i=0; j=paraString[i]; i++){
+        paraObj[j.substring(0,j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=")+1,j.length);
+      }
+      var returnValue = paraObj[paras.toLowerCase()];
+      if(typeof(returnValue)=="undefined"){
+        return "";
+      }else{
+        return returnValue;
+      }
     }
 
     function getTime(){
