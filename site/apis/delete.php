@@ -10,8 +10,9 @@ if(!$dbConnect){
 mysql_select_db("blog_commit", $dbConnect);
 
 $postData = file_get_contents("php://input");
-$commentData = json_decode($postData, true);
+$deleteData = json_decode($postData, true);
 
-$sql = "INSERT INTO comments (page_name, author, content, email) VALUES ('${commentData[pageName]}', '${commentData[author]}', '${commentData[content]}', '${commentData[email]}')";
+$sql = "DELETE FROM comments WHERE id='$deleteData[id]' ";
 mysql_query($sql);
+echo "success";
 ?>

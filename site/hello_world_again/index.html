@@ -392,6 +392,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
       getPageName();
       getCommentData();
       Guest = getUrlPara("guest");
+      userDataInit();
     }
 
     function createDB(){
@@ -399,20 +400,46 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
     }
 
     function addCommentData(datas){
-      $commentBox = $($("#comment-box-tpl").html());
+      var $commentBox = $($("#comment-box-tpl").html());
       $commentBox.find("#author").text(datas.author);
       $commentBox.find("#email").text(datas.email);
       $commentBox.find("#content").text(datas.content);
       $commentBox.find("#comment-time").text(datas.commentTime);
       $commentBox.insertAfter(".comment:last");
+      if (Guest == "ryan") {
+        $commentBox.click(function () {
+          if (window.confirm("Are U Sure To Remove This Comment?")) {
+            console.log(datas.id);
+            deleteCommentData($commentBox, datas.id);
+          }
+        })
+      }
       $commentBoxs.push($commentBox);
+    }
+
+    function deleteCommentData(self, id){
+      var data = {};
+      console.log(id);
+      if (!id) {
+        alert("Data Error Please Retry After Refresh!");
+        window.location.reload(true);
+        return;
+      }
+      data.id = id;
+      $.post(serverApiUrl + "delete.php", JSON.stringify(data), function (data, status) {
+        if (data == "success") {
+          self.remove();
+        }
+        else {
+          alert("Server Error!" + data);
+        }
+      })
     }
 
     function getCommentData() {
       var getUrl = serverApiUrl + "get.php?pageName=" + pageName;
       $.get(getUrl, function(data, status){
         if (status == "success") {
-          console.log(data);
           var CommentList = JSON.parse(data);
           for (var i = 0; i < CommentList.length; i++) {
             addCommentData(CommentList[i]);
@@ -431,6 +458,14 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
         }else{
             return false;
         }
+    }
+
+    function userDataInit(){
+      if (Guest=="ryan") {
+        $("#author-input").val("Ryan");
+        $("#email-input").val("ryan951125@icloud.com");
+      }
+      return;
     }
 
     function postCommentData(){
@@ -536,7 +571,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
 .comment-block .reply input {
 	display: inline-block;
-	width: 32%;
+	width: 47%;
 	margin-right: 2%;
 }
 

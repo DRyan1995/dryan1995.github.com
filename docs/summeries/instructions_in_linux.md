@@ -21,6 +21,9 @@
 - `"df -h"`
 > *show the disk usage condition*
 
+- `"du -k"`
+> *show the folder disk usage*
+
 - `"ssh root@192.168.0.120"`
 > *remotely connect the linux terminal by "usr@ipaddress"*
 
