@@ -911,6 +911,12 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
     $(".submit").click(function(){
       postCommentData();
     });
+
+    $(document).keypress(function(e){
+      if (e.keyCode == 13) {
+        postCommentData();
+      }
+    })
   })
 </script>
 
