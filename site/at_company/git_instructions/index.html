@@ -334,6 +334,7 @@ Git有很多优势，其中之一就是远程操作非常简便。本文详细�
 </code></pre>
 <p><code>git clone [user@]example.com:path/to/repo.git/</code></p>
 <p>通常来说，Git协议下载速度最快，SSH协议用于需要用户认证的场合。各种协议优劣的详细讨论请参考官方文档。</p>
+<hr />
 <h3 id="git-remote">二、git remote</h3>
 <hr />
 <p>为了便于管理，Git要求每个远程主机都必须指定一个主机名。git remote命令就用于管理主机名。
@@ -361,6 +362,7 @@ Git有很多优势，其中之一就是远程操作非常简便。本文详细�
 <p><code>git remote rm &lt;主机名&gt;</code></p>
 <p>git remote rename命令用于远程主机的改名。</p>
 <p><code>git remote rename &lt;原主机名&gt; &lt;新主机名&gt;</code></p>
+<hr />
 <h3 id="git-fetch">三、git fetch</h3>
 <hr />
 <p>一旦远程主机的版本库有了更新（Git术语叫做commit），需要将这些更新取回本地，这时就要用到git fetch命令。</p>
@@ -389,6 +391,7 @@ Git有很多优势，其中之一就是远程操作非常简便。本文详细�
 <p><strong>或者</strong></p>
 <p><code>git rebase origin/master</code></p>
 <p>上面命令表示在当前分支上，合并origin/master。</p>
+<hr />
 <h3 id="git-pull">四、git pull</h3>
 <hr />
 <p>git pull命令的作用是，取回远程主机某个分支的更新，再与本地的指定分支合并。它的完整格式稍稍有点复杂。</p>
@@ -420,6 +423,7 @@ Git有很多优势，其中之一就是远程操作非常简便。本文详细�
 <pre><code>    git fetch --prune origin
     git fetch -p
 </code></pre>
+<hr />
 <h3 id="git-push">五、git push</h3>
 <hr />
 <p>git push命令用于将本地分支的更新，推送到远程主机。它的格式与git pull命令相仿。</p>
