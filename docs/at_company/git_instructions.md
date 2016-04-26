@@ -281,4 +281,3 @@ $ git push origin master
 最后，git push不会推送标签（tag），除非使用--tags选项。
 
 `git push origin --tags`
-（完）
