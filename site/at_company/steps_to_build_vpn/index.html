@@ -427,7 +427,7 @@ eth0是网卡名字，可以通过命令 ifconfig 查看 （插播悲剧：serve
 	</div>
 
 	<div class="reply">
-		<textarea id="comment-content-input"></textarea>
+		<textarea id="comment-content-input" placeholder="Your Comments Here..."></textarea>
 		<div>
 			<input id="author-input" type="text" placeholder="Your Name"></input>
 			<input id="email-input" type="text" placeholder="Your Email Address"></input>
@@ -656,7 +656,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
 .comment-block .reply * {
 	width: 100%;
-	margin: 20px 0;
+	margin: 10px 0;
 }
 
 .comment-block .reply input {
@@ -698,14 +698,16 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 }
 
 .comment-block .reply button {
-	background-color: #222;
+	background-color: #9E9D9D;
 	color: white;
 	font-size: 14px;
 	border: none;
 	padding: 15px;
-	width: 30%;
+	width: 50%;
 	outline: none;
-
+  float: right;
+  margin: 0 25%;
+  margin-top: 5%;
 	transition: all .2s ease;
 }
 
