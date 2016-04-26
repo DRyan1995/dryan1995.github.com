@@ -14,7 +14,11 @@ Git有很多优势，其中之一就是远程操作非常简便。本文详细�
         git pull
         git push
 
+---
+
 ### 一、git clone
+
+---
 
 远程操作的第一步，通常是从远程主机克隆一个版本库，这时就要用到git clone命令。
 
@@ -44,6 +48,8 @@ git clone支持多种协议，除了HTTP(s)以外，还支持SSH、Git、本地�
 通常来说，Git协议下载速度最快，SSH协议用于需要用户认证的场合。各种协议优劣的详细讨论请参考官方文档。
 
 ### 二、git remote
+
+---
 
 为了便于管理，Git要求每个远程主机都必须指定一个主机名。git remote命令就用于管理主机名。
 不带选项的时候，git remote命令列出所有远程主机。
@@ -91,6 +97,8 @@ git remote rename命令用于远程主机的改名。
 
 ### 三、git fetch
 
+---
+
 一旦远程主机的版本库有了更新（Git术语叫做commit），需要将这些更新取回本地，这时就要用到git fetch命令。
 
 `git fetch <远程主机名>`
@@ -136,6 +144,8 @@ git branch命令的-r选项，可以用来查看远程分支，-a选项查看所
 上面命令表示在当前分支上，合并origin/master。
 
 ### 四、git pull
+
+---
 
 git pull命令的作用是，取回远程主机某个分支的更新，再与本地的指定分支合并。它的完整格式稍稍有点复杂。
 
@@ -189,6 +199,8 @@ Git也允许手动建立追踪关系。
 
 ### 五、git push
 
+---
+
 git push命令用于将本地分支的更新，推送到远程主机。它的格式与git pull命令相仿。
 
 `git push <远程主机名> <本地分支名>:<远程分支名>`
@@ -196,7 +208,8 @@ git push命令用于将本地分支的更新，推送到远程主机。它的格
 注意，分支推送顺序的写法是<来源地>:<目的地>，所以git pull是<远程分支>:<本地分支>，而git push是<本地分支>:<远程分支>。
 如果省略远程分支名，则表示将本地分支推送与之存在"追踪关系"的远程分支（通常两者同名），如果该远程分支不存在，则会被新建。
 
-$ git push origin master
+`git push origin master`
+
 上面命令表示，将本地的master分支推送到origin主机的master分支。如果后者不存在，则会被新建。
 
 如果省略本地分支名，则表示删除指定的远程分支，因为这等同于推送一个空的本地分支到远程分支。
@@ -253,7 +266,7 @@ $ git push origin master
 
 ## About config the editor:
 
-`$ git config --global core.editor emacs`
+`git config --global core.editor emacs`
 
 ## About the branch operations:
 
