@@ -421,12 +421,33 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
       $.get(serverApiUrl + "server.php");
     }
 
+    function timeHandler(time1) {
+      var date = new Date(Date.parse(time1.replace(/-/g,   "/")));
+      var nowDate = new Date();
+      var passedSecond =  (nowDate.getTime()-date.getTime())/1000;
+      var result;
+      if (passedSecond >= 24 * 60 * 60 * 30) { // greater than one month
+        result = time1;
+      } else if (passedSecond >= 24 * 60 * 60 ) { //greater than one day
+        result = parseInt(passedSecond / (24 * 60 *60)) + "days ago";
+      } else if (passedSecond > 1 * 60 * 60) {// greater than an hour
+        result = parseInt(passedSecond / (60 * 60)) + "hours ago";
+      } else if (passedSecond > 1* 60){ //greater than one minute
+        result = parseInt(passedSecond / 60) + "minutes ago";
+      } else { // less than one minute
+        result = parseInt(passedSecond) + "seconds ago";
+      }
+
+      return result + '...';
+    }
+
     function addCommentData(datas){
       var $commentBox = $($("#comment-box-tpl").html());
       $commentBox.find("#author").text(datas.author);
       $commentBox.find("#email").text(datas.email);
       $commentBox.find("#content").text(datas.content);
-      $commentBox.find("#comment-time").text(datas.commentTime);
+      $commentBox.find("#comment-time").text(timeHandler(datas.commentTime));
+      console.log(timeHandler(datas.commentTime));
       $commentBox.insertAfter(".comment:last");
       if (Guest == "ryan") {
         $commentBox.click(function () {
@@ -499,7 +520,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
       datas.content = content;
       datas.author = author;
       datas.email = email;
-      datas.commentTime = getTime();
+      datas.commentTime = getCurrentTime();
       if (datas.content == "") {
         alert("Please Say Something!");
         return;
@@ -542,7 +563,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
       }
     }
 
-    function getTime(){
+    function getCurrentTime(){
         var myDate = new Date();
         var nowTime = myDate.toLocaleString();
         return nowTime;
@@ -581,11 +602,22 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
 .comment-block .comment .meta .name {
 	color: black;
+  font-weight: 600;
 }
 
 .comment-block .comment .meta .time, .comment-block .comment .meta .email {
 	color: #aaa;
 	line-height: 20px;
+}
+
+.comment-block .email{
+  font-weight: 600;
+}
+
+.comment-block .time{
+  margin-left: 2%;
+  font-style: italic;
+
 }
 
 .comment-block .comment .content {
