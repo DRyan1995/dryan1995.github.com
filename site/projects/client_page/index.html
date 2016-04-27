@@ -514,9 +514,9 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
         alert("Please Enter Your Correct Email Address!");
         return;
       }
+      $("#comment-content-input").val("");
       $.post(serverApiUrl+"post.php", JSON.stringify(datas), function(data, status){
         if (status == "success") {
-          $("#comment-content-input").val("");
           addCommentData(datas);
         }
         else {
