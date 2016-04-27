@@ -82,3 +82,8 @@ Content-length:102
 > Reference:
 
 > <http://www.cnblogs.com/Darren_code/archive/2011/11/24/Cookie.html>
+nn
+
+##8. HTTP PROTOCOL
+
+[REFERENCE](https://www.w3.org/Protocols/rfc2616/rfc2616.html)
