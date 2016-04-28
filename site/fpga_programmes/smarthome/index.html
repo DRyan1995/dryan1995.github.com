@@ -426,7 +426,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
       var nowDate = new Date();
       var passedSecond =  (nowDate.getTime()-date.getTime())/1000;
       var result;
-      if (passedSecond >= 24 * 60 * 60 * 30) { // greater than one month
+      if (passedSecond >= 24 * 60 * 60 * 3) { // greater than three days
         result = time1;
       } else if (passedSecond >= 24 * 60 * 60 ) { //greater than one day
         result = parseInt(passedSecond / (24 * 60 *60)) + "days ago";
