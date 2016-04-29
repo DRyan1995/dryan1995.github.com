@@ -321,9 +321,19 @@
             "title": "\u3010Source Code\u3011"
         },
         {
+            "location": "/at_company/ideas/",
+            "text": "WHEN I TEMPORARULY GIVE UP WEB LEARNING\n\n\nNothing is still and everyone needs to look forward\n\n\nUpset as I was at the time when saying goodbye to my first startup, I realize it's the time for myself to look and move forword.\n\n\nWith plenty of time and energy spent in the company, lots of experiences and skills are gained for myself at the same time. Coding language like JavaScript, JQuery, CoffeeScript, css, less, php are learnt in the 2 months period. After the 2 mounth learning, at least, I am able to design a total web on my own, which really makes sense to me.\n\n\nFortunately, I received the offer from University California, Riverside several days ago, which determines my mind to get down to my study in the next two months. First I need to complete my courses of this term perfectly. Second, I cannot forget these courses that needs to be made up this term!! Last, I wanna have a fabulous end(You know my meaning..)\n\n\n...",
+            "title": "WHEN AM TEMPORARILY AWAY FROM WEB"
+        },
+        {
+            "location": "/at_company/ideas/#when-i-temporaruly-give-up-web-learning",
+            "text": "Nothing is still and everyone needs to look forward  Upset as I was at the time when saying goodbye to my first startup, I realize it's the time for myself to look and move forword.  With plenty of time and energy spent in the company, lots of experiences and skills are gained for myself at the same time. Coding language like JavaScript, JQuery, CoffeeScript, css, less, php are learnt in the 2 months period. After the 2 mounth learning, at least, I am able to design a total web on my own, which really makes sense to me.  Fortunately, I received the offer from University California, Riverside several days ago, which determines my mind to get down to my study in the next two months. First I need to complete my courses of this term perfectly. Second, I cannot forget these courses that needs to be made up this term!! Last, I wanna have a fabulous end(You know my meaning..)  ...",
+            "title": "WHEN I TEMPORARULY GIVE UP WEB LEARNING"
+        },
+        {
             "location": "/summeries/instructions_in_linux/",
             "text": "Handbook for Linux Instructions\n\n\nmodified on 2016.1.2\n\n\n\n\n\n\n\n\n\"cd\"\n\n\n\n\nchange dir\n\n\n\n\n\n\n\n\n\"ls\"\n\n\n\n\nList Files\n\n\n\n\n\n\n\n\n\"rm -f\"\n\n\n\n\nremove -f +filenames\n\n\n(deleting files by name)\n\n\n\n\n\n\n\n\n\"rm -rf\"\n\n\n\n\nBeing used to delete folders\n\n\n\n\n\n\n\n\n\"df -h\"\n\n\n\n\nshow the disk usage condition\n\n\n\n\n\n\n\n\n\"du -k\"\n\n\n\n\nshow the folder disk usage\n\n\n\n\n\n\n\n\n\"ssh root@192.168.0.120\"\n\n\n\n\nremotely connect the linux terminal by \"usr@ipaddress\"\n\n\n\n\n\n\n\n\n\"scp my_file_name root@192.168.1.120:/home/root\"\n\n\n\n\nremotely copy a file to the account on the ip\n\n\n\n\n\n\n\n\n\"chmod +x my_file_name\"\n\n\n\n\nchange the file permission so that it can be excuted\n\n\n\n\n\n\n\n\n\n\n\n\nhow to share folder with Windows\n\n\n\n\n\n\n\n\n\"g++ -g sourcename -o targetname\"\n\n\n\n\nbeing used to build cpp projects with gdb\n\n\n\n\n\n\n\n\n\"python3 -m http.server port\"\n\n\n\n\nbeing used to create a server to share files\n\n\n\n\n\n\n\n\n\"zip -r target_name.zip source_folder_name\"\n\n\n\n\nbeing used to zip folders\n\n\n\n\n\n\n\n\nnohup command \n\n\n\n\nbeing used to run command backgroud when ssh\n\n\n\n\n\n\n\n\nUSE PM2 INSTEAD",
-            "title": "INSTRUCTIONS"
+            "title": "LINUX INSTRUCTIONS"
         },
         {
             "location": "/summeries/instructions_in_linux/#handbook-for-linux-instructions",

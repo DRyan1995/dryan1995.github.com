@@ -12,8 +12,9 @@ pages:
         - Ryan's IM: projects/ryan-im.md
     - FPGA:
         - Smart Home: fpga_programmes/smarthome.md
-    - LINUX:
-        - INSTRUCTIONS: summeries/instructions_in_linux.md
+    - SUMMARIEW:
+        - WHEN AM TEMPORARILY AWAY FROM WEB: at_company/ideas.md
+        - LINUX INSTRUCTIONS: summeries/instructions_in_linux.md
     - WEB:
         - HOW TO RUN DEBUG SERVER: at_company/debug_instructions.md
         - HTTP Protocol: at_company/about_http.md
