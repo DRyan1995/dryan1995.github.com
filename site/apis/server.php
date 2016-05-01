@@ -24,20 +24,9 @@ function dbCreateTable($dbConnect){
       PRIMARY KEY (id)
   )";
 
-  $sqlCreateTableVisitStatistic = "CREATE TABLE visit_statistics
-  (
-      page_name varchar(50),
-      last_visit_time timestamp,
-      count int(10) DEFAULT 0,
-      PRIMARY KEY (page_name)
-  )";
-
-
   mysql_query($sqlCreateTableComments, $dbConnect);
-  mysql_query($sqlCreateTableVisitStatistic, $dbConnect);
   mysql_query("alter table comments modify id integer auto_increment");
   mysql_query(" alter table comments change comment_time comment_time timestamp default current_timestamp");
-  mysql_query("alter table visit_statistics modify id integer auto_increment");
 }
 
 // mysql_query("INSERT INTO user_data (id, username, nickname, avatar)
