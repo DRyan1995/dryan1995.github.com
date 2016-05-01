@@ -3,7 +3,7 @@
         {
             "location": "/",
             "text": "Welcome to Ryan's Blog\n\n\n\n\nHELLO\n\n\nSwiftly Recording Moments In  My  Life...\n\n\n\n\nMy Websites\n\n\nMy Writing Team\n\n\nMy Github",
-            "title": "Index"
+            "title": "INDEX"
         },
         {
             "location": "/#welcome-to-ryans-blog",
@@ -279,66 +279,6 @@
             "location": "/projects/ryan-im/#13-use-a-magic-way-to-loop-in-ajax",
             "text": "function queryAsk(refreshingIndex){\n      if (refreshingIndex == UserList.length - 1) {\n        return;\n      }\n      var requestUrl = \"apis/server.php?command=content ownerId=\" + myId\n                        + \" targetId=\" + UserList[refreshingIndex].userid;\n      $.get(requestUrl, function(data,status){\n        if (status == \"success\") {\n          UserList[refreshingIndex].newChatMsgs = [];\n          var chatMsg = JSON.parse(data);\n          for (var j = 0; j   chatMsg.length; j++) {\n            var ChatMsg1 = new ChatMsg(chatMsg[j]);\n            ChatMsg1.targetUserIndex = refreshingIndex;\n            UserList[refreshingIndex].newChatMsgs.push(ChatMsg1);\n          }\n          UserList[refreshingIndex].newChatMsgs.sort(mysort);\n      }\n        else {\n          alert(\"server error!\");\n        }\n        queryAsk(++refreshingIndex);\n      });\n    }",
             "title": "13. USE A MAGIC WAY TO LOOP IN AJAX"
-        },
-        {
-            "location": "/fpga_programmes/smarthome/",
-            "text": "SmartHome\n\n\nPics \n Video\n\n\nCLICK HERE TO View Our Instrution Video \uff08PLEASE DOWNLOAD IT FIRST\uff09\n\n\n\n\n\n\n\n\n\n\nBrief Introduction\n\n\n\u3010Abstract\u3011\n\n\nOur design is based  on the platform of Altera DE-2 development board based on WiFi communication of smart home model to simulate the home environment, controlling a number of peripheral modules, and complete the communication between board(server) and  mobile phones(client) . Through this course design, I have been familiar with the usage of HDL, qsys,  quartus 13 ,NIOS II Eclipse and a series of development environment.\n\n\nIn this design, we use Verilog HDL to prepare the DHT11 temperature and humidity sensor for reading temperature and humidity data , and control some surroundings such as breathing LEDs (PWM), a small fan; using Qsys to build a NIOS II core platform; NIOS II and WIFI module communication protocol written by C language, sending instructions to the client and decode the instructions sent by the client, after which parsing operation after a series of peripheral modules; using JAVA language and Android Studio platform to complete the building of the Android client; SOCKET communication based on TCP protocol to complete the two-way communication between the client and the server; finally using quartus13.0 to complete the final design.\n\n\n\n\n\u3010Key Words\u3011\n\n\nFPGA\uff0cNIOS ii\uff0cPWM\uff0cUART\uff0cTCP\uff0cSOCKET\uff0cANDROID\uff0cC/S\uff0cWIFI\uff0cSmart Home\n\n\n\n\n\u3010Report\u3011\n\n\nClick HERE TO Download Our Project Report\n\n\nClick HERE TO Download Our Project Report2\n\n\n\n\n\u3010Source Code\u3011\n\n\nClick HERE TO Download Android Platform Code\n\n\nClick HERE TO Download Altera Platform Code\n\n\nClick HERE TO Download Xilinx Platform Code",
-            "title": "Smart Home"
-        },
-        {
-            "location": "/fpga_programmes/smarthome/#smarthome",
-            "text": "",
-            "title": "SmartHome"
-        },
-        {
-            "location": "/fpga_programmes/smarthome/#pics-video",
-            "text": "CLICK HERE TO View Our Instrution Video \uff08PLEASE DOWNLOAD IT FIRST\uff09",
-            "title": "Pics &amp; Video"
-        },
-        {
-            "location": "/fpga_programmes/smarthome/#brief-introduction",
-            "text": "",
-            "title": "Brief Introduction"
-        },
-        {
-            "location": "/fpga_programmes/smarthome/#abstract",
-            "text": "Our design is based  on the platform of Altera DE-2 development board based on WiFi communication of smart home model to simulate the home environment, controlling a number of peripheral modules, and complete the communication between board(server) and  mobile phones(client) . Through this course design, I have been familiar with the usage of HDL, qsys,  quartus 13 ,NIOS II Eclipse and a series of development environment.  In this design, we use Verilog HDL to prepare the DHT11 temperature and humidity sensor for reading temperature and humidity data , and control some surroundings such as breathing LEDs (PWM), a small fan; using Qsys to build a NIOS II core platform; NIOS II and WIFI module communication protocol written by C language, sending instructions to the client and decode the instructions sent by the client, after which parsing operation after a series of peripheral modules; using JAVA language and Android Studio platform to complete the building of the Android client; SOCKET communication based on TCP protocol to complete the two-way communication between the client and the server; finally using quartus13.0 to complete the final design.",
-            "title": "\u3010Abstract\u3011"
-        },
-        {
-            "location": "/fpga_programmes/smarthome/#key-words",
-            "text": "FPGA\uff0cNIOS ii\uff0cPWM\uff0cUART\uff0cTCP\uff0cSOCKET\uff0cANDROID\uff0cC/S\uff0cWIFI\uff0cSmart Home",
-            "title": "\u3010Key Words\u3011"
-        },
-        {
-            "location": "/fpga_programmes/smarthome/#report",
-            "text": "Click HERE TO Download Our Project Report  Click HERE TO Download Our Project Report2",
-            "title": "\u3010Report\u3011"
-        },
-        {
-            "location": "/fpga_programmes/smarthome/#source-code",
-            "text": "Click HERE TO Download Android Platform Code  Click HERE TO Download Altera Platform Code  Click HERE TO Download Xilinx Platform Code",
-            "title": "\u3010Source Code\u3011"
-        },
-        {
-            "location": "/at_company/ideas/",
-            "text": "WHEN I TEMPORARULY GIVE UP WEB LEARNING\n\n\nNothing is still and everyone needs to look forward\n\n\nUpset as I was at the time when saying goodbye to my first startup, I realize it's the time for myself to look and move forword.\n\n\nWith plenty of time and energy spent in the company, lots of experiences and skills are gained for myself at the same time. Coding language like JavaScript, JQuery, CoffeeScript, css, less, php are learnt in the 2 months period. After the 2 mounth learning, at least, I am able to design a total web on my own, which really makes sense to me.\n\n\nFortunately, I received the offer from University California, Riverside several days ago, which determines my mind to get down to my study in the next two months. First I need to complete my courses of this term perfectly. Second, I cannot forget these courses that needs to be made up this term!! Last, I wanna have a fabulous end(You know my meaning..)\n\n\n...",
-            "title": "WHEN AM TEMPORARILY AWAY FROM WEB"
-        },
-        {
-            "location": "/at_company/ideas/#when-i-temporaruly-give-up-web-learning",
-            "text": "Nothing is still and everyone needs to look forward  Upset as I was at the time when saying goodbye to my first startup, I realize it's the time for myself to look and move forword.  With plenty of time and energy spent in the company, lots of experiences and skills are gained for myself at the same time. Coding language like JavaScript, JQuery, CoffeeScript, css, less, php are learnt in the 2 months period. After the 2 mounth learning, at least, I am able to design a total web on my own, which really makes sense to me.  Fortunately, I received the offer from University California, Riverside several days ago, which determines my mind to get down to my study in the next two months. First I need to complete my courses of this term perfectly. Second, I cannot forget these courses that needs to be made up this term!! Last, I wanna have a fabulous end(You know my meaning..)  ...",
-            "title": "WHEN I TEMPORARULY GIVE UP WEB LEARNING"
-        },
-        {
-            "location": "/summeries/instructions_in_linux/",
-            "text": "Handbook for Linux Instructions\n\n\nmodified on 2016.1.2\n\n\n\n\n\n\n\n\n\"cd\"\n\n\n\n\nchange dir\n\n\n\n\n\n\n\n\n\"ls\"\n\n\n\n\nList Files\n\n\n\n\n\n\n\n\n\"rm -f\"\n\n\n\n\nremove -f +filenames\n\n\n(deleting files by name)\n\n\n\n\n\n\n\n\n\"rm -rf\"\n\n\n\n\nBeing used to delete folders\n\n\n\n\n\n\n\n\n\"df -h\"\n\n\n\n\nshow the disk usage condition\n\n\n\n\n\n\n\n\n\"du -k\"\n\n\n\n\nshow the folder disk usage\n\n\n\n\n\n\n\n\n\"ssh root@192.168.0.120\"\n\n\n\n\nremotely connect the linux terminal by \"usr@ipaddress\"\n\n\n\n\n\n\n\n\n\"scp my_file_name root@192.168.1.120:/home/root\"\n\n\n\n\nremotely copy a file to the account on the ip\n\n\n\n\n\n\n\n\n\"chmod +x my_file_name\"\n\n\n\n\nchange the file permission so that it can be excuted\n\n\n\n\n\n\n\n\n\n\n\n\nhow to share folder with Windows\n\n\n\n\n\n\n\n\n\"g++ -g sourcename -o targetname\"\n\n\n\n\nbeing used to build cpp projects with gdb\n\n\n\n\n\n\n\n\n\"python3 -m http.server port\"\n\n\n\n\nbeing used to create a server to share files\n\n\n\n\n\n\n\n\n\"zip -r target_name.zip source_folder_name\"\n\n\n\n\nbeing used to zip folders\n\n\n\n\n\n\n\n\nnohup command \n\n\n\n\nbeing used to run command backgroud when ssh\n\n\n\n\n\n\n\n\nUSE PM2 INSTEAD",
-            "title": "LINUX INSTRUCTIONS"
-        },
-        {
-            "location": "/summeries/instructions_in_linux/#handbook-for-linux-instructions",
-            "text": "modified on 2016.1.2     \"cd\"   change dir     \"ls\"   List Files     \"rm -f\"   remove -f +filenames  (deleting files by name)     \"rm -rf\"   Being used to delete folders     \"df -h\"   show the disk usage condition     \"du -k\"   show the folder disk usage     \"ssh root@192.168.0.120\"   remotely connect the linux terminal by \"usr@ipaddress\"     \"scp my_file_name root@192.168.1.120:/home/root\"   remotely copy a file to the account on the ip     \"chmod +x my_file_name\"   change the file permission so that it can be excuted       how to share folder with Windows     \"g++ -g sourcename -o targetname\"   being used to build cpp projects with gdb     \"python3 -m http.server port\"   being used to create a server to share files     \"zip -r target_name.zip source_folder_name\"   being used to zip folders     nohup command    being used to run command backgroud when ssh     USE PM2 INSTEAD",
-            "title": "Handbook for Linux Instructions"
         },
         {
             "location": "/at_company/debug_instructions/",
@@ -714,6 +654,26 @@
             "location": "/at_company/php/#4-how-to-get-data-from-http-request",
             "text": "Get POST json data: $postData = file_get_contents(\"php://input\");    Get GET paras: $command = @$_GET[\"command\"]?$_GET[\"command\"]:\"\";",
             "title": "4. HOW TO GET DATA FROM HTTP REQUEST"
+        },
+        {
+            "location": "/at_company/ideas/",
+            "text": "WHEN I TEMPORARULY GIVE UP WEB LEARNING\n\n\nNothing is still and everyone needs to look forward\n\n\nUpset as I was at the time when saying goodbye to my first startup, I realize it's the time for myself to look and move forword.\n\n\nWith plenty of time and energy spent in the company, lots of experiences and skills are gained for myself at the same time. Coding language like JavaScript, JQuery, CoffeeScript, css, less, php are learnt in the 2 months period. After the 2 mounth learning, at least, I am able to design a total web on my own, which really makes sense to me.\n\n\nFortunately, I received the offer from University California, Riverside several days ago, which determines my mind to get down to my study in the next two months. First I need to complete my courses of this term perfectly. Second, I cannot forget these courses that needs to be made up this term!! Last, I wanna have a fabulous end(You know my meaning..)\n\n\n...",
+            "title": "WHEN AM TEMPORARILY AWAY FROM WEB"
+        },
+        {
+            "location": "/at_company/ideas/#when-i-temporaruly-give-up-web-learning",
+            "text": "Nothing is still and everyone needs to look forward  Upset as I was at the time when saying goodbye to my first startup, I realize it's the time for myself to look and move forword.  With plenty of time and energy spent in the company, lots of experiences and skills are gained for myself at the same time. Coding language like JavaScript, JQuery, CoffeeScript, css, less, php are learnt in the 2 months period. After the 2 mounth learning, at least, I am able to design a total web on my own, which really makes sense to me.  Fortunately, I received the offer from University California, Riverside several days ago, which determines my mind to get down to my study in the next two months. First I need to complete my courses of this term perfectly. Second, I cannot forget these courses that needs to be made up this term!! Last, I wanna have a fabulous end(You know my meaning..)  ...",
+            "title": "WHEN I TEMPORARULY GIVE UP WEB LEARNING"
+        },
+        {
+            "location": "/summeries/instructions_in_linux/",
+            "text": "Handbook for Linux Instructions\n\n\nmodified on 2016.1.2\n\n\n\n\n\n\n\n\n\"cd\"\n\n\n\n\nchange dir\n\n\n\n\n\n\n\n\n\"ls\"\n\n\n\n\nList Files\n\n\n\n\n\n\n\n\n\"rm -f\"\n\n\n\n\nremove -f +filenames\n\n\n(deleting files by name)\n\n\n\n\n\n\n\n\n\"rm -rf\"\n\n\n\n\nBeing used to delete folders\n\n\n\n\n\n\n\n\n\"df -h\"\n\n\n\n\nshow the disk usage condition\n\n\n\n\n\n\n\n\n\"du -k\"\n\n\n\n\nshow the folder disk usage\n\n\n\n\n\n\n\n\n\"ssh root@192.168.0.120\"\n\n\n\n\nremotely connect the linux terminal by \"usr@ipaddress\"\n\n\n\n\n\n\n\n\n\"scp my_file_name root@192.168.1.120:/home/root\"\n\n\n\n\nremotely copy a file to the account on the ip\n\n\n\n\n\n\n\n\n\"chmod +x my_file_name\"\n\n\n\n\nchange the file permission so that it can be excuted\n\n\n\n\n\n\n\n\n\n\n\n\nhow to share folder with Windows\n\n\n\n\n\n\n\n\n\"g++ -g sourcename -o targetname\"\n\n\n\n\nbeing used to build cpp projects with gdb\n\n\n\n\n\n\n\n\n\"python3 -m http.server port\"\n\n\n\n\nbeing used to create a server to share files\n\n\n\n\n\n\n\n\n\"zip -r target_name.zip source_folder_name\"\n\n\n\n\nbeing used to zip folders\n\n\n\n\n\n\n\n\nnohup command \n\n\n\n\nbeing used to run command backgroud when ssh\n\n\n\n\n\n\n\n\nUSE PM2 INSTEAD",
+            "title": "LINUX INSTRUCTIONS"
+        },
+        {
+            "location": "/summeries/instructions_in_linux/#handbook-for-linux-instructions",
+            "text": "modified on 2016.1.2     \"cd\"   change dir     \"ls\"   List Files     \"rm -f\"   remove -f +filenames  (deleting files by name)     \"rm -rf\"   Being used to delete folders     \"df -h\"   show the disk usage condition     \"du -k\"   show the folder disk usage     \"ssh root@192.168.0.120\"   remotely connect the linux terminal by \"usr@ipaddress\"     \"scp my_file_name root@192.168.1.120:/home/root\"   remotely copy a file to the account on the ip     \"chmod +x my_file_name\"   change the file permission so that it can be excuted       how to share folder with Windows     \"g++ -g sourcename -o targetname\"   being used to build cpp projects with gdb     \"python3 -m http.server port\"   being used to create a server to share files     \"zip -r target_name.zip source_folder_name\"   being used to zip folders     nohup command    being used to run command backgroud when ssh     USE PM2 INSTEAD",
+            "title": "Handbook for Linux Instructions"
         },
         {
             "location": "/at_company/git_instructions/",

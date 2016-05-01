@@ -1,7 +1,7 @@
 site_name: "Ryan's Blog"
 pages:
-    - Index: index.md
-    - Hello:
+    - INDEX: index.md
+    - WELCOME:
         - Hello World! : helloworld.md
         - Setting Up My First Blog: set_steps.md
         - Helloworld again!: hello_world_again.md
@@ -10,11 +10,6 @@ pages:
         - Smart Home: projects/smarthome.md
         - Client Page: projects/client_page.md
         - Ryan's IM: projects/ryan-im.md
-    - FPGA:
-        - Smart Home: fpga_programmes/smarthome.md
-    - SUMMARIEW:
-        - WHEN AM TEMPORARILY AWAY FROM WEB: at_company/ideas.md
-        - LINUX INSTRUCTIONS: summeries/instructions_in_linux.md
     - WEB:
         - HOW TO RUN DEBUG SERVER: at_company/debug_instructions.md
         - HTTP Protocol: at_company/about_http.md
@@ -28,6 +23,9 @@ pages:
         - NODE: at_company/node.md
         - Nginx: at_company/nginx.md
         - PHP: at_company/php.md
+    - SUMMARIES:
+        - WHEN AM TEMPORARILY AWAY FROM WEB: at_company/ideas.md
+        - LINUX INSTRUCTIONS: summeries/instructions_in_linux.md
     - TOOLS:
         - Git: at_company/git_instructions.md
         - VPN: at_company/steps_to_build_vpn.md
