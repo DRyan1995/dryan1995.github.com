@@ -533,9 +533,8 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
       console.log(timeHandler(datas.commentTime));
       $commentBox.insertAfter(".comment:last");
       if (Guest == "ryan") {
-        $commentBox.click(function () {
+        $commentBox.dblclick(function () {
           if (window.confirm("Are U Sure To Remove This Comment?")) {
-            console.log(datas.id);
             deleteCommentData($commentBox, datas.id);
           }
         })
