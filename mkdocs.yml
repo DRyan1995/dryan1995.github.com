@@ -5,7 +5,8 @@ pages:
         - Hello World! : helloworld.md
         - Setting Up My First Blog: set_steps.md
         - Helloworld again!: hello_world_again.md
-    - TODOLIST: todolist.md
+    - PRIVATE:
+        - TODOLIST: todolist.md
     - PROJECTS:
         - Smart Home: projects/smarthome.md
         - Client Page: projects/client_page.md
