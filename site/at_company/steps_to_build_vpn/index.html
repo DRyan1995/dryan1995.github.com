@@ -285,6 +285,8 @@
         
             <li><a href="#shadowsocks">ShadowSocks</a></li>
         
+            <li><a href="#socks5">SOCKS5</a></li>
+        
             <li><a href="#my-notes">My Notes</a></li>
         
     
@@ -374,6 +376,92 @@ eth0是网卡名字，可以通过命令 ifconfig 查看 （插播悲剧：serve
 <li><a href="http://blog.csdn.net/weiqiangsu/article/details/46956977">browse the website for a solution</a></li>
 <li>genpac -p "SOCKS5 127.0.0.1:1080" --gfwlist-proxy="SOCKS5 127.0.0.1:1080" --gfwlist-url="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt" --output="~/shadowsocks/autoproxy.pac"</li>
 <li>Use auto proxy mode to surf the Internet</li>
+</ol>
+<h2 id="socks5">SOCKS5</h2>
+<ol>
+<li>
+<p><code>sudo apt-get install dante-server</code></p>
+</li>
+<li>
+<p>modify the conf file</p>
+<pre><code>/etc/danted.conf
+
+#logoutput: stderr
+#logoutput: syslog
+logoutput: /var/log/sockd/sockd.log
+
+internal: 0.0.0.0 port = 10080
+
+external: eth0
+
+#method: username none
+#method: pam
+method: none
+## no password
+
+user.privileged: root
+
+#user.notprivileged: root
+
+user.libwrap: nobody
+
+compatibility: sameport
+compatibility: reuseaddr
+extension: bind
+
+client pass {
+
+        from: 0.0.0.0/0 to: 0.0.0.0/0
+
+        log: connect disconnect error
+
+}
+
+pass {
+
+        from: 0.0.0.0/0 to: 0.0.0.0/0
+
+        command: bind
+
+        log: connect disconnect error
+
+}
+
+pass {
+
+                from: 0.0.0.0/0 to: 0.0.0.0/0
+
+                command: bindreply udpreply
+
+                log: connect error
+
+}
+
+pass {
+
+                from: 0.0.0.0/0 to: 0.0.0.0/0 port 1-65535
+
+                protocol: tcp udp
+
+}
+
+pass {
+
+                from: 0.0.0.0/0 to: 0.0.0.0/0 port 1-65535
+
+                command: udpassociate
+
+}
+
+#block {
+#                from: 0.0.0.0/0 to: 0.0.0.0/0 port 1-65535
+#                protocol: tcp udp
+#                log: connect erro
+</code></pre>
+</li>
+<li>
+<p><code>sudo service danted restart</code></p>
+</li>
 </ol>
 <h2 id="my-notes">My Notes</h2>
 <h4 id="stop-connection">STOP CONNECTION</h4>

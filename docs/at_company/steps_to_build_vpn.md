@@ -70,6 +70,88 @@ eth0是网卡名字，可以通过命令 ifconfig 查看 （插播悲剧：serve
 4. Use auto proxy mode to surf the Internet
 
 
+## SOCKS5
+
+1. `sudo apt-get install dante-server`
+
+2. modify the conf file
+
+        /etc/danted.conf
+
+        #logoutput: stderr
+        #logoutput: syslog
+        logoutput: /var/log/sockd/sockd.log
+
+        internal: 0.0.0.0 port = 10080
+
+        external: eth0
+
+        #method: username none
+        #method: pam
+        method: none
+        ## no password
+        
+        user.privileged: root
+
+        #user.notprivileged: root
+
+        user.libwrap: nobody
+
+        compatibility: sameport
+        compatibility: reuseaddr
+        extension: bind
+
+        client pass {
+
+                from: 0.0.0.0/0 to: 0.0.0.0/0
+
+                log: connect disconnect error
+
+        }
+
+        pass {
+
+                from: 0.0.0.0/0 to: 0.0.0.0/0
+
+                command: bind
+
+                log: connect disconnect error
+
+        }
+
+        pass {
+
+                        from: 0.0.0.0/0 to: 0.0.0.0/0
+
+                        command: bindreply udpreply
+
+                        log: connect error
+
+        }
+
+        pass {
+
+                        from: 0.0.0.0/0 to: 0.0.0.0/0 port 1-65535
+
+                        protocol: tcp udp
+
+        }
+
+        pass {
+
+                        from: 0.0.0.0/0 to: 0.0.0.0/0 port 1-65535
+
+                        command: udpassociate
+
+        }
+
+        #block {
+        #                from: 0.0.0.0/0 to: 0.0.0.0/0 port 1-65535
+        #                protocol: tcp udp
+        #                log: connect erro
+
+3. `sudo service danted restart`
+
 ## My Notes
 
 #### STOP CONNECTION
