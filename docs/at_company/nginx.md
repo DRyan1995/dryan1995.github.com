@@ -40,4 +40,4 @@
 
 AND HOW TO SET PASSWORD?
 
-`htpasswd -b -c pass.txt janet 1125`
+`htpasswd -b -c pass.txt username passwd`

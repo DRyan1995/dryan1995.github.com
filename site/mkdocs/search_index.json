@@ -602,7 +602,7 @@
         },
         {
             "location": "/at_company/nginx/",
-            "text": "Nginx\n\n\n1. INSTALL\n\n\nsudo apt-get install nginx\n\n\nsudo vim /etc/nginx/site-enabled/myconfig\n\n\n    server {\n        listen       1125;\n        server_name  ryan95.site localhost;\n    index index.html index.htm index.php;\n        root /home/ubuntu/ym/site;\n    }\n\n\n\nsudo nginx -s reload\n\n\n2. INSTALL ON MACOSX\n\n\nCLICK HERE\n\n\n3. HOW TO START ON MY MAC\n\n\nexport PATH=\"/usr/local/bin:/usr/local/sbin:$PATH\"\n\n\nsudo nginx -s reopen\n\n\nsudo php-fpm -D\n\n\nDO NOT FORGET THIS STEP OTHERWISE IT WILL TURN OUT 502 ERROR\n\n\nNEED TO PAY SPECIAL ATTENTION TO THE ORDER OF THESE INSTRUCTIONS\n\n\n4. SET PASSWORD\n\n\n    location /todolist {\n          auth_basic \"Authorized users only\";\n          auth_basic_user_file pass.txt;\n    }\n\n\n\nAND HOW TO SET PASSWORD?\n\n\nhtpasswd -b -c pass.txt janet 1125",
+            "text": "Nginx\n\n\n1. INSTALL\n\n\nsudo apt-get install nginx\n\n\nsudo vim /etc/nginx/site-enabled/myconfig\n\n\n    server {\n        listen       1125;\n        server_name  ryan95.site localhost;\n    index index.html index.htm index.php;\n        root /home/ubuntu/ym/site;\n    }\n\n\n\nsudo nginx -s reload\n\n\n2. INSTALL ON MACOSX\n\n\nCLICK HERE\n\n\n3. HOW TO START ON MY MAC\n\n\nexport PATH=\"/usr/local/bin:/usr/local/sbin:$PATH\"\n\n\nsudo nginx -s reopen\n\n\nsudo php-fpm -D\n\n\nDO NOT FORGET THIS STEP OTHERWISE IT WILL TURN OUT 502 ERROR\n\n\nNEED TO PAY SPECIAL ATTENTION TO THE ORDER OF THESE INSTRUCTIONS\n\n\n4. SET PASSWORD\n\n\n    location /todolist {\n          auth_basic \"Authorized users only\";\n          auth_basic_user_file pass.txt;\n    }\n\n\n\nAND HOW TO SET PASSWORD?\n\n\nhtpasswd -b -c pass.txt username passwd",
             "title": "Nginx"
         },
         {
@@ -627,7 +627,7 @@
         },
         {
             "location": "/at_company/nginx/#4-set-password",
-            "text": "location /todolist {\n          auth_basic \"Authorized users only\";\n          auth_basic_user_file pass.txt;\n    }  AND HOW TO SET PASSWORD?  htpasswd -b -c pass.txt janet 1125",
+            "text": "location /todolist {\n          auth_basic \"Authorized users only\";\n          auth_basic_user_file pass.txt;\n    }  AND HOW TO SET PASSWORD?  htpasswd -b -c pass.txt username passwd",
             "title": "4. SET PASSWORD"
         },
         {
