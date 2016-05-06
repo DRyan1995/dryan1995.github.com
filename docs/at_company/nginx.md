@@ -29,3 +29,15 @@
 **DO NOT FORGET THIS STEP OTHERWISE IT WILL TURN OUT 502 ERROR**
 
 **NEED TO PAY SPECIAL ATTENTION TO THE ORDER OF THESE INSTRUCTIONS**
+
+
+## 4. SET PASSWORD
+
+        location /todolist {
+              auth_basic "Authorized users only";
+              auth_basic_user_file pass.txt;
+        }
+
+AND HOW TO SET PASSWORD?
+
+`htpasswd -b -c pass.txt janet 1125`

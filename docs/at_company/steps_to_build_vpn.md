@@ -90,7 +90,7 @@ eth0是网卡名字，可以通过命令 ifconfig 查看 （插播悲剧：serve
         #method: pam
         method: none
         ## no password
-        
+
         user.privileged: root
 
         #user.notprivileged: root
@@ -159,3 +159,10 @@ eth0是网卡名字，可以通过命令 ifconfig 查看 （插播悲剧：serve
 
 #### START CONNECTION
 `sudo /etc/vpnc/default.conf`
+
+
+## SSH TUNNEL
+
+`ssh -fN -R 10022:localhost:22 relayserver_user@1.1.1.1`
+
+[VIEW THIS WEBSITE FOR MORE DETAIL](https://linux.cn/article-5975-1.html)
