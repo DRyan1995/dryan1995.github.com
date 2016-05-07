@@ -12,7 +12,8 @@ mysql_select_db("blog_commit", $dbConnect);
 $postData = file_get_contents("php://input");
 $deleteData = json_decode($postData, true);
 
-$sql = "DELETE FROM comments WHERE id='$deleteData[id]' ";
+// $sql = "DELETE FROM comments WHERE id='$deleteData[id]' ";
+$sql = "UPDATE comments SET deleted = 1 WHERE id = '$deleteData[id]'";
 mysql_query($sql);
 echo "success";
 ?>

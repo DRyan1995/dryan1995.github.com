@@ -25,10 +25,10 @@ while ($resultRow = mysql_fetch_array($selectResult)) {
     'content' => $resultRow["content"],
     'author' => $resultRow["author"],
     'email' => $resultRow["email"],
-    'id' => $resultRow["id"]
+    'id' => $resultRow["id"],
+    'deleted' => $resultRow["deleted"]
   ));
 }
 echo json_encode($datas);
-
 
 ?>

@@ -371,6 +371,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
     var pageName;
     var Guest;
     var serverApiUrl;
+    var ListAll = false;
 
     pageInit();
 
@@ -390,6 +391,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
       else {
         serverApiUrl = "http://ryan95.com/apis/";
       }
+      ListAll = (getUrlPara("list_all")=='1'?true:false);
     }
 
     function pageInit() {
@@ -406,9 +408,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
       var url = serverApiUrl + "visit.php?pageName=" + pageName;
       $.get(url, function (data, status) {
         if (status == "success") {
-          console.log(data);
           var datas = JSON.parse(data);
-          console.log(datas);
           $("#visit-count").text(datas.count);
           $("#last-visited").text(timeHandler(datas.time));
         }else {
@@ -481,8 +481,11 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
       $.get(getUrl, function(data, status){
         if (status == "success") {
           var CommentList = JSON.parse(data);
+          console.log(CommentList);
           for (var i = 0; i < CommentList.length; i++) {
-            addCommentData(CommentList[i]);
+            if (CommentList[i].deleted == "0" || ListAll) {
+              addCommentData(CommentList[i]);
+            }
           }
         }
         else {
