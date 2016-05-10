@@ -538,8 +538,22 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
       $commentBox.insertAfter(".comment:last");
       if (Guest == "ryan") {
         $commentBox.dblclick(function () {
-          if (window.confirm("Are U Sure To Remove This Comment?")) {
-            deleteCommentData($commentBox, datas.id);
+          if (datas.deleted == '0') {
+            if (window.confirm("Are U Sure To Remove This Comment?")) {
+              deleteCommentData($commentBox, datas.id);
+            }
+          }else {
+            if (window.confirm("Are U Sure To Recover This Comment?")) {
+              var data = {};
+              data.id = datas.id;
+              $.post(serverApiUrl + "recover.php", JSON.stringify(data), function(data,status){
+                if (data == "success") {
+                  $commentBox.removeClass("deleted");
+                }else {
+                  alert("server error" + data);
+                }
+              })
+            }
           }
         })
       }
