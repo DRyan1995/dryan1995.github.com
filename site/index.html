@@ -390,6 +390,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
       pageName = pageName.replace(/ /g,'');
       pageName = pageName.replace(/-/g,'');
       pageName = pageName.replace(/"/g,'');
+      console.log(pageName);
     }
 
     function getEnv() {
@@ -534,6 +535,9 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
       if (Guest=="ryan") {
         $("#author-input").val("Ryan");
         $("#email-input").val("ryan951125@icloud.com");
+      }else if (pageName == "LOVEDIARYRyansBlog") {
+        $("#author-input").val("WXY");
+        $("#email-input").val("mollymollyhoon@outlook.com");
       }
       return;
     }
