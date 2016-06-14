@@ -91,6 +91,16 @@
             "title": "TYPE DOWN YOUR RECENT TODO LIST HERE"
         },
         {
+            "location": "/love_diary/",
+            "text": "LOVE DIARY\n\n\nDaily Life For Two Pigs",
+            "title": "LOVE DIARY"
+        },
+        {
+            "location": "/love_diary/#love-diary",
+            "text": "Daily Life For Two Pigs",
+            "title": "LOVE DIARY"
+        },
+        {
             "location": "/projects/smarthome/",
             "text": "SmartHome\n\n\nPics \n Video\n\n\nCLICK HERE TO View Our Instrution Video (DOWNLOAD IT FOR BETTER PERFORMANCE\uff09\n\n\n\n\n\n\n\n\n\n\nBrief Introduction\n\n\n\u3010Abstract\u3011\n\n\nOur design is based  on the platform of Altera DE-2 development board based on WiFi communication of smart home model to simulate the home environment, controlling a number of peripheral modules, and complete the communication between board(server) and  mobile phones(client) . Through this course design, I have been familiar with the usage of HDL, qsys,  quartus 13 ,NIOS II Eclipse and a series of development environment.\n\n\nIn this design, we use Verilog HDL to prepare the DHT11 temperature and humidity sensor for reading temperature and humidity data , and control some surroundings such as breathing LEDs (PWM), a small fan; using Qsys to build a NIOS II core platform; NIOS II and WIFI module communication protocol written by C language, sending instructions to the client and decode the instructions sent by the client, after which parsing operation after a series of peripheral modules; using JAVA language and Android Studio platform to complete the building of the Android client; SOCKET communication based on TCP protocol to complete the two-way communication between the client and the server; finally using quartus13.0 to complete the final design.\n\n\n\n\n\u3010Key Words\u3011\n\n\nFPGA\uff0cNIOS ii\uff0cPWM\uff0cUART\uff0cTCP\uff0cSOCKET\uff0cANDROID\uff0cC/S\uff0cWIFI\uff0cSmart Home\n\n\n\n\n\u3010Report\u3011\n\n\nClick HERE TO Download Our Project Report\n\n\nClick HERE TO Download Our Project Report2\n\n\n\n\n\u3010Source Code\u3011\n\n\nClick HERE TO Download Android Platform Code\n\n\nClick HERE TO Download Altera Platform Code\n\n\nClick HERE TO Download Xilinx Platform Code",
             "title": "Smart Home"
