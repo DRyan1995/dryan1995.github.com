@@ -743,6 +743,9 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
         alert("Please Enter Your Correct Email Address!");
         return;
       }
+      if (!window.confirm("Comfirm Submit?")) {
+        return;
+      }
       $("#comment-content-input").val("");
       $.post(serverApiUrl+"post.php", JSON.stringify(datas), function(data, status){
         if (status == "success") {
@@ -782,7 +785,9 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
     $(document).keypress(function(e){
       if (e.keyCode == 13) {
         e.preventDefault();
-        postCommentData();
+        if (pageName!="LOVEDIARYRyansBlog") {
+          postCommentData();
+        }
       }
     })
   })
