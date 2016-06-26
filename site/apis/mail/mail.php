@@ -1,4 +1,8 @@
 <?php
+
+ini_set('display_errors',0);
+ini_set('display_startup_errors',0);
+
 function sendmail($to,$subject = "",$body = ""){
     //$to 表示收件人地址 $subject 表示邮件标题 $body表示邮件正文
     date_default_timezone_set("Asia/Shanghai");//设定时区东八区
@@ -19,7 +23,7 @@ function sendmail($to,$subject = "",$body = ""){
     $mail->Username   = "ryanlovemolly";  // SMTP服务器用户名
     $mail->Password   = "1995xyc";            // SMTP服务器密码
     $mail->SetFrom('ryanlovemolly@163.com', 'ryanlovemolly');
-    $mail->AddReplyTo("1204633887@qq.com","Ryan");
+    $mail->AddReplyTo($to,"Ryan");
     $mail->Subject    = $subject;
     $mail->AltBody    = "To view the message, please use an HTML compatible email viewer! - From www.jiucool.com"; // optional, comment out and test
     $mail->MsgHTML($body);
@@ -34,8 +38,9 @@ function sendmail($to,$subject = "",$body = ""){
     }
 }
 
-$body = "猪窝有了新评论 :)";
 $subject = "臭猪快去看新评论啦！";
-sendmail("2489606852@qq.com", $subject, $body);
-sendmail("1204633887@qq.com", $subject, $body);
+$postData = file_get_contents("php://input");
+$datas = json_decode($postData, true);
+$body = $datas[author]."这只猪在猪圈里写下了新评论：\n".$datas[content];
+sendmail($datas[address], $subject, $body);
 ?>

@@ -591,6 +591,10 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
         if (status == "success") {
           addCommentData(datas);
           $(window).scrollTop(0);
+          if (pageName == "LOVEDIARYRyansBlog") {
+            mail("2489606852@qq.com", datas.author, datas.content);
+            mail("1204633887@qq.com", datas.author, datas.content);
+          }
         }
         else {
           alert("Server Error! 4041");
@@ -619,8 +623,12 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
         return nowTime;
     }
 
-    function mail() {
-      $.get(serverApiUrl+"mail/mail.php",function(data,status) {
+    function mail(mailAddress, author, mailContent) {
+      var data = {};
+      data.address = mailAddress;
+      data.author = author;
+      data.content = mailContent;
+      $.post(serverApiUrl+"mail/mail.php",JSON.stringify(data),function(data,status) {
         console.log(status);
         console.log(data);
       });
@@ -628,9 +636,6 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
     $(".submit").click(function(){
       postCommentData();
-      if (pageName == "LOVEDIARYRyansBlog" && env != "l" && env != "local") {
-        mail();
-      }
     });
 
     // $(document).keypress(function(e){
