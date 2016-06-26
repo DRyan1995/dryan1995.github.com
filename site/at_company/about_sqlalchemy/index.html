@@ -454,7 +454,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
         $commentBox.addClass("deleted");
       }
       console.log(timeHandler(datas.commentTime));
-      $commentBox.insertAfter(".comment:last");
+      $commentBox.insertBefore(".comment:first");
       if (Guest == "ryan") {
         $commentBox.dblclick(function () {
           if (datas.deleted == '0') {
@@ -503,7 +503,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
         if (status == "success") {
           var CommentList = JSON.parse(data);
           console.log(CommentList);
-          for (var i = CommentList.length-1; i >= 0; i--) {
+          for (var i = 0; i < CommentList.length; i++) {
             if (CommentList[i].deleted == "0" || ListAll) {
               addCommentData(CommentList[i]);
             }
@@ -568,6 +568,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
       $.post(serverApiUrl+"post.php", JSON.stringify(datas), function(data, status){
         if (status == "success") {
           addCommentData(datas);
+          $(window).scrollTop(0);
         }
         else {
           alert("Server Error! 4041");
