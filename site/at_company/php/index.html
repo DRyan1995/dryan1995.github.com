@@ -729,7 +729,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
     $(".submit").click(function(){
       postCommentData();
-      if (pageName == "LOVEDIARYRyansBlog") {
+      if (pageName == "LOVEDIARYRyansBlog" && env != "l" && env != "local") {
         mail();
       }
     });
