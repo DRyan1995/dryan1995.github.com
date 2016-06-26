@@ -991,8 +991,8 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
     $(document).keypress(function(e){
       if (e.keyCode == 13) {
-        e.preventDefault();
         if (pageName!="LOVEDIARYRyansBlog") {
+          e.preventDefault();
           postCommentData();
         }
       }
@@ -1043,6 +1043,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 }
 
 .comment-block .comment .content {
+  white-space: pre;
 	color: black;
 	font-size: 21px;
 }
