@@ -603,7 +603,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
         if (status == "success") {
           var CommentList = JSON.parse(data);
           console.log(CommentList);
-          for (var i = 0; i < CommentList.length; i++) {
+          for (var i = CommentList.length-1; i >= 0; i--) {
             if (CommentList[i].deleted == "0" || ListAll) {
               addCommentData(CommentList[i]);
             }
