@@ -36,6 +36,6 @@ function sendmail($to,$subject = "",$body = ""){
 
 $body = "猪窝有了新评论 :)";
 $subject = "臭猪快去看新评论啦！";
-sendmail("ryan951125@icloud.com", $subject, $body);
+sendmail("1204633887@qq.com", $subject, $body);
 sendmail("2489606852@qq.com", $subject, $body);
 ?>
