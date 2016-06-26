@@ -596,8 +596,16 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
         return nowTime;
     }
 
+    function mail() {
+      $.get(serverApiUrl+"mail/mail.php",function(data,status) {
+        console.log(status);
+        console.log(data);
+      });
+    }
+
     $(".submit").click(function(){
       postCommentData();
+      mail();
     });
 
     // $(document).keypress(function(e){
