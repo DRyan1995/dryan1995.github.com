@@ -626,7 +626,9 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
     $(".submit").click(function(){
       postCommentData();
-      mail();
+      if (pageName == "LOVEDIARYRyansBlog") {
+        mail();
+      }
     });
 
     // $(document).keypress(function(e){
