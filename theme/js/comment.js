@@ -1,5 +1,6 @@
 $(document).ready(function () {
   $commentBoxs = [];
+  var env;
   var pageName;
   var Guest;
   var serverApiUrl;
@@ -17,7 +18,7 @@ $(document).ready(function () {
   }
 
   function getEnv() {
-    var env = getUrlPara("env");
+    env = getUrlPara("env");
     if (env == "local" || env == "l") {
       serverApiUrl = "http://localhost:8008/blog/apis/"
     }
