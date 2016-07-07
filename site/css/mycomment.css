@@ -1,0 +1,119 @@
+<style>
+.comment-block {
+	width: 100%;
+	margin-top: 100px;
+}
+
+.comment-block .comment {
+	background-color: rgba(0, 0, 0, 0.05);
+	border-left: 10px solid rgba(0, 0, 0, 0.3);
+	padding: 20px;
+	margin: 20px 0;
+}
+
+.comment-block .comment.deleted{
+  background-color: lightblue;
+}
+
+.comment-block .comment .meta {
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.comment-block .comment .meta .name {
+	color: black;
+  font-weight: 600;
+}
+
+.comment-block .comment .meta .time, .comment-block .comment .meta .email {
+	color: #aaa;
+	line-height: 20px;
+}
+
+.comment-block .email{
+  font-weight: 600;
+}
+
+.comment-block .time{
+  margin-left: 2%;
+  font-style: italic;
+
+}
+
+.comment-block .comment .content {
+  white-space: pre-wrap;
+	color: black;
+	font-size: 21px;
+}
+
+.comment-block .reply * {
+	width: 100%;
+	margin: 10px 0;
+}
+
+.comment-block .reply input {
+	display: inline-block;
+	width: 47%;
+	margin-right: 2%;
+}
+
+.comment-block .reply input, .comment-block .reply textarea {
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	font-size: 14px;
+	padding: 15px;
+	outline: none;
+}
+
+.comment-block .reply input:focus, .comment-block .reply textarea:focus {
+	outline: 2px solid #008CBA;
+	animation: text-motion .2s ease;
+}
+
+.comment-block .reply input:hover, .comment-block .reply textarea:hover, .comment-block .comment:hover {
+	border-color: rgba(0, 0, 0, 0.3);
+}
+
+@keyframes text-motion {
+	0% {
+		outline: 2px solid transparent;
+		outline-offset: 25px;
+	}
+	100% {
+		outline: 2px solid #008CBA;
+		outline-offset: 0%;
+	}
+}
+.comment-block .reply textarea {
+	font-size: 18px;
+	min-height: 150px;
+	resize: none;
+}
+
+.comment-block .reply button {
+	background-color: #9E9D9D;
+	color: white;
+	font-size: 14px;
+	border: none;
+	padding: 15px;
+	width: 50%;
+	outline: none;
+  float: right;
+  margin: 0 25%;
+  margin-top: 5%;
+	transition: all .2s ease;
+}
+
+.comment-block .reply button:active {
+	transform: scale(0.8, 0.8);
+}
+
+.statistic-block{
+  color: grey;
+  margin-top: 50px;
+  float: right;
+  font-size: 14;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+</style>
