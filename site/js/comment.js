@@ -247,6 +247,15 @@ $(document).ready(function () {
     postCommentData();
   });
 
+  $("#move-top-btn").click(function(){
+     $( "html,body").animate({ "scrollTop" : 0 }, 300);
+  })
+
+  $("#move-bottom-btn").click(function(){
+    var windowHeight = parseInt($("body").css("height" ));//整个页面的高度
+    $( "html,body").animate({ "scrollTop" : windowHeight }, 300);
+  })
+
   // $(document).keypress(function(e){
   //   if (e.keyCode == 13) {
   //     if (pageName!="LOVEDIARYRyansBlog") {
