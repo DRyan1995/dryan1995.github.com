@@ -252,8 +252,9 @@ $(document).ready(function () {
   })
 
   $("#move-bottom-btn").click(function(){
-    var windowHeight = parseInt($("body").css("height" ));//整个页面的高度
-    $( "html,body").animate({ "scrollTop" : windowHeight }, 300);
+    // var windowHeight = parseInt($("body").css("height" ));//整个页面的高度
+    var offset = $("#comment-content-input").offset().top;
+    $( "html,body").animate({ "scrollTop" : offset }, 300);
   })
 
   // $(document).keypress(function(e){
