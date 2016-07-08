@@ -129,3 +129,22 @@ USE `$(".class").size();`
 ### 9. DO NOT FORGET UNBIND AFTER ONE BIND
 
 `      $modifyDialog.find(".dialog_btn_confirm").unbind("click");`
+
+### 10. MOVE TOP AND MOVE bottom
+
+        $( function () {
+            var speed = 1000;//自定义滚动速度
+            //回到顶部
+            $( "#toTop").click( function () {
+                $( "html,body").animate({ "scrollTop" : 0 }, speed);
+                });
+            //回到底部
+            var windowHeight = parseInt($("body").css("height" ));//整个页面的高度
+            $( "#toBottom").click(function () {
+                $( "html,body").animate({ "scrollTop" : windowHeight }, speed);
+            });
+        });
+
+*How To Move TO a SPECIFIC ELEMENT?*
+
+    scrollTop = $("#ID").offset().top;
