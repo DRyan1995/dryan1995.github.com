@@ -247,14 +247,16 @@ $(document).ready(function () {
     postCommentData();
   });
 
+  var scrollTimeout = 500;
+
   $("#move-top-btn").click(function(){
-     $( "html,body").animate({ "scrollTop" : 0 }, 300);
+     $( "html,body").animate({ "scrollTop" : 0 }, scrollTimeout);
   })
 
   $("#move-bottom-btn").click(function(){
     // var windowHeight = parseInt($("body").css("height" ));//整个页面的高度
     var offset = $("#comment-content-input").offset().top;
-    $( "html,body").animate({ "scrollTop" : offset }, 300);
+    $( "html,body").animate({ "scrollTop" : offset }, scrollTimeout);
   })
 
   // $(document).keypress(function(e){
