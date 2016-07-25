@@ -77,7 +77,7 @@
         },
         {
             "location": "/todolist/",
-            "text": "TODOLIST\n\n\nTYPE DOWN YOUR RECENT TODO LIST HERE\n\n\nFileServer\n\n\nsimple but useful",
+            "text": "TODOLIST\n\n\nTYPE DOWN YOUR RECENT TODO LIST HERE\n\n\nServer Study\n\n\nServer UCRrepos\n\n\nsimple but useful",
             "title": "TODOLIST"
         },
         {
@@ -87,7 +87,7 @@
         },
         {
             "location": "/todolist/#type-down-your-recent-todo-list-here",
-            "text": "FileServer  simple but useful",
+            "text": "Server Study  Server UCRrepos  simple but useful",
             "title": "TYPE DOWN YOUR RECENT TODO LIST HERE"
         },
         {
