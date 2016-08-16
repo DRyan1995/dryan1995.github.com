@@ -31,5 +31,5 @@ pages:
         - Git: at_company/git_instructions.md
         - VPN: at_company/steps_to_build_vpn.md
         - HOTKEYS: at_company/about_hotkeys.md
-        - README: readme.md
+    - README: readme.md
 theme_dir: ./theme
