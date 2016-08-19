@@ -169,7 +169,7 @@ $(document).ready(function () {
   function userDataInit(){
     if (Guest=="ryan") {
       $("#author-input").val("Ryan");
-      $("#email-input").val("ryan951125@icloud.com");
+      $("#email-input").val("ryanlvivian@gmail.com");
     }else if (pageName == "LOVEDIARYRyansBlog") {
       $("#author-input").val("WXY");
       $("#email-input").val("mollymollyhoon@outlook.com");
