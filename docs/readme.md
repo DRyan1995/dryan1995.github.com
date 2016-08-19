@@ -6,7 +6,7 @@
 
 ***
 
-- E-Mail : ryan951125@icloud.com
+- E-Mail : ryanlvivian@gmail.com
 
 - My Github: <a href="http://github.com/dryan1995"> My Github </a>
 
