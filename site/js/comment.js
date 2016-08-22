@@ -55,16 +55,16 @@ $(document).ready(function () {
   function createDB(){
     $.get(serverApiUrl + "server.php");
   }
-
-  function loveInit(){
-    var time1 = "2016-06-04 23:08:08";
-    var date = new Date(Date.parse(time1.replace(/-/g,   "/")));
-    var nowDate = new Date();
-    var passedSecond = (nowDate.getTime() - date.getTime())/1000;
-    var result = parseInt(passedSecond / 3600 / 24);
-    $("#love-days-count").text(result+" Days");
-    return result;
-  }
+  //
+  // function loveInit(){
+  //   var time1 = "2016-06-04 23:08:08";
+  //   var date = new Date(Date.parse(time1.replace(/-/g,   "/")));
+  //   var nowDate = new Date();
+  //   var passedSecond = (nowDate.getTime() - date.getTime())/1000;
+  //   var result = parseInt(passedSecond / 3600 / 24);
+  //   $("#love-days-count").text(result+" Days");
+  //   return result;
+  // }
 
   function timeHandler(time1) {
     var date = new Date(Date.parse(time1.replace(/-/g,   "/")));
