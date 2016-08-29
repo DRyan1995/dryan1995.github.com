@@ -55,7 +55,7 @@ $(document).ready(function () {
   function createDB(){
     $.get(serverApiUrl + "server.php");
   }
-  //
+
   // function loveInit(){
   //   var time1 = "2016-06-04 23:08:08";
   //   var date = new Date(Date.parse(time1.replace(/-/g,   "/")));
@@ -92,10 +92,9 @@ $(document).ready(function () {
     $commentBox.find("#content").text(datas.content);
     $commentBox.find("#comment-time").text(timeHandler(datas.commentTime));
     if (datas.deleted == '1') {
-      console.log(1111);
       $commentBox.addClass("deleted");
     }
-    console.log(timeHandler(datas.commentTime));
+    // console.log(timeHandler(datas.commentTime));
     $commentBox.insertBefore(".comment:first");
     if (Guest == "ryan") {
       $commentBox.dblclick(function () {
@@ -209,8 +208,9 @@ $(document).ready(function () {
     $("#comment-content-input").val("");
     $.post(serverApiUrl+"post.php", JSON.stringify(datas), function(data, status){
       if (status == "success") {
-        addCommentData(datas);
+        // addCommentData(datas);
         $( "html,body").animate({ "scrollTop" :  $(".comment:first").offset().top - 45}, 300);
+        location.reload();
         if (pageName == "LOVEDIARYRyansBlog" && env!="local" && env!= "l") {
           mail("2489606852@qq.com", datas.author, datas.content);
           mail("1204633887@qq.com", datas.author, datas.content);
