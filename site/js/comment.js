@@ -28,7 +28,8 @@ $(document).ready(function () {
     ListAll = (getUrlPara("list_all")=='1'?true:false);
   }
 
-    function pageInit() {
+  function pageInit() {
+    timezoneOffset = new Date().getTimezoneOffset();
     getEnv();
     createDB();
     getPageName();
@@ -36,8 +37,7 @@ $(document).ready(function () {
     getVisitCount();
     Guest = getUrlPara("guest");
     userDataInit();
-    // loveInit();
-  }
+   }
 
   function getVisitCount() {
     var url = serverApiUrl + "visit.php?pageName=" + pageName;
@@ -69,7 +69,7 @@ $(document).ready(function () {
   function timeHandler(time1) {
     var date = new Date(Date.parse(time1.replace(/-/g,   "/")));
     var nowDate = new Date();
-    var passedSecond =  (nowDate.getTime()-date.getTime())/1000;
+    var passedSecond =  (nowDate.getTime()-date.getTime())/1000 + 60 * (timezoneOffset + 8 * 60);
     var result;
     if (passedSecond >= 24 * 60 * 60 * 3) { // greater than three days
       result = time1;
