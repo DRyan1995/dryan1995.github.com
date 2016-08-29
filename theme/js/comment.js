@@ -209,8 +209,8 @@ $(document).ready(function () {
     $.post(serverApiUrl+"post.php", JSON.stringify(datas), function(data, status){
       if (status == "success") {
         // addCommentData(datas);
-        $( "html,body").animate({ "scrollTop" :  $(".comment:first").offset().top - 45}, 300);
         location.reload();
+        $( "html,body").animate({ "scrollTop" :  $(".comment:first").offset().top - 45}, 300);
         if (pageName == "LOVEDIARYRyansBlog" && env!="local" && env!= "l") {
           mail("2489606852@qq.com", datas.author, datas.content);
           mail("1204633887@qq.com", datas.author, datas.content);
