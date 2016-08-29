@@ -36,7 +36,7 @@ $(document).ready(function () {
     getVisitCount();
     Guest = getUrlPara("guest");
     userDataInit();
-    loveInit();
+    // loveInit();
   }
 
   function getVisitCount() {
