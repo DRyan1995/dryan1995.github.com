@@ -10,7 +10,7 @@
 
 
 
-![mylife](http://120.27.114.115:8088/myblog/blog_cover.jpg)
+![mylife](http://120.27.114.115:8088/myblog/blog_cover.JPG)
 
 
 ## My Websites
