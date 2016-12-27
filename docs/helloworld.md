@@ -11,4 +11,4 @@ Here are the features of the server:
 
 ![hello](http://120.27.114.115:8088/myblog/server_pc.png)
 
-> [if you are interested in how to build your own Blog, CLICK HERE](../set_steps)
+> [if you are interested in how to build your own Blog, CLICK HERE](./set_steps)

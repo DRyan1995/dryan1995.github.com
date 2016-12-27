@@ -5,7 +5,6 @@ pages:
         - Hello World! : helloworld.md
         - Setting Up My First Blog: set_steps.md
         - Helloworld again!: hello_world_again.md
-    - TODOLIST: todolist.md
     - PROJECTS:
         - Smart Home: projects/smarthome.md
         - Client Page: projects/client_page.md
@@ -23,6 +22,9 @@ pages:
         - NODE: at_company/node.md
         - Nginx: at_company/nginx.md
         - PHP: at_company/php.md
+    - Linux Hacking:
+        - BUILD A KERNEL FROM SOURCE: linux/build_from_source.md
+        - ADD A HELLOWORLD SYSTEM CALL: linux/system_call.md
     - SUMMARIES:
         - WHEN AM TEMPORARILY AWAY FROM WEB: at_company/ideas.md
         - LINUX INSTRUCTIONS: summeries/instructions_in_linux.md

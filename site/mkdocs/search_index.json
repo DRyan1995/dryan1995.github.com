@@ -76,21 +76,6 @@
             "title": "Hello again!!!"
         },
         {
-            "location": "/todolist/",
-            "text": "TODOLIST\n\n\nTYPE DOWN YOUR RECENT TODO LIST HERE\n\n\nServer Study\n\n\nServer UCRrepos\n\n\nsimple but useful",
-            "title": "TODOLIST"
-        },
-        {
-            "location": "/todolist/#todolist",
-            "text": "",
-            "title": "TODOLIST"
-        },
-        {
-            "location": "/todolist/#type-down-your-recent-todo-list-here",
-            "text": "Server Study  Server UCRrepos  simple but useful",
-            "title": "TYPE DOWN YOUR RECENT TODO LIST HERE"
-        },
-        {
             "location": "/projects/smarthome/",
             "text": "SmartHome\n\n\nPics \n Video\n\n\nCLICK HERE TO View Our Instrution Video (DOWNLOAD IT FOR BETTER PERFORMANCE\uff09\n\n\n\n\n\n\n\n\n\n\nBrief Introduction\n\n\n\u3010Abstract\u3011\n\n\nOur design is based  on the platform of Altera DE-2 development board based on WiFi communication of smart home model to simulate the home environment, controlling a number of peripheral modules, and complete the communication between board(server) and  mobile phones(client) . Through this course design, I have been familiar with the usage of HDL, qsys,  quartus 13 ,NIOS II Eclipse and a series of development environment.\n\n\nIn this design, we use Verilog HDL to prepare the DHT11 temperature and humidity sensor for reading temperature and humidity data , and control some surroundings such as breathing LEDs (PWM), a small fan; using Qsys to build a NIOS II core platform; NIOS II and WIFI module communication protocol written by C language, sending instructions to the client and decode the instructions sent by the client, after which parsing operation after a series of peripheral modules; using JAVA language and Android Studio platform to complete the building of the Android client; SOCKET communication based on TCP protocol to complete the two-way communication between the client and the server; finally using quartus13.0 to complete the final design.\n\n\n\n\n\u3010Key Words\u3011\n\n\nFPGA\uff0cNIOS ii\uff0cPWM\uff0cUART\uff0cTCP\uff0cSOCKET\uff0cANDROID\uff0cC/S\uff0cWIFI\uff0cSmart Home\n\n\n\n\n\u3010Report\u3011\n\n\nClick HERE TO Download Our Project Report\n\n\nClick HERE TO Download Our Project Report2\n\n\n\n\n\u3010Source Code\u3011\n\n\nClick HERE TO Download Android Platform Code\n\n\nClick HERE TO Download Altera Platform Code\n\n\nClick HERE TO Download Xilinx Platform Code",
             "title": "Smart Home"
@@ -664,6 +649,61 @@
             "location": "/at_company/php/#4-how-to-get-data-from-http-request",
             "text": "Get POST json data: $postData = file_get_contents(\"php://input\");    Get GET paras: $command = @$_GET[\"command\"]?$_GET[\"command\"]:\"\";",
             "title": "4. HOW TO GET DATA FROM HTTP REQUEST"
+        },
+        {
+            "location": "/linux/build_from_source/",
+            "text": "Build Kernel From Source (Ubuntu)\n\n\n\n\n\n\nDOWNLOAD\n\n\n\n\napt-get source linux-image-$(uname -r)\n\n\nsudo apt-get build-dep linux-image-$(uname -r)\n // set up the build environment\n\n\n\n\n\n\n\n\nCONFIG\n\n\n\n\nmake defconfig\n // for default configuration\n\n\nmake menuconfig\n // manually configure\n\n\nmake oldconfig\n // use old configuartion\n\n\nOR YOU CAN DOWNLOAD THE CONFIG FILE FROM UBUNTU WEBSITE \nLINK\n\n\n\n\n\n\n\n\nBUILD\n\n\n\n\nmake -j6\n\n\n\n\n\n\n\n\nINSTALL\n\n\n\n\nsudo make modules_install\n\n\nsudo make install\n\n\nsudo reboot",
+            "title": "BUILD A KERNEL FROM SOURCE"
+        },
+        {
+            "location": "/linux/build_from_source/#build-kernel-from-source-ubuntu",
+            "text": "DOWNLOAD   apt-get source linux-image-$(uname -r)  sudo apt-get build-dep linux-image-$(uname -r)  // set up the build environment     CONFIG   make defconfig  // for default configuration  make menuconfig  // manually configure  make oldconfig  // use old configuartion  OR YOU CAN DOWNLOAD THE CONFIG FILE FROM UBUNTU WEBSITE  LINK     BUILD   make -j6     INSTALL   sudo make modules_install  sudo make install  sudo reboot",
+            "title": "Build Kernel From Source (Ubuntu)"
+        },
+        {
+            "location": "/linux/system_call/",
+            "text": "ADD A SYSTEM CALL TO KERNEL(UBUNTU)\n\n\n1. Define a new system call sys_hello()\n\n\n\n\nmkdir hello\n\n\ncd hello\n\n\nvim hello.c\n\n\n\n\n/* hello.c */\n#include \nlinux/kernel.h\n\n\nasmlinkage long sys_hello(void){\n  printk(\u201cHello world from system call\\n\u201d);\n  return 0;\n }\n\n\n\n\n2. Create a Makefile in the hello folder\n\n\n\n\nvim Makefile\n\n\nadd this line in Makefile\n\n\n\n\nobj-y := hello.o\n\n\n\n\n3. Add the hello directory to the kernel's Makefile\n\n\n\n\nchange\n\ncore-y += kernel/ mm/ fs/ ipc/ security/ crypto/ block/\n\nto\n\ncore-y += kernel/ mm/ fs/ ipc/ security/ crypto/ block/ hello/\n\n\n\n\n4. Add the new system call( \nsys_hello()\n ) in the system call table\n\n\n\n\nvim /arch/x86/entry/syscalls/syscall_64.tbl\n\n\nadd the following line in the end of this file\n\n\n\n\n354 common hello sys_hello\n// 354 is the number of the system call. It should be one plus the number of the last system call\n\n\n\n\n5. Add the new system call ( \nsys_hello()\n ) in the system call header file\n\n\n\n\nvim /linux/syscalls.h\n\n\nadd the following line to the end of the file just before the \n#endif\n\n\n\n\nasmlinkage long sys_hello(void);\n\n\n\n\n6. Compile and Reboot (Refer to the BUILD FROM SOURCE)\n\n\n7. Test\n\n\n\n\nCreate a userspace.c\n\n\n\n\n/* userspace.c */\n#include \nstdio.h\n\n#include \nlinux/kernel.h\n\n#include \nsys/syscall.h\n\n#include \nunistd.h\n\nint main(){\n  long int ret = syscall(326);\n  printf(\u201cSystem call sys_hello returned %ld\\n\u201d, ret);\n  return 0;\n}\n\n\n\n\n\n\ngcc -o userspace userspace.c\n\n\n./userspace\n\n\ndmesg",
+            "title": "ADD A HELLOWORLD SYSTEM CALL"
+        },
+        {
+            "location": "/linux/system_call/#add-a-system-call-to-kernelubuntu",
+            "text": "",
+            "title": "ADD A SYSTEM CALL TO KERNEL(UBUNTU)"
+        },
+        {
+            "location": "/linux/system_call/#1-define-a-new-system-call-sys_hello",
+            "text": "mkdir hello  cd hello  vim hello.c   /* hello.c */\n#include  linux/kernel.h \n\nasmlinkage long sys_hello(void){\n  printk(\u201cHello world from system call\\n\u201d);\n  return 0;\n }",
+            "title": "1. Define a new system call sys_hello()"
+        },
+        {
+            "location": "/linux/system_call/#2-create-a-makefile-in-the-hello-folder",
+            "text": "vim Makefile  add this line in Makefile   obj-y := hello.o",
+            "title": "2. Create a Makefile in the hello folder"
+        },
+        {
+            "location": "/linux/system_call/#3-add-the-hello-directory-to-the-kernels-makefile",
+            "text": "change core-y += kernel/ mm/ fs/ ipc/ security/ crypto/ block/ \nto core-y += kernel/ mm/ fs/ ipc/ security/ crypto/ block/ hello/",
+            "title": "3. Add the hello directory to the kernel's Makefile"
+        },
+        {
+            "location": "/linux/system_call/#4-add-the-new-system-call-sys_hello-in-the-system-call-table",
+            "text": "vim /arch/x86/entry/syscalls/syscall_64.tbl  add the following line in the end of this file   354 common hello sys_hello\n// 354 is the number of the system call. It should be one plus the number of the last system call",
+            "title": "4. Add the new system call( sys_hello() ) in the system call table"
+        },
+        {
+            "location": "/linux/system_call/#5-add-the-new-system-call-sys_hello-in-the-system-call-header-file",
+            "text": "vim /linux/syscalls.h  add the following line to the end of the file just before the  #endif   asmlinkage long sys_hello(void);",
+            "title": "5. Add the new system call ( sys_hello() ) in the system call header file"
+        },
+        {
+            "location": "/linux/system_call/#6-compile-and-reboot-refer-to-the-build-from-source",
+            "text": "",
+            "title": "6. Compile and Reboot (Refer to the BUILD FROM SOURCE)"
+        },
+        {
+            "location": "/linux/system_call/#7-test",
+            "text": "Create a userspace.c   /* userspace.c */\n#include  stdio.h \n#include  linux/kernel.h \n#include  sys/syscall.h \n#include  unistd.h \nint main(){\n  long int ret = syscall(326);\n  printf(\u201cSystem call sys_hello returned %ld\\n\u201d, ret);\n  return 0;\n}   gcc -o userspace userspace.c  ./userspace  dmesg",
+            "title": "7. Test"
         },
         {
             "location": "/at_company/ideas/",
