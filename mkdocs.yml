@@ -22,7 +22,7 @@ pages:
         - NODE: at_company/node.md
         - Nginx: at_company/nginx.md
         - PHP: at_company/php.md
-    - Linux Hacking:
+    - LINUX HACKING:
         - BUILD A KERNEL FROM SOURCE: linux/build_from_source.md
         - ADD A HELLOWORLD SYSTEM CALL: linux/system_call.md
     - SUMMARIES:
