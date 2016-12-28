@@ -300,10 +300,37 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
+        <li class="main active"><a href="#add-a-system-call-dynamically-using-a-loadable-kernel-module-lkm">Add a system call dynamically using a loadable kernel module (LKM)</a></li>
+        
+    
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
+<h1 id="add-a-system-call-dynamically-using-a-loadable-kernel-module-lkm">Add a system call dynamically using a loadable kernel module (LKM)</h1>
+<ol>
+<li>
+<p><strong>get the sys_call_table address</strong></p>
+<ul>
+<li><code>cat /boot/System.map.xxx | grep sys_call_table</code></li>
+</ul>
+</li>
+<li>
+<p><strong>set a global variable to store this address</strong></p>
+<ul>
+<li><code>unsigned long *sys_call_table = (unsigned long *)0xffffffff81a001c0;</code></li>
+</ul>
+</li>
+<li>
+<p><strong>pick a unused system call number</strong></p>
+<ul>
+<li>see the last number of the system call in <code>/arch/x86/entry/syscalls/syscall_64.tbl</code></li>
+</ul>
+</li>
+<li>
+<p><strong>that's it, enjoy!</strong></p>
+</li>
+</ol>
 <pre><code>#include &lt;linux/version.h&gt;
 #include &lt;linux/module.h&gt;
 #include &lt;linux/miscdevice.h&gt;

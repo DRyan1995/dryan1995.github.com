@@ -1,3 +1,16 @@
+# Add a system call dynamically using a loadable kernel module (LKM)
+
+1. **get the sys_call_table address**
+    * `cat /boot/System.map.xxx | grep sys_call_table`
+
+2. **set a global variable to store this address**
+    * `unsigned long *sys_call_table = (unsigned long *)0xffffffff81a001c0;`
+
+3. **pick a unused system call number**
+    * see the last number of the system call in `/arch/x86/entry/syscalls/syscall_64.tbl`
+
+4. **that's it, enjoy!**
+
 ~~~
 #include <linux/version.h>
 #include <linux/module.h>
