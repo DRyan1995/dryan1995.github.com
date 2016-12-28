@@ -25,6 +25,7 @@ pages:
     - LINUX HACKING:
         - BUILD A KERNEL FROM SOURCE: linux/build_from_source.md
         - ADD A HELLOWORLD SYSTEM CALL: linux/system_call.md
+        - USE LKM TO ADD A SYSCALL: linux/LKM_system_call.md
     - SUMMARIES:
         - WHEN AM TEMPORARILY AWAY FROM WEB: at_company/ideas.md
         - LINUX INSTRUCTIONS: summeries/instructions_in_linux.md
