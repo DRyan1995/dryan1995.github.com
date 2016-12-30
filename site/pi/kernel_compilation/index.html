@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>EXPERIENCES - Ryan's Blog</title>
+	<title>CROSS COMPILE - Ryan's Blog</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -110,79 +110,79 @@
             
             
             
-                <li class="dropdown active">
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">WEB <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         
 <li >
-    <a href="../debug_instructions/">HOW TO RUN DEBUG SERVER</a>
+    <a href="../../at_company/debug_instructions/">HOW TO RUN DEBUG SERVER</a>
 </li>
 
                     
                         
 <li >
-    <a href="../about_http/">HTTP Protocol</a>
+    <a href="../../at_company/about_http/">HTTP Protocol</a>
 </li>
 
                     
                         
 <li >
-    <a href="../flask_demo/">My First Flask Program</a>
+    <a href="../../at_company/flask_demo/">My First Flask Program</a>
 </li>
 
                     
                         
 <li >
-    <a href="../about_db/">DATABASE</a>
-</li>
-
-                    
-                        
-<li class="active">
-    <a href="./">EXPERIENCES</a>
+    <a href="../../at_company/about_db/">DATABASE</a>
 </li>
 
                     
                         
 <li >
-    <a href="../about_sqlalchemy/">SQLAlchemy</a>
+    <a href="../../at_company/develop_experiences/">EXPERIENCES</a>
 </li>
 
                     
                         
 <li >
-    <a href="../docker/">DOCKER</a>
+    <a href="../../at_company/about_sqlalchemy/">SQLAlchemy</a>
 </li>
 
                     
                         
 <li >
-    <a href="../jquery/">JQUERY</a>
+    <a href="../../at_company/docker/">DOCKER</a>
 </li>
 
                     
                         
 <li >
-    <a href="../css/">CSS</a>
+    <a href="../../at_company/jquery/">JQUERY</a>
 </li>
 
                     
                         
 <li >
-    <a href="../node/">NODE</a>
+    <a href="../../at_company/css/">CSS</a>
 </li>
 
                     
                         
 <li >
-    <a href="../nginx/">Nginx</a>
+    <a href="../../at_company/node/">NODE</a>
 </li>
 
                     
                         
 <li >
-    <a href="../php/">PHP</a>
+    <a href="../../at_company/nginx/">Nginx</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../at_company/php/">PHP</a>
 </li>
 
                     
@@ -218,25 +218,25 @@
             
             
             
-                <li class="dropdown">
+                <li class="dropdown active">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">RASPBERRY PI <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         
 <li >
-    <a href="../../pi/notes/">NOTES</a>
+    <a href="../notes/">NOTES</a>
+</li>
+
+                    
+                        
+<li class="active">
+    <a href="./">CROSS COMPILE</a>
 </li>
 
                     
                         
 <li >
-    <a href="../../pi/kernel_compilation/">CROSS COMPILE</a>
-</li>
-
-                    
-                        
-<li >
-    <a href="../../pi/sys_call/">SYSTEM CALL</a>
+    <a href="../sys_call/">SYSTEM CALL</a>
 </li>
 
                     
@@ -251,7 +251,7 @@
                     
                         
 <li >
-    <a href="../ideas/">WHEN AM TEMPORARILY AWAY FROM WEB</a>
+    <a href="../../at_company/ideas/">WHEN AM TEMPORARILY AWAY FROM WEB</a>
 </li>
 
                     
@@ -272,19 +272,19 @@
                     
                         
 <li >
-    <a href="../git_instructions/">Git</a>
+    <a href="../../at_company/git_instructions/">Git</a>
 </li>
 
                     
                         
 <li >
-    <a href="../steps_to_build_vpn/">VPN</a>
+    <a href="../../at_company/steps_to_build_vpn/">VPN</a>
 </li>
 
                     
                         
 <li >
-    <a href="../about_hotkeys/">HOTKEYS</a>
+    <a href="../../at_company/about_hotkeys/">HOTKEYS</a>
 </li>
 
                     
@@ -308,12 +308,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../about_db/">
+                    <a rel="next" href="../notes/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../about_sqlalchemy/">
+                    <a rel="prev" href="../sys_call/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -327,63 +327,74 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#develop-experiences">Develop Experiences</a></li>
+        <li class="main active"><a href="#build-kernel-for-raspberry-pi">Build Kernel For Raspberry Pi</a></li>
         
-            <li><a href="#about-web-server-developing">About web server developing</a></li>
+            <li><a href="#1-file-preparations">1. File Preparations</a></li>
         
-            <li><a href="#some-tips">SOME TIPS</a></li>
+            <li><a href="#2-environment-preparations">2. Environment Preparations</a></li>
         
-            <li><a href="#greate-examples">GREATE EXAMPLES</a></li>
+            <li><a href="#3-cross-compilation">3. Cross Compilation</a></li>
+        
+            <li><a href="#4-installation">4. Installation</a></li>
+        
+            <li><a href="#5-unmount-and-insert-the-sd-card-to-pi">5. Unmount and Insert the SD Card to PI</a></li>
+        
+            <li><a href="#6-enjoy">6. Enjoy!</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="develop-experiences">Develop Experiences</h1>
-<p><em>Typing down what I've met and learnt in the web project</em></p>
-<h2 id="about-web-server-developing">About web server developing</h2>
-<blockquote>
-<p>How to get data from a POST request</p>
+<h1 id="build-kernel-for-raspberry-pi">Build Kernel For Raspberry Pi</h1>
+<h2 id="1-file-preparations">1. File Preparations</h2>
 <ul>
-<li><code>data = args_helper.check_post_data(["?reject_reason:str"])</code></li>
+<li><code>git clone https://github.com/raspberrypi/linux</code></li>
+<li><code>git clone https://github.com/raspberrypi/tools</code></li>
+<li>A ubuntu os</li>
 </ul>
-<p>DO NOT FORGET to check if the dict has the key!!!!</p>
+<h2 id="2-environment-preparations">2. Environment Preparations</h2>
 <ul>
-<li><code>if "key" in data</code> and so as to use <code>data[key]</code></li>
+<li>add <code>export PATH=$PATH:/home/ryan/Desktop/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin</code> in <code>~/.bashrc</code></li>
 </ul>
-<p>How to loop n times in Python3</p>
-<ul>
-<li><code>for i in range(0,n)</code></li>
-</ul>
-</blockquote>
-<h2 id="some-tips">SOME TIPS</h2>
-<blockquote>
+<h2 id="3-cross-compilation">3. Cross Compilation</h2>
 <ul>
 <li>
-<p><em>Pay Special Attention to the FORMAT &amp; NAME of coding</em></p>
+<p><code>KERNEL=kernel7</code></p>
 </li>
 <li>
-<p>DONOT FORGET CHECK GRAMMAR ONCE YOU MODIFY THE PROGRAM</p>
+<p><code>make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bcm2709_defconfig</code></p>
 </li>
 <li>
-<p>DONOT FORGET <code>utils.gen_hash_id()</code> when creating a <code>HashIdModel</code></p>
-</li>
-<li>
-<p>Use <code>args_helper.check_post_data(["key1","key2:type'])</code> to get body json content</p>
-</li>
-<li>
-<p>DO BE PATIENT AND PATIENT WHEN CODING!!!</p>
+<p><code>make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- zImage modules dtbs</code></p>
 </li>
 </ul>
-</blockquote>
-<h2 id="greate-examples">GREATE EXAMPLES</h2>
-<h3 id="example-1">Example 1</h3>
-<p><img alt="example1" src="http://120.27.114.115:8088/myblog/example_1.png" /></p>
-<h3 id="example-2">Example 2</h3>
-<p><img alt="example2" src="http://120.27.114.115:8088/myblog/example_2.png" /></p>
-<h3 id="example-3">Example 3</h3>
-<p><img alt="example3" src="http://120.27.114.115:8088/myblog/example_3.png" /></p>
+<h2 id="4-installation">4. Installation</h2>
+<ul>
+<li>
+<p>Insert the SD Card into Ubuntu OS</p>
+</li>
+<li>
+<p><code>sudo make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=/media/ryan/root modules_install</code></p>
+</li>
+<li>
+<p><code>sudo cp mnt/boot/$KERNEL.img mnt/boot/$KERNEL-backup.img</code></p>
+</li>
+<li>
+<p><code>sudo scripts/mkknlimg arch/arm/boot/zImage /media/ryan/boot/$KERNEL.img</code></p>
+</li>
+<li>
+<p><code>sudo cp arch/arm/boot/dts/*.dtb /media/ryan/boot/</code></p>
+</li>
+<li>
+<p><code>sudo cp arch/arm/boot/dts/overlays/*.dtb* /media/ryan/boot/overlays/</code></p>
+</li>
+<li>
+<p><code>sudo cp arch/arm/boot/dts/overlays/README /media/ryan/boot/overlays/</code></p>
+</li>
+</ul>
+<h2 id="5-unmount-and-insert-the-sd-card-to-pi">5. Unmount and Insert the SD Card to PI</h2>
+<h2 id="6-enjoy">6. Enjoy!</h2>
 
 <head>
   <link rel="stylesheet" href="../../css/mycomment.css" media="screen" title="no title" charset="utf-8">

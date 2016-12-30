@@ -726,6 +726,86 @@
             "title": "NOTES FOR PI"
         },
         {
+            "location": "/pi/kernel_compilation/",
+            "text": "Build Kernel For Raspberry Pi\n\n\n1. File Preparations\n\n\n\n\ngit clone https://github.com/raspberrypi/linux\n\n\ngit clone https://github.com/raspberrypi/tools\n\n\nA ubuntu os\n\n\n\n\n2. Environment Preparations\n\n\n\n\nadd \nexport PATH=$PATH:/home/ryan/Desktop/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin\n in \n~/.bashrc\n\n\n\n\n3. Cross Compilation\n\n\n\n\n\n\nKERNEL=kernel7\n\n\n\n\n\n\nmake ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bcm2709_defconfig\n\n\n\n\n\n\nmake ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- zImage modules dtbs\n\n\n\n\n\n\n4. Installation\n\n\n\n\n\n\nInsert the SD Card into Ubuntu OS\n\n\n\n\n\n\nsudo make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=/media/ryan/root modules_install\n\n\n\n\n\n\nsudo cp mnt/boot/$KERNEL.img mnt/boot/$KERNEL-backup.img\n\n\n\n\n\n\nsudo scripts/mkknlimg arch/arm/boot/zImage /media/ryan/boot/$KERNEL.img\n\n\n\n\n\n\nsudo cp arch/arm/boot/dts/*.dtb /media/ryan/boot/\n\n\n\n\n\n\nsudo cp arch/arm/boot/dts/overlays/*.dtb* /media/ryan/boot/overlays/\n\n\n\n\n\n\nsudo cp arch/arm/boot/dts/overlays/README /media/ryan/boot/overlays/\n\n\n\n\n\n\n5. Unmount and Insert the SD Card to PI\n\n\n6. Enjoy!",
+            "title": "CROSS COMPILE"
+        },
+        {
+            "location": "/pi/kernel_compilation/#build-kernel-for-raspberry-pi",
+            "text": "",
+            "title": "Build Kernel For Raspberry Pi"
+        },
+        {
+            "location": "/pi/kernel_compilation/#1-file-preparations",
+            "text": "git clone https://github.com/raspberrypi/linux  git clone https://github.com/raspberrypi/tools  A ubuntu os",
+            "title": "1. File Preparations"
+        },
+        {
+            "location": "/pi/kernel_compilation/#2-environment-preparations",
+            "text": "add  export PATH=$PATH:/home/ryan/Desktop/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin  in  ~/.bashrc",
+            "title": "2. Environment Preparations"
+        },
+        {
+            "location": "/pi/kernel_compilation/#3-cross-compilation",
+            "text": "KERNEL=kernel7    make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bcm2709_defconfig    make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- zImage modules dtbs",
+            "title": "3. Cross Compilation"
+        },
+        {
+            "location": "/pi/kernel_compilation/#4-installation",
+            "text": "Insert the SD Card into Ubuntu OS    sudo make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=/media/ryan/root modules_install    sudo cp mnt/boot/$KERNEL.img mnt/boot/$KERNEL-backup.img    sudo scripts/mkknlimg arch/arm/boot/zImage /media/ryan/boot/$KERNEL.img    sudo cp arch/arm/boot/dts/*.dtb /media/ryan/boot/    sudo cp arch/arm/boot/dts/overlays/*.dtb* /media/ryan/boot/overlays/    sudo cp arch/arm/boot/dts/overlays/README /media/ryan/boot/overlays/",
+            "title": "4. Installation"
+        },
+        {
+            "location": "/pi/kernel_compilation/#5-unmount-and-insert-the-sd-card-to-pi",
+            "text": "",
+            "title": "5. Unmount and Insert the SD Card to PI"
+        },
+        {
+            "location": "/pi/kernel_compilation/#6-enjoy",
+            "text": "",
+            "title": "6. Enjoy!"
+        },
+        {
+            "location": "/pi/sys_call/",
+            "text": "Add a System Call in Raspberry PI\n\n\n* Files need to be modified\n\n\n/arch/arm/kernel/calls.S\n/arch/arm/include/arm/unistd.h\n/arch/arm/kernel/sys_arm.c\n/include/linux/syscalls.h\n\n\n\n\n1. /arch/arm/kernel/calls.S\n\n\n\n\nchange the \n59th\n \nCALL\n to \nCALL(sys_helloworld)\n\n\n\n\n2. /arch/arm/include/arm/unistd.h\n\n\n\n\nadd the line: \n#define __NR_helloworld (__NR_SYSCALL_BASE+ 59)\n\n\n\n\n3. /arch/arm/kernel/sys_arm.c\n\n\n\n\nadd my source code\n\n\n\n\nasmlinkage long sys_helloworld(void)\n{\n    printk(\nMy Hello World system call.\\n\n);\n    return 0;\n}\n\n\n\n\n4. /include/linux/syscalls.h\n\n\n\n\nadd declaration for my system call function\n\n\n\n\nasmlinkage long sys_helloworld(void);\n\n\n\n\n* TEST CODE\n\n\n#include \nstdio.h\n\n#include \nlinux/kernel.h\n\n#include \nsys/syscall.h\n\n#include \nunistd.h\n\n#include \nsys/ioctl.h\n\n#include \nsys/types.h\n\n#include \nsys/stat.h\n\n#include \nfcntl.h\n\n\n#define my_sys_call_num 59\n\nint main(void){\n  int ret = syscall(my_sys_call_num);\n  printf(\nmy sys returned: %d\\n\n, ret);\n  return 0;\n}\n\n\n\n\n\n\ndmesg | tail",
+            "title": "SYSTEM CALL"
+        },
+        {
+            "location": "/pi/sys_call/#add-a-system-call-in-raspberry-pi",
+            "text": "",
+            "title": "Add a System Call in Raspberry PI"
+        },
+        {
+            "location": "/pi/sys_call/#files-need-to-be-modified",
+            "text": "/arch/arm/kernel/calls.S\n/arch/arm/include/arm/unistd.h\n/arch/arm/kernel/sys_arm.c\n/include/linux/syscalls.h",
+            "title": "* Files need to be modified"
+        },
+        {
+            "location": "/pi/sys_call/#1-archarmkernelcallss",
+            "text": "change the  59th   CALL  to  CALL(sys_helloworld)",
+            "title": "1. /arch/arm/kernel/calls.S"
+        },
+        {
+            "location": "/pi/sys_call/#2-archarmincludearmunistdh",
+            "text": "add the line:  #define __NR_helloworld (__NR_SYSCALL_BASE+ 59)",
+            "title": "2. /arch/arm/include/arm/unistd.h"
+        },
+        {
+            "location": "/pi/sys_call/#3-archarmkernelsys_armc",
+            "text": "add my source code   asmlinkage long sys_helloworld(void)\n{\n    printk( My Hello World system call.\\n );\n    return 0;\n}",
+            "title": "3. /arch/arm/kernel/sys_arm.c"
+        },
+        {
+            "location": "/pi/sys_call/#4-includelinuxsyscallsh",
+            "text": "add declaration for my system call function   asmlinkage long sys_helloworld(void);",
+            "title": "4. /include/linux/syscalls.h"
+        },
+        {
+            "location": "/pi/sys_call/#test-code",
+            "text": "#include  stdio.h \n#include  linux/kernel.h \n#include  sys/syscall.h \n#include  unistd.h \n#include  sys/ioctl.h \n#include  sys/types.h \n#include  sys/stat.h \n#include  fcntl.h \n\n#define my_sys_call_num 59\n\nint main(void){\n  int ret = syscall(my_sys_call_num);\n  printf( my sys returned: %d\\n , ret);\n  return 0;\n}   dmesg | tail",
+            "title": "* TEST CODE"
+        },
+        {
             "location": "/at_company/ideas/",
             "text": "WHEN I TEMPORARULY GIVE UP WEB LEARNING\n\n\nNothing is still and everyone needs to look forward\n\n\nUpset as I was at the time when saying goodbye to my first startup, I realize it's the time for myself to look and move forword.\n\n\nWith plenty of time and energy spent in the company, lots of experiences and skills are gained for myself at the same time. Coding language like JavaScript, JQuery, CoffeeScript, css, less, php are learnt in the 2 months period. After the 2 mounth learning, at least, I am able to design a total web on my own, which really makes sense to me.\n\n\nFortunately, I received the offer from University California, Riverside several days ago, which determines my mind to get down to my study in the next two months. First I need to complete my courses of this term perfectly. Second, I cannot forget these courses that needs to be made up this term!! Last, I wanna have a fabulous end(You know my meaning..)\n\n\n...",
             "title": "WHEN AM TEMPORARILY AWAY FROM WEB"
