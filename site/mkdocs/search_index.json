@@ -806,6 +806,31 @@
             "title": "* TEST CODE"
         },
         {
+            "location": "/pi/kernel_module/",
+            "text": "Build a LKM (Loadable Kernel Module) by Cross Compilation\n\n\nIt is strange that I cannot directly compile the kernel module on my PI using a common approach. However, I have successfully used the cross-compile to build it which is really useful\n\n\n1. Makefile\n\n\nobj-m += hello1.o\n\nall:\n        make -C /home/ryan/Desktop/linux/ M=$(PWD) modules\nclean:\n        make -C /home/ryan/Desktop/linux/ M=$(PWD) clean\n\n\n\n\n2. Make Command\n\n\nmake ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-\n\n\n3. Insmod \n Enjoy!",
+            "title": "LKM COMPILATION"
+        },
+        {
+            "location": "/pi/kernel_module/#build-a-lkm-loadable-kernel-module-by-cross-compilation",
+            "text": "It is strange that I cannot directly compile the kernel module on my PI using a common approach. However, I have successfully used the cross-compile to build it which is really useful",
+            "title": "Build a LKM (Loadable Kernel Module) by Cross Compilation"
+        },
+        {
+            "location": "/pi/kernel_module/#1-makefile",
+            "text": "obj-m += hello1.o\n\nall:\n        make -C /home/ryan/Desktop/linux/ M=$(PWD) modules\nclean:\n        make -C /home/ryan/Desktop/linux/ M=$(PWD) clean",
+            "title": "1. Makefile"
+        },
+        {
+            "location": "/pi/kernel_module/#2-make-command",
+            "text": "make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-",
+            "title": "2. Make Command"
+        },
+        {
+            "location": "/pi/kernel_module/#3-insmod-enjoy",
+            "text": "",
+            "title": "3. Insmod &amp; Enjoy!"
+        },
+        {
             "location": "/at_company/ideas/",
             "text": "WHEN I TEMPORARULY GIVE UP WEB LEARNING\n\n\nNothing is still and everyone needs to look forward\n\n\nUpset as I was at the time when saying goodbye to my first startup, I realize it's the time for myself to look and move forword.\n\n\nWith plenty of time and energy spent in the company, lots of experiences and skills are gained for myself at the same time. Coding language like JavaScript, JQuery, CoffeeScript, css, less, php are learnt in the 2 months period. After the 2 mounth learning, at least, I am able to design a total web on my own, which really makes sense to me.\n\n\nFortunately, I received the offer from University California, Riverside several days ago, which determines my mind to get down to my study in the next two months. First I need to complete my courses of this term perfectly. Second, I cannot forget these courses that needs to be made up this term!! Last, I wanna have a fabulous end(You know my meaning..)\n\n\n...",
             "title": "WHEN AM TEMPORARILY AWAY FROM WEB"
