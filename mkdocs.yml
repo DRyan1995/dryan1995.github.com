@@ -1,10 +1,15 @@
 site_name: "Ryan's Blog"
 pages:
     - INDEX: index.md
-    - WELCOME:
-        - Hello World! : helloworld.md
-        - Setting Up My First Blog: set_steps.md
-        - Helloworld again!: hello_world_again.md
+    - NOTES:
+        - HELLO WORLD! : helloworld.md
+        - SET UP MY FIRST BLOG: set_steps.md
+        - HELLO AGAIN!: hello_world_again.md
+        - WHEN AM TEMPORARILY AWAY FROM WEB: at_company/ideas.md
+        - LINUX INSTRUCTIONS: summeries/instructions_in_linux.md
+        - GIT: at_company/git_instructions.md
+        - VPN: at_company/steps_to_build_vpn.md
+        - HOTKEYS: at_company/about_hotkeys.md
     - PROJECTS:
         - Smart Home: projects/smarthome.md
         - Client Page: projects/client_page.md
@@ -26,17 +31,10 @@ pages:
         - BUILD A KERNEL FROM SOURCE: linux/build_from_source.md
         - ADD A HELLOWORLD SYSTEM CALL: linux/system_call.md
         - USE LKM TO ADD A SYSCALL: linux/LKM_system_call.md
-    - RASPBERRY PI:
+    - PI:
         - NOTES: pi/notes.md
         - CROSS COMPILE: pi/kernel_compilation.md
         - SYSTEM CALL: pi/sys_call.md
         - LKM COMPILATION: pi/kernel_module.md
-    - SUMMARIES:
-        - WHEN AM TEMPORARILY AWAY FROM WEB: at_company/ideas.md
-        - LINUX INSTRUCTIONS: summeries/instructions_in_linux.md
-    - TOOLS:
-        - Git: at_company/git_instructions.md
-        - VPN: at_company/steps_to_build_vpn.md
-        - HOTKEYS: at_company/about_hotkeys.md
     - README: readme.md
 theme_dir: ./theme
