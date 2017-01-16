@@ -338,6 +338,13 @@
             <div class="col-md-9" role="main">
 
 <h1 id="notes-for-de1-soc-development">NOTES FOR DE1-SOC DEVELOPMENT</h1>
+<ol>
+<li>FIX COMPILE ISSUE:</li>
+</ol>
+<pre><code>ALT_DEVICE_FAMILY ?= soc_cv_av
+
+-I${SOCEDS_DEST_ROOT}/ip/altera/hps/altera_hps/hwlib/include/$(ALT_DEVICE_FAMILY)/ -D$(ALT_DEVICE_FAMILY)
+</code></pre>
 
 <head>
   <link rel="stylesheet" href="../../css/mycomment.css" media="screen" title="no title" charset="utf-8">
