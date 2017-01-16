@@ -32,11 +32,11 @@ pages:
         - ADD A HELLOWORLD SYSTEM CALL: linux/system_call.md
         - USE LKM TO ADD A SYSCALL: linux/LKM_system_call.md
     - PI:
-        - NOTES: pi/notes.md
+        - NOTES: pi/pi-notes.md
         - CROSS COMPILE: pi/kernel_compilation.md
         - SYSTEM CALL: pi/sys_call.md
         - LKM COMPILATION: pi/kernel_module.md
     - DE1-SOC:
-        - NOTES: soc/notes.md
+        - NOTES: soc/soc-notes.md
     - README: readme.md
 theme_dir: ./theme

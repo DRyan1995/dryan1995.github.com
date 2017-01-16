@@ -871,12 +871,12 @@
             "title": "Add a system call dynamically using a loadable kernel module (LKM)"
         },
         {
-            "location": "/pi/notes/",
+            "location": "/pi/pi-notes/",
             "text": "NOTES FOR PI",
             "title": "NOTES"
         },
         {
-            "location": "/pi/notes/#notes-for-pi",
+            "location": "/pi/pi-notes/#notes-for-pi",
             "text": "",
             "title": "NOTES FOR PI"
         },
@@ -986,12 +986,12 @@
             "title": "3. Insmod &amp; Enjoy!"
         },
         {
-            "location": "/soc/notes/",
+            "location": "/soc/soc-notes/",
             "text": "NOTES FOR DE1-SOC DEVELOPMENT",
             "title": "NOTES"
         },
         {
-            "location": "/soc/notes/#notes-for-de1-soc-development",
+            "location": "/soc/soc-notes/#notes-for-de1-soc-development",
             "text": "",
             "title": "NOTES FOR DE1-SOC DEVELOPMENT"
         },
