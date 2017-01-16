@@ -873,7 +873,7 @@
         {
             "location": "/pi/pi-notes/",
             "text": "NOTES FOR PI",
-            "title": "NOTES"
+            "title": "PI-NOTES"
         },
         {
             "location": "/pi/pi-notes/#notes-for-pi",
@@ -988,7 +988,7 @@
         {
             "location": "/soc/soc-notes/",
             "text": "NOTES FOR DE1-SOC DEVELOPMENT",
-            "title": "NOTES"
+            "title": "DE1-SOC-NOTES"
         },
         {
             "location": "/soc/soc-notes/#notes-for-de1-soc-development",
