@@ -14,6 +14,7 @@ pages:
         - Smart Home: projects/smarthome.md
         - Client Page: projects/client_page.md
         - Ryan's IM: projects/ryan-im.md
+        - Deep Learning: projects/deeplearning.md
     - WEB:
         - HOW TO RUN DEBUG SERVER: at_company/debug_instructions.md
         - HTTP Protocol: at_company/about_http.md

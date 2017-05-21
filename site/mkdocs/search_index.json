@@ -421,6 +421,16 @@
             "title": "13. USE A MAGIC WAY TO LOOP IN AJAX"
         },
         {
+            "location": "/projects/deeplearning/",
+            "text": "Deeplearning cats and dogs via CNN",
+            "title": "Deep Learning"
+        },
+        {
+            "location": "/projects/deeplearning/#deeplearning-cats-and-dogs-via-cnn",
+            "text": "",
+            "title": "Deeplearning cats and dogs via CNN"
+        },
+        {
             "location": "/at_company/debug_instructions/",
             "text": "The debug flow\n\n\nmodified on Mar 13 2016 12:49AM\n\n\n\n\nHow to run the dev server:\n\n\n\n\n\n\nUsing ssh to connect to the server  \nssh sp\n\n\nenter the circle-server-dev folder \ncsd\n\n\nrun Runimg.sh \ncd docker/app\n + \n./runimage.sh --dev -d\n\n\ncheck the logs \ndocker logs --follow circle-server\n\n\n\n\n\n\nHow to check the logs of time server:\n\n\n\n\n\n\nusing \npm2 l\n to see all the running exs\n\n\nusing \npm2 logs 2\n to check the logs of the time server",
             "title": "HOW TO RUN DEBUG SERVER"
