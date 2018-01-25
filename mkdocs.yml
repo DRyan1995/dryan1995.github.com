@@ -42,3 +42,4 @@ pages:
         - DE1-SOC-NOTES: soc/soc-notes.md
     - README: readme.md
 theme_dir: ./theme
+# theme: readthedocs

@@ -23,7 +23,7 @@ $(document).ready(function () {
       serverApiUrl = "http://localhost:8008/blog/apis/"
     }
     else {
-      serverApiUrl = "http://ryan95.com/apis/";
+      serverApiUrl = "/apis/";
     }
     ListAll = (getUrlPara("list_all")=='1'?true:false);
   }
