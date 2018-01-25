@@ -3,8 +3,8 @@
 
     
     <url>
-     <loc>/</loc>
-     <lastmod>2018-01-24</lastmod>
+     <loc>None/</loc>
+     <lastmod>2016-04-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,56 +12,20 @@
     
         
     <url>
-     <loc>/helloworld/</loc>
-     <lastmod>2018-01-24</lastmod>
+     <loc>None/helloworld/</loc>
+     <lastmod>2016-04-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/set_steps/</loc>
-     <lastmod>2018-01-24</lastmod>
+     <loc>None/set_steps/</loc>
+     <lastmod>2016-04-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/hello_world_again/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/at_company/ideas/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/summeries/instructions_in_linux/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/at_company/git_instructions/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/at_company/steps_to_build_vpn/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/at_company/about_hotkeys/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/caffe/</loc>
-     <lastmod>2018-01-24</lastmod>
+     <loc>None/hello_world_again/</loc>
+     <lastmod>2016-04-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -70,26 +34,20 @@
     
         
     <url>
-     <loc>/projects/smarthome/</loc>
-     <lastmod>2018-01-24</lastmod>
+     <loc>None/projects/smarthome/</loc>
+     <lastmod>2016-04-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/projects/client_page/</loc>
-     <lastmod>2018-01-24</lastmod>
+     <loc>None/projects/client_page/</loc>
+     <lastmod>2016-04-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/projects/ryan-im/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/projects/deeplearning/</loc>
-     <lastmod>2018-01-24</lastmod>
+     <loc>None/projects/ryan-im/</loc>
+     <lastmod>2016-04-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -98,74 +56,8 @@
     
         
     <url>
-     <loc>/at_company/debug_instructions/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/at_company/about_http/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/at_company/flask_demo/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/at_company/about_db/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/at_company/develop_experiences/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/at_company/about_sqlalchemy/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/at_company/docker/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/at_company/jquery/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/at_company/css/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/at_company/node/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/at_company/nginx/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/at_company/php/</loc>
-     <lastmod>2018-01-24</lastmod>
+     <loc>None/fpga_programmes/smarthome/</loc>
+     <lastmod>2016-04-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -174,20 +66,8 @@
     
         
     <url>
-     <loc>/linux/build_from_source/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/linux/system_call/</loc>
-     <lastmod>2018-01-24</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/linux/LKM_system_call/</loc>
-     <lastmod>2018-01-24</lastmod>
+     <loc>None/summeries/instructions_in_linux/</loc>
+     <lastmod>2016-04-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -196,26 +76,74 @@
     
         
     <url>
-     <loc>/pi/pi-notes/</loc>
-     <lastmod>2018-01-24</lastmod>
+     <loc>None/at_company/debug_instructions/</loc>
+     <lastmod>2016-04-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/pi/kernel_compilation/</loc>
-     <lastmod>2018-01-24</lastmod>
+     <loc>None/at_company/about_http/</loc>
+     <lastmod>2016-04-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/pi/sys_call/</loc>
-     <lastmod>2018-01-24</lastmod>
+     <loc>None/at_company/flask_demo/</loc>
+     <lastmod>2016-04-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/pi/kernel_module/</loc>
-     <lastmod>2018-01-24</lastmod>
+     <loc>None/at_company/about_db/</loc>
+     <lastmod>2016-04-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/at_company/develop_experiences/</loc>
+     <lastmod>2016-04-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/at_company/about_sqlalchemy/</loc>
+     <lastmod>2016-04-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/at_company/docker/</loc>
+     <lastmod>2016-04-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/at_company/jquery/</loc>
+     <lastmod>2016-04-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/at_company/css/</loc>
+     <lastmod>2016-04-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/at_company/node/</loc>
+     <lastmod>2016-04-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/at_company/nginx/</loc>
+     <lastmod>2016-04-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/at_company/php/</loc>
+     <lastmod>2016-04-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -224,8 +152,20 @@
     
         
     <url>
-     <loc>/soc/soc-notes/</loc>
-     <lastmod>2018-01-24</lastmod>
+     <loc>None/at_company/git_instructions/</loc>
+     <lastmod>2016-04-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/at_company/steps_to_build_vpn/</loc>
+     <lastmod>2016-04-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/at_company/about_hotkeys/</loc>
+     <lastmod>2016-04-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -233,8 +173,8 @@
 
     
     <url>
-     <loc>/readme/</loc>
-     <lastmod>2018-01-24</lastmod>
+     <loc>None/readme/</loc>
+     <lastmod>2016-04-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
