@@ -31,6 +31,7 @@ $(document).ready(function () {
   function pageInit() {
     timezoneOffset = new Date().getTimezoneOffset();
     getEnv();
+    createDB();
     getPageName();
     getCommentData();
     getVisitCount();
@@ -39,7 +40,7 @@ $(document).ready(function () {
    }
 
   function getVisitCount() {
-    var url = "/visit/" + pageName;
+    var url = serverApiUrl + "visit.php?pageName=" + pageName;
     $.get(url, function (data, status) {
       if (status == "success") {
         var datas = JSON.parse(data);
@@ -49,6 +50,10 @@ $(document).ready(function () {
         $("#visit-count").text("cannnot connect server!");
       }
     });
+  }
+
+  function createDB(){
+    $.get(serverApiUrl + "server.php");
   }
 
   // function loveInit(){
@@ -62,12 +67,12 @@ $(document).ready(function () {
   // }
 
   function timeHandler(time1) {
-    var date = new Date(time1 * 1000);
+    var date = new Date(Date.parse(time1.replace(/-/g,   "/")));
     var nowDate = new Date();
-    var passedSecond =  (nowDate.getTime()-date.getTime())/1000
+    var passedSecond =  (nowDate.getTime()-date.getTime())/1000 + 60 * (timezoneOffset + 8 * 60);
     var result;
     if (passedSecond >= 24 * 60 * 60 * 3) { // greater than three days
-      result = date.toLocaleString();
+      result = time1;
     } else if (passedSecond >= 24 * 60 * 60 ) { //greater than one day
       result = parseInt(passedSecond / (24 * 60 *60)) + "day(s) ago ...";
     } else if (passedSecond > 1 * 60 * 60) {// greater than an hour
@@ -101,7 +106,7 @@ $(document).ready(function () {
           if (window.confirm("Are U Sure To Recover This Comment?")) {
             var data = {};
             data.id = datas.id;
-            $.post("/recover/comments/"+data.id, JSON.stringify(data), function(data,status){
+            $.post(serverApiUrl + "recover.php", JSON.stringify(data), function(data,status){
               if (data == "success") {
                 $commentBox.removeClass("deleted");
               }else {
@@ -123,16 +128,18 @@ $(document).ready(function () {
       return;
     }
     data.id = id;
-    $.ajax({
-      method:"DELETE",
-      url:"/comments/" + id
-    }).done(function(data) {
-      self.remove();
+    $.post(serverApiUrl + "delete.php", JSON.stringify(data), function (data, status) {
+      if (data == "success") {
+        self.remove();
+      }
+      else {
+        alert("Server Error!" + data);
+      }
     })
   }
 
   function getCommentData() {
-    var getUrl = "/comments/" + pageName;
+    var getUrl = serverApiUrl + "get.php?pageName=" + pageName;
     $.get(getUrl, function(data, status){
       if (status == "success") {
         var CommentList = JSON.parse(data);
@@ -199,17 +206,20 @@ $(document).ready(function () {
       return;
     }
     $("#comment-content-input").val("");
-    $.ajax({
-          url: "/comments/"+pageName,
-          method: "POST",
-          contentType: "application/json",
-          data: JSON.stringify(datas),
-      }).done(function(data) {
-          location.reload();
-          $( "html,body").animate({ "scrollTop" :  $(".comment:first").offset().top - 45}, 300);
-      }).fail(function(xhr) {
-          alert("Server Error! 4041");
-      })
+    $.post(serverApiUrl+"post.php", JSON.stringify(datas), function(data, status){
+      if (status == "success") {
+        // addCommentData(datas);
+        location.reload();
+        $( "html,body").animate({ "scrollTop" :  $(".comment:first").offset().top - 45}, 300);
+        if (pageName == "LOVEDIARYRyansBlog" && env!="local" && env!= "l") {
+          mail("2489606852@qq.com", datas.author, datas.content);
+          mail("1204633887@qq.com", datas.author, datas.content);
+        }
+      }
+      else {
+        alert("Server Error! 4041");
+      }
+    });
   }
 
   function getUrlPara(paras){
@@ -231,6 +241,17 @@ $(document).ready(function () {
       var myDate = new Date();
       var nowTime = myDate.toLocaleString();
       return nowTime;
+  }
+
+  function mail(mailAddress, author, mailContent) {
+    var data = {};
+    data.address = mailAddress;
+    data.author = author;
+    data.content = mailContent;
+    $.post(serverApiUrl+"mail/mail.php",JSON.stringify(data),function(data,status) {
+      console.log(status);
+      console.log(data);
+    });
   }
 
   $(".submit").click(function(){
