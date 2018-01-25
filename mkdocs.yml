@@ -10,6 +10,7 @@ pages:
         - GIT: at_company/git_instructions.md
         - VPN: at_company/steps_to_build_vpn.md
         - HOTKEYS: at_company/about_hotkeys.md
+        - Caffe Installation: caffe.md
     - PROJECTS:
         - Smart Home: projects/smarthome.md
         - Client Page: projects/client_page.md
@@ -40,4 +41,5 @@ pages:
     - DE1-SOC:
         - DE1-SOC-NOTES: soc/soc-notes.md
     - README: readme.md
-theme_dir: ./theme
+# theme_dir: ./theme
+theme: readthedocs
